@@ -1,0 +1,31 @@
+Tag:
+  tableName:                           t_tag
+  actAs:
+    SluggableExt:                      { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    name:                              { type: string   , length: 100                   , notnull: true                                                        }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }    
+  indexes:
+    u_name:                            { fields: [ name ]                               , type: unique                                                         }
+  relations:
+    Post:                              { class: Post             , local: tag_id   , foreign: post_id  , alias: Posts, refClass: PostTag     }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]        
+    
+    
+PostTag:
+  tableName:                           t_post_tag
+  actAs:
+    Timestampable:                     { updated: { disabled: true } }
+  columns:
+    post_id:                           { type: integer  , length: 20 , primary: true                                                                           }
+    tag_id:                            { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Post:                              { class: Post        , local: post_id  , foreign: id, type: one , alias: Post , onDelete: CASCADE , onUpdate: CASCADE }
+    Tag:                               { class: Tag         , local: tag_id   , foreign: id, type: one , alias: Tag  , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: false }
+    

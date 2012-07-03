@@ -1,0 +1,41 @@
+Company:
+  tableName:                           t_company
+  actAs:
+    Timestampable:
+    SluggableExt: { fields: [name]}
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true     , autoincrement: true                                                  }
+    name:                              { type: string   , length: 50                     , notnull: true                                                        }
+    description:                       { type: string   , length: 10000                  , notnull: true                                                        }
+    history:                           { type: string   , length: 10000                  , notnull: true                                                        }
+    vision:                            { type: string   , length: 10000                  , notnull: true                                                        }
+    mission:                           { type: string   , length: 10000                  , notnull: true                                                        }
+    facebook:                          { type: string   , length: 100                     , notnull: false                                                        }
+    twitter:                           { type: string   , length: 100                     , notnull: false                                                        }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                            } 
+  relations:
+    CompanyImage:                         { class: CompanyImage , local: id  , foreign: company_id      , type: many , alias: CompanyImages                    }
+  indexes:
+    i_active:                          { fields: [ active ]                                                                                                    }
+    i_name:                          { fields: [ name ]                                                                                                    }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]
+    
+CompanyImage:
+  tableName:                      t_company_image
+  actAs:
+    Timestampable:
+  columns:
+    id:                           { type: integer  , length: 20 , primary: true , autoincrement: true                                                    }
+    company_id:                      { type: integer  , length: 20                                                                                          }    
+    title:                        { type: string   , length: 50                    , notnull: false                                                      }
+    image:                        { type: string   , length: 200                   , notnull: false                                                      }
+    active:                       { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                          } 
+  indexes:
+    i_active:                     { fields: [ active ]                                                                                                   }
+  relations:
+    Company:                      { class: Company           , local: company_id            , foreign: id      , type: one   , alias: Company    , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                      { filter: false, form: true }
+    boolean_columns:              [ active ]    
