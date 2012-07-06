@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <?php include_http_metas() ?>
@@ -14,7 +14,7 @@
     <div class="wrap">
       <div class="header">
         <br/><br/>
-        CUSA Site
+        ADEHR Site
       </div>
       
       <div class="content">
@@ -22,9 +22,9 @@
       </div>
       
       <div class="footer">
-        © 2002-2011 CUSA. All Rights Reserved.
+        © 2002-2011 ADEHR. All Rights Reserved.
         <br/>
-        Flexiwik Administrator 1.0
+        Administrator 1.0
       </div>
     </div>
   </body>

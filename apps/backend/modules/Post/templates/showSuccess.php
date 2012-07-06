@@ -1,9 +1,9 @@
 <?php slot('title') ?>
-  Categorias
+  Articulos
 <?php end_slot() ?>
 
 <?php slot('subtitle') ?>
-  Categoria: <?php echo $form->getObject()->getName() ?>
+  Articulo: <?php echo $form->getObject()->getTitle() ?>
 <?php end_slot() ?>
 
 <?php include_component('Crud', 'show', array('form' => $form)) ?>

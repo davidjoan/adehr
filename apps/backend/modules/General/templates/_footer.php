@@ -1,1 +1,1 @@
-&copy; 2009 -  <?php echo link_to('ITSN S.A.C.', '/') ?>
+&copy; 2012 -  <?php echo link_to('ADEHR', '/') ?>
