@@ -29,6 +29,7 @@ abstract class BasePostForm extends BaseFormDoctrine
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
       'categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Category')),
+      'medias_list'      => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Media')),
       'tags_list'        => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Tag')),
     ));
 
@@ -47,6 +48,7 @@ abstract class BasePostForm extends BaseFormDoctrine
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
       'categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Category', 'required' => false)),
+      'medias_list'      => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Media', 'required' => false)),
       'tags_list'        => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Tag', 'required' => false)),
     ));
 
@@ -80,6 +82,11 @@ abstract class BasePostForm extends BaseFormDoctrine
       $this->setDefault('categories_list', $this->object->Categories->getPrimaryKeys());
     }
 
+    if (isset($this->widgetSchema['medias_list']))
+    {
+      $this->setDefault('medias_list', $this->object->Medias->getPrimaryKeys());
+    }
+
     if (isset($this->widgetSchema['tags_list']))
     {
       $this->setDefault('tags_list', $this->object->Tags->getPrimaryKeys());
@@ -90,6 +97,7 @@ abstract class BasePostForm extends BaseFormDoctrine
   protected function doSave($con = null)
   {
     $this->saveCategoriesList($con);
+    $this->saveMediasList($con);
     $this->saveTagsList($con);
 
     parent::doSave($con);
@@ -130,6 +138,44 @@ abstract class BasePostForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('Categories', array_values($link));
+    }
+  }
+
+  public function saveMediasList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['medias_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Medias->getPrimaryKeys();
+    $values = $this->getValue('medias_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Medias', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Medias', array_values($link));
     }
   }
 

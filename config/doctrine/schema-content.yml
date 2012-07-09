@@ -24,6 +24,7 @@ Post:
     User:                              { class: User        , local: user_id       , foreign: id           , type: one , alias: User      , onDelete: RESTRICT, onUpdate: CASCADE }
     PostIndex:                         { class: PostIndex   , local: id            , foreign: post_id      , type: one , alias: PostIndex                }
     Category:                          { class: Category    , local: post_id       , foreign: category_id  , alias: Categories, refClass: PostCategory   }
+    Media:                             { class: Media       , local: post_id       , foreign: media_id     , alias: Medias, refClass: PostMedia          }
     Tag:                               { class: Tag         , local: post_id       , foreign: tag_id       , alias: Tags, refClass: PostTag              }
     Comment:                           { class: Comment     , local: id            , foreign: post_id      , type: many, alias: Comments                 }
   options:

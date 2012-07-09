@@ -18,9 +18,11 @@
  * @property User $User
  * @property PostIndex $PostIndex
  * @property Doctrine_Collection $Categories
+ * @property Doctrine_Collection $Medias
  * @property Doctrine_Collection $Tags
  * @property Doctrine_Collection $Comments
  * @property Doctrine_Collection $PostCategory
+ * @property Doctrine_Collection $PostMedia
  * @property Doctrine_Collection $PostTag
  * 
  * @method integer             getId()               Returns the current record's "id" value
@@ -36,9 +38,11 @@
  * @method User                getUser()             Returns the current record's "User" value
  * @method PostIndex           getPostIndex()        Returns the current record's "PostIndex" value
  * @method Doctrine_Collection getCategories()       Returns the current record's "Categories" collection
+ * @method Doctrine_Collection getMedias()           Returns the current record's "Medias" collection
  * @method Doctrine_Collection getTags()             Returns the current record's "Tags" collection
  * @method Doctrine_Collection getComments()         Returns the current record's "Comments" collection
  * @method Doctrine_Collection getPostCategory()     Returns the current record's "PostCategory" collection
+ * @method Doctrine_Collection getPostMedia()        Returns the current record's "PostMedia" collection
  * @method Doctrine_Collection getPostTag()          Returns the current record's "PostTag" collection
  * @method Post                setId()               Sets the current record's "id" value
  * @method Post                setUserId()           Sets the current record's "user_id" value
@@ -53,9 +57,11 @@
  * @method Post                setUser()             Sets the current record's "User" value
  * @method Post                setPostIndex()        Sets the current record's "PostIndex" value
  * @method Post                setCategories()       Sets the current record's "Categories" collection
+ * @method Post                setMedias()           Sets the current record's "Medias" collection
  * @method Post                setTags()             Sets the current record's "Tags" collection
  * @method Post                setComments()         Sets the current record's "Comments" collection
  * @method Post                setPostCategory()     Sets the current record's "PostCategory" collection
+ * @method Post                setPostMedia()        Sets the current record's "PostMedia" collection
  * @method Post                setPostTag()          Sets the current record's "PostTag" collection
  * 
  * @package    adehr
@@ -186,6 +192,11 @@ abstract class BasePost extends DoctrineRecord
              'local' => 'post_id',
              'foreign' => 'category_id'));
 
+        $this->hasMany('Media as Medias', array(
+             'refClass' => 'PostMedia',
+             'local' => 'post_id',
+             'foreign' => 'media_id'));
+
         $this->hasMany('Tag as Tags', array(
              'refClass' => 'PostTag',
              'local' => 'post_id',
@@ -196,6 +207,10 @@ abstract class BasePost extends DoctrineRecord
              'foreign' => 'post_id'));
 
         $this->hasMany('PostCategory', array(
+             'local' => 'id',
+             'foreign' => 'post_id'));
+
+        $this->hasMany('PostMedia', array(
              'local' => 'id',
              'foreign' => 'post_id'));
 

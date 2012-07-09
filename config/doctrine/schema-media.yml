@@ -1,0 +1,54 @@
+MediaType:
+  tableName:                           t_media_type
+  actAs:
+    SluggableExt:                      { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    name:                              { type: string   , length: 100                   , notnull: true                                                        }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+  indexes:
+    u_name:                            { fields: [ name ]                               , type: unique                                                         }
+  relations:
+    Media:                          { class: Media    , local: id                 , foreign: media_type_id, type: many, alias: Medias          }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]        
+    
+
+Media:
+  tableName:                           t_media
+  actAs:
+    SluggableExt:                      { fields: [ name ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    media_type_id:                     { type: integer  , length: 20                    , notnull: true                                                        }
+    name:                              { type: string   , length: 100                   , notnull: true                                                        }
+    album_picasa_name:                 { type: string   , length: 100                   , notnull: true                                                        }
+    path:                              { type: string   , length: 255                   , notnull: true                                                        }
+    size:                              { type: integer  , length: 10                    , notnull: true , default: 0                                           }
+    full_mime:                         { type: string   , length: 100                   , notnull: true                                                        }
+    rank:                              { type: integer  , length: 5                     , notnull: true , default: 0                                           }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+  indexes:
+    u_name:                            { fields: [ name ]                               , type: unique                                                         }
+  relations:
+    MediaType:                         { class: MediaType         , local: media_type_id  , foreign: id , type: one , alias: MediaType      , onDelete: RESTRICT, onUpdate: CASCADE }
+    Post:                              { class: Post             , local: media_type_id   , foreign: post_id  , alias: Posts, refClass: PostMedia             }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]        
+
+PostMedia:
+  tableName:                           t_post_media
+  actAs:
+    Timestampable:                     { updated: { disabled: true } }
+  columns:
+    post_id:                           { type: integer  , length: 20 , primary: true                                                                           }
+    media_id:                          { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Post:                              { class: Post          , local: post_id    , foreign: id, type: one , alias: Post  , onDelete: CASCADE , onUpdate: CASCADE }
+    Media:                             { class: Media         , local: media_id   , foreign: id, type: one , alias: Media , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: false }
