@@ -29,6 +29,11 @@ class Post extends BasePost {
             $this->setUserId(sfContext::getInstance()->getUser()->getUserId());
             $this->setDatetime(date('Y-m-d H:i:s'));
         }
+        
+        if($this->isNew())
+    {
+    	$this->setNewRank();
+    }
 
         if ($this->isColumnModified('content')) {
             $this->setExcerpt(substr(strip_tags($this->getContent()), 0, 1000) . '...');
@@ -70,5 +75,20 @@ class Post extends BasePost {
     public function getName() {
         return $this->getTitle();
     }
+    
+  public function setNewRank()
+  {
+  	$rank = $this->getTable()->getNewRank();
+  	$this->setRank($rank);
+  }  
+  
+    public function getCategoryNameForList() {
+        $result = "";
+        foreach ($this->getCategories() as $category) {
+            $result = $result . $category->getName() . ',';
+        }
+
+        return substr($result,0,23)."...";
+    }  
 
 }

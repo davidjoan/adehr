@@ -72,7 +72,7 @@ post_show:
   
 post_list:
   url:             /listar/articulos/:filter_by/:filter/:order_by/:order/:max/:page
-  param:           { module: Post, action: list, filter_by: title, filter: 0, order_by: datetime, order: d, max: 20, page: 1, rflow: on }
+  param:           { module: Post, action: list, filter_by: rank, filter: 0, order_by: datetime, order: a, max: 20, page: 1, rflow: on }
   requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
 
 post_new:
@@ -88,6 +88,10 @@ post_delete:
   url:             /eliminar/articulos/:slug
   param:           { module: Post, action: delete }
   requirements:    { slug: '[\w-,]+' }
+  
+post_sort:
+  url:             /ordenar/articulos/*
+  param:           { module: Post, action: sort }   
 
 #######################
 ########## Tag ########

@@ -14,6 +14,7 @@
  * @property string $meta_description
  * @property string $meta_keywords
  * @property datetime $datetime
+ * @property integer $rank
  * @property string $status
  * @property User $User
  * @property PostIndex $PostIndex
@@ -34,6 +35,7 @@
  * @method string              getMetaDescription()  Returns the current record's "meta_description" value
  * @method string              getMetaKeywords()     Returns the current record's "meta_keywords" value
  * @method datetime            getDatetime()         Returns the current record's "datetime" value
+ * @method integer             getRank()             Returns the current record's "rank" value
  * @method string              getStatus()           Returns the current record's "status" value
  * @method User                getUser()             Returns the current record's "User" value
  * @method PostIndex           getPostIndex()        Returns the current record's "PostIndex" value
@@ -53,6 +55,7 @@
  * @method Post                setMetaDescription()  Sets the current record's "meta_description" value
  * @method Post                setMetaKeywords()     Sets the current record's "meta_keywords" value
  * @method Post                setDatetime()         Sets the current record's "datetime" value
+ * @method Post                setRank()             Sets the current record's "rank" value
  * @method Post                setStatus()           Sets the current record's "status" value
  * @method Post                setUser()             Sets the current record's "User" value
  * @method Post                setPostIndex()        Sets the current record's "PostIndex" value
@@ -119,6 +122,12 @@ abstract class BasePost extends DoctrineRecord
              'type' => 'datetime',
              'notnull' => true,
              ));
+        $this->hasColumn('rank', 'integer', 5, array(
+             'type' => 'integer',
+             'length' => 5,
+             'notnull' => true,
+             'default' => 0,
+             ));
         $this->hasColumn('status', 'string', 2, array(
              'type' => 'string',
              'length' => 2,
@@ -157,6 +166,12 @@ abstract class BasePost extends DoctrineRecord
              'fields' => 
              array(
               0 => 'datetime',
+             ),
+             ));
+        $this->index('i_rank', array(
+             'fields' => 
+             array(
+              0 => 'rank',
              ),
              ));
         $this->index('i_status', array(
