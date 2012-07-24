@@ -16,7 +16,9 @@
         'columns'            => array
                                 (
                                   array('2' , ''             , ''            , ''              ),
-                                    array('20', 'title'         , 'Titulo'        , 'getTitle'       ),
+                                  array('20', 'title'         , 'Titulo'        , 'getTitle'       ),
+                                  array('20', 'size'         , 'Tamaño'        , 'getSize'       ),
+            array('20', 'full_mime'         , 'Mime'        , 'getFullMime'       ),
                                   array('6' , 'disable_image' , 'Activo'  , 'getDisableImage', 'center', false),
                                   array('2' , ''             , ''            , 'checkbox'      ),
                                 )

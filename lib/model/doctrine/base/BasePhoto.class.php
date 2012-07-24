@@ -121,7 +121,9 @@ abstract class BasePhoto extends DoctrineRecord
              ),
              ));
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $thumbnailable0 = new Doctrine_Template_Thumbnailable();
         $this->actAs($sluggableext0);
         $this->actAs($timestampable0);
+        $this->actAs($thumbnailable0);
     }
 }

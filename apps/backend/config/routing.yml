@@ -1,3 +1,35 @@
+
+#######################
+########## Photo ######
+#######################
+
+#photo
+photo_show:
+  url:             /mostrar/foto/:slug
+  param:           { module: Photo, action: show }
+  requirements:    { slug: \w+ }
+  
+photo_list:
+  url:             /listar/fotos/:filter_by/:filter/:order_by/:order/:max/:page
+  param:           { module: Photo, action: list, filter_by: title, filter: 0, order_by: title, order: d, max: 20, page: 1, rflow: on }
+  requirements:    { filter_by: \w+, filter: '[^\/^\s]+', order_by: \w+, order: \w+, max: \d+, page: \d+ }
+
+photo_new:
+  url:             /nueva/foto
+  param:           { module: Photo, action: edit }
+
+photo_edit:
+  url:             /editar/foto/:slug
+  param:           { module: Photo, action: edit }
+  requirements:    { slug: '[\w-]+' }
+
+photo_delete:
+  url:             /eliminar/eliminar/:slug
+  param:           { module: Photo, action: delete }
+  requirements:    { slug: '[\w-,]+' }
+
+
+
 ############################
 ########## Post ############
 ############################

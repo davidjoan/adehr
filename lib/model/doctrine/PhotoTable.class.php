@@ -16,4 +16,25 @@ class PhotoTable extends DoctrineTable
     {
         return Doctrine_Core::getTable('Photo');
     }
+    
+  public function getPathDir()
+  {
+    return sfConfig::get('app_photo_dir');
+  }
+  
+  public function getPathPath()
+  {
+    return sfConfig::get('app_photo_path');
+  }    
+  
+  
+    public function getNewRank()
+  {
+  	 $q = $this->createQuery('a')
+  	           ->addSelect('MAX(rank)');
+  	           
+  	 $dato = $q->execute()->getFirst()->toArray();
+  	 return $dato['MAX']+1;
+  	 
+  } 
 }

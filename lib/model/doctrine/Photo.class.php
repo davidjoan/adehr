@@ -10,7 +10,30 @@
  * @author     David Joan Tataje Mendoza <new.skin007@gmail.com>
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class Photo extends BasePhoto
-{
+class Photo extends BasePhoto {
+
+    public function generatePathFilename($file) {
+        $this->setSize(filesize($file->getTempName()));
+        $this->setFullMime($file->getType());
+
+        return Stringkit::fixFilename($file->getOriginalName()) . '_' . rand(11111, 99999) . $file->getOriginalExtension();
+    }
+
+    public function save(Doctrine_Connection $conn = null) {
+        $this->createThumbnail('path', $this->getFullMime());
+        if ($this->isNew()) {
+            $this->setNewRank();
+        }
+        parent::save($conn);
+    }
+
+    public function getFormattedCreatedAt($format = 'D') {
+        return $this->getTable()->getDateTimeFormatter()->format($this->getCreatedAt(), $format);
+    }
+
+    public function setNewRank() {
+        $rank = $this->getTable()->getNewRank();
+        $this->setRank($rank);
+    }
 
 }
