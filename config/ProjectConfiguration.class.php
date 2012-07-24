@@ -15,7 +15,8 @@ class ProjectConfiguration extends sfProjectConfigurationExt
              'sfFormExtraPlugin',
              'sfDoctrinePlugin',
              'symfextPlugin',
-             'sfPicasaPlugin'
+             'sfPicasaPlugin',
+             'sfDoctrineNestedSetPlugin'
            );
   }
   

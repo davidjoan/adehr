@@ -9,16 +9,6 @@ Company:
     created_at: '2011-05-21 23:45:08'
     updated_at: '2011-05-21 23:45:08'
 
-MediaType:
-  MediaType_1:
-    name: Foto
-  MediaType_2:
-    name: Video
-  MediaType_3:
-    name: Galeria Picasa
-  MediaType_4:
-    name: Vimeo
-    
 Tag:
   Tag_1:
     name: noticia

@@ -40,18 +40,11 @@
           ?>         
           <?php include_partial('General/tab', array
                 (
-                  'title'       => 'Recursos', 
-                  'uri'         => '@media_list',
+                  'title'       => 'Fotos', 
+                  'uri'         => '@photo_list',
                   'image'       => 'backend/menu/campaigns.gif',
                 ))
-          ?>            
-          <?php include_partial('General/tab', array
-                (
-                  'title'       => 'Tipos de Recursos', 
-                  'uri'         => '@media_type_list',
-                  'image'       => 'backend/menu/campaigns.gif',
-                ))
-          ?>        
+          ?>                  
           <?php include_partial('General/tab', array
                 (
                   'title'       => 'Usuarios', 

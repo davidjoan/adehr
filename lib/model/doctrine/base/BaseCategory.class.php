@@ -9,17 +9,20 @@
  * @property string $name
  * @property string $active
  * @property Doctrine_Collection $Posts
+ * @property Doctrine_Collection $Menus
  * @property Doctrine_Collection $PostCategory
  * 
  * @method integer             getId()           Returns the current record's "id" value
  * @method string              getName()         Returns the current record's "name" value
  * @method string              getActive()       Returns the current record's "active" value
  * @method Doctrine_Collection getPosts()        Returns the current record's "Posts" collection
+ * @method Doctrine_Collection getMenus()        Returns the current record's "Menus" collection
  * @method Doctrine_Collection getPostCategory() Returns the current record's "PostCategory" collection
  * @method Category            setId()           Sets the current record's "id" value
  * @method Category            setName()         Sets the current record's "name" value
  * @method Category            setActive()       Sets the current record's "active" value
  * @method Category            setPosts()        Sets the current record's "Posts" collection
+ * @method Category            setMenus()        Sets the current record's "Menus" collection
  * @method Category            setPostCategory() Sets the current record's "PostCategory" collection
  * 
  * @package    adehr
@@ -75,6 +78,10 @@ abstract class BaseCategory extends DoctrineRecord
              'refClass' => 'PostCategory',
              'local' => 'category_id',
              'foreign' => 'post_id'));
+
+        $this->hasMany('Menu as Menus', array(
+             'local' => 'id',
+             'foreign' => 'category_id'));
 
         $this->hasMany('PostCategory', array(
              'local' => 'id',

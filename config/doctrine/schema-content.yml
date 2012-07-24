@@ -6,6 +6,7 @@ Post:
   columns:
     id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
     user_id:                           { type: integer  , length: 20                    , notnull: true                                                        }
+    picassa_id:                        { type: integer  , length: 20                    , notnull: false                                                       }
     title:                             { type: string   , length: 200                   , notnull: true                                                        }
     image:                             { type: string   , length: 200                   , notnull: true                                                        }
     content:                           { type: string   , length: 20000                 , notnull: true                                                        }
@@ -26,13 +27,15 @@ Post:
     User:                              { class: User        , local: user_id       , foreign: id           , type: one , alias: User      , onDelete: RESTRICT, onUpdate: CASCADE }
     PostIndex:                         { class: PostIndex   , local: id            , foreign: post_id      , type: one , alias: PostIndex                }
     Category:                          { class: Category    , local: post_id       , foreign: category_id  , alias: Categories, refClass: PostCategory   }
-    Media:                             { class: Media       , local: post_id       , foreign: media_id     , alias: Medias, refClass: PostMedia          }
+    Photo:                             { class: Photo       , local: post_id       , foreign: photo_id     , alias: Photos, refClass: PostPhoto          }
+    Video:                             { class: Video       , local: video_id      , foreign: video_id     , alias: Videos, refClass: PostVideo          }    
     Tag:                               { class: Tag         , local: post_id       , foreign: tag_id       , alias: Tags, refClass: PostTag              }
     Comment:                           { class: Comment     , local: id            , foreign: post_id      , type: many, alias: Comments                 }
+    Menu:                              { class: Menu        , local: id            , foreign: post_id      , type: many, alias: Menus                    }
+    Picassa:                           { class: Picassa     , local: picassa_id    , foreign: id           , type: one , alias: Picassa      , onDelete: CASCADE , onUpdate: CASCADE }
   options:
     symfony:                           { filter: false, form: true }
     type_columns:                      [ status ]
-    
     
 PostIndex:
   tableName:                           t_post_index
@@ -51,8 +54,7 @@ PostIndex:
     Post:                              { class: Post             , local: post_id       , foreign: id           , type: one , alias: Post      , onDelete: CASCADE , onUpdate: CASCADE }
   options:
     symfony:                           { filter: false, form: false }
-    
-    
+       
 Comment:
   tableName:                           t_comment
   actAs:

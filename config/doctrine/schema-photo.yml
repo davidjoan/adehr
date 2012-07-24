@@ -1,0 +1,33 @@
+Photo:
+  tableName:                           t_photo
+  actAs:
+    SluggableExt:                      { fields: [ title ] }
+    Timestampable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    title:                             { type: string   , length: 100                   , notnull: true                                                        }
+    path:                              { type: string   , length: 255                   , notnull: true                                                        }
+    size:                              { type: integer  , length: 10                    , notnull: true , default: 0                                           }
+    full_mime:                         { type: string   , length: 100                   , notnull: true                                                        }
+    rank:                              { type: integer  , length: 5                     , notnull: true , default: 0                                           }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+  indexes:
+    u_title:                           { fields: [ title ]                               , type: unique                                                        }
+  relations:
+    Post:                              { class: Post             , local: photo_id   , foreign: post_id  , alias: Posts, refClass: PostPhoto }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]        
+
+PostPhoto:
+  tableName:                           t_post_photo
+  actAs:
+    Timestampable:                     { updated: { disabled: true } }
+  columns:
+    post_id:                           { type: integer  , length: 20 , primary: true                                                                           }
+    photo_id:                          { type: integer  , length: 20 , primary: true                                                                           }
+  relations:
+    Post:                              { class: Post          , local: post_id    , foreign: id, type: one , alias: Post  , onDelete: CASCADE , onUpdate: CASCADE }
+    Photo:                             { class: Photo         , local: photo_id   , foreign: id, type: one , alias: Photo , onDelete: CASCADE , onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: false }
