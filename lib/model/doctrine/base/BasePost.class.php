@@ -7,6 +7,7 @@
  * 
  * @property integer $id
  * @property integer $user_id
+ * @property integer $picassa_id
  * @property string $title
  * @property string $image
  * @property string $content
@@ -19,15 +20,20 @@
  * @property User $User
  * @property PostIndex $PostIndex
  * @property Doctrine_Collection $Categories
- * @property Doctrine_Collection $Medias
+ * @property Doctrine_Collection $Photos
+ * @property Doctrine_Collection $Videos
  * @property Doctrine_Collection $Tags
  * @property Doctrine_Collection $Comments
+ * @property Doctrine_Collection $Menus
+ * @property Picassa $Picassa
  * @property Doctrine_Collection $PostCategory
- * @property Doctrine_Collection $PostMedia
+ * @property Doctrine_Collection $PostPhoto
  * @property Doctrine_Collection $PostTag
+ * @property Doctrine_Collection $PostVideo
  * 
  * @method integer             getId()               Returns the current record's "id" value
  * @method integer             getUserId()           Returns the current record's "user_id" value
+ * @method integer             getPicassaId()        Returns the current record's "picassa_id" value
  * @method string              getTitle()            Returns the current record's "title" value
  * @method string              getImage()            Returns the current record's "image" value
  * @method string              getContent()          Returns the current record's "content" value
@@ -40,14 +46,19 @@
  * @method User                getUser()             Returns the current record's "User" value
  * @method PostIndex           getPostIndex()        Returns the current record's "PostIndex" value
  * @method Doctrine_Collection getCategories()       Returns the current record's "Categories" collection
- * @method Doctrine_Collection getMedias()           Returns the current record's "Medias" collection
+ * @method Doctrine_Collection getPhotos()           Returns the current record's "Photos" collection
+ * @method Doctrine_Collection getVideos()           Returns the current record's "Videos" collection
  * @method Doctrine_Collection getTags()             Returns the current record's "Tags" collection
  * @method Doctrine_Collection getComments()         Returns the current record's "Comments" collection
+ * @method Doctrine_Collection getMenus()            Returns the current record's "Menus" collection
+ * @method Picassa             getPicassa()          Returns the current record's "Picassa" value
  * @method Doctrine_Collection getPostCategory()     Returns the current record's "PostCategory" collection
- * @method Doctrine_Collection getPostMedia()        Returns the current record's "PostMedia" collection
+ * @method Doctrine_Collection getPostPhoto()        Returns the current record's "PostPhoto" collection
  * @method Doctrine_Collection getPostTag()          Returns the current record's "PostTag" collection
+ * @method Doctrine_Collection getPostVideo()        Returns the current record's "PostVideo" collection
  * @method Post                setId()               Sets the current record's "id" value
  * @method Post                setUserId()           Sets the current record's "user_id" value
+ * @method Post                setPicassaId()        Sets the current record's "picassa_id" value
  * @method Post                setTitle()            Sets the current record's "title" value
  * @method Post                setImage()            Sets the current record's "image" value
  * @method Post                setContent()          Sets the current record's "content" value
@@ -60,12 +71,16 @@
  * @method Post                setUser()             Sets the current record's "User" value
  * @method Post                setPostIndex()        Sets the current record's "PostIndex" value
  * @method Post                setCategories()       Sets the current record's "Categories" collection
- * @method Post                setMedias()           Sets the current record's "Medias" collection
+ * @method Post                setPhotos()           Sets the current record's "Photos" collection
+ * @method Post                setVideos()           Sets the current record's "Videos" collection
  * @method Post                setTags()             Sets the current record's "Tags" collection
  * @method Post                setComments()         Sets the current record's "Comments" collection
+ * @method Post                setMenus()            Sets the current record's "Menus" collection
+ * @method Post                setPicassa()          Sets the current record's "Picassa" value
  * @method Post                setPostCategory()     Sets the current record's "PostCategory" collection
- * @method Post                setPostMedia()        Sets the current record's "PostMedia" collection
+ * @method Post                setPostPhoto()        Sets the current record's "PostPhoto" collection
  * @method Post                setPostTag()          Sets the current record's "PostTag" collection
+ * @method Post                setPostVideo()        Sets the current record's "PostVideo" collection
  * 
  * @package    adehr
  * @subpackage model
@@ -87,6 +102,11 @@ abstract class BasePost extends DoctrineRecord
              'type' => 'integer',
              'length' => 20,
              'notnull' => true,
+             ));
+        $this->hasColumn('picassa_id', 'integer', 20, array(
+             'type' => 'integer',
+             'length' => 20,
+             'notnull' => false,
              ));
         $this->hasColumn('title', 'string', 200, array(
              'type' => 'string',
@@ -207,10 +227,15 @@ abstract class BasePost extends DoctrineRecord
              'local' => 'post_id',
              'foreign' => 'category_id'));
 
-        $this->hasMany('Media as Medias', array(
-             'refClass' => 'PostMedia',
+        $this->hasMany('Photo as Photos', array(
+             'refClass' => 'PostPhoto',
              'local' => 'post_id',
-             'foreign' => 'media_id'));
+             'foreign' => 'photo_id'));
+
+        $this->hasMany('Video as Videos', array(
+             'refClass' => 'PostVideo',
+             'local' => 'video_id',
+             'foreign' => 'video_id'));
 
         $this->hasMany('Tag as Tags', array(
              'refClass' => 'PostTag',
@@ -221,15 +246,29 @@ abstract class BasePost extends DoctrineRecord
              'local' => 'id',
              'foreign' => 'post_id'));
 
+        $this->hasMany('Menu as Menus', array(
+             'local' => 'id',
+             'foreign' => 'post_id'));
+
+        $this->hasOne('Picassa', array(
+             'local' => 'picassa_id',
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE',
+             'onUpdate' => 'CASCADE'));
+
         $this->hasMany('PostCategory', array(
              'local' => 'id',
              'foreign' => 'post_id'));
 
-        $this->hasMany('PostMedia', array(
+        $this->hasMany('PostPhoto', array(
              'local' => 'id',
              'foreign' => 'post_id'));
 
         $this->hasMany('PostTag', array(
+             'local' => 'id',
+             'foreign' => 'post_id'));
+
+        $this->hasMany('PostVideo', array(
              'local' => 'id',
              'foreign' => 'post_id'));
 

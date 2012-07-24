@@ -19,6 +19,6 @@ abstract class ActionsProject extends sfActionsExt
     POST_NAMESPACE                     = 'Post',
     COMPANY_NAMESPACE                  = 'Company',
     USER_NAMESPACE                     = 'User',
-    MEDIA_TYPE_NAMESPACE               = 'MediaType',
-    MEDIA_NAMESPACE                    = 'Media';
+    VIDEO_NAMESPACE                    = 'Video',
+    PHOTO_NAMESPACE                    = 'Photo';
 }

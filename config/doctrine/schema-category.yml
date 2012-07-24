@@ -4,13 +4,14 @@ Category:
     SluggableExt:                      { fields: [ name ] }
     Timestampable:
   columns:
-    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
-    name:                              { type: string   , length: 100                   , notnull: true                                                        }
-    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                    }
+    name:                              { type: string   , length: 100                   , notnull: true                                          }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                             }
   indexes:
-    u_name:                            { fields: [ name ]                               , type: unique                                                         }
+    u_name:                            { fields: [ name ]                               , type: unique                                           }
   relations:
-    Post:                              { class: Post             , local: category_id   , foreign: post_id  , alias: Posts, refClass: PostCategory             }
+    Post:                              { class: Post        , local: category_id   , foreign: post_id     , alias: Posts, refClass: PostCategory }
+    Menu:                              { class: Menu        , local: id            , foreign: category_id , type: many, alias: Menus             }
   options:
     symfony:                           { filter: false, form: true }
     boolean_columns:                   [ active ]        

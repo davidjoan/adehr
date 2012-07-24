@@ -1,0 +1,23 @@
+Menu:
+  tableName:      t_menu
+  actAs:
+    Timestampable:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+    SluggableExt:     { fields: [name] }
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    post_id:                           { type: integer  , length: 20                    , notnull: false                                                       }
+    category_id:                       { type: integer  , length: 20                    , notnull: false                                                       }
+    name:                              { type: string   , length: 50                    , notnull: true                                                        }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                           }
+  indexes:
+    i_active:                          { fields: [ active ]                                                                                                    }
+    i_name:                            { fields: [ name ]                                                                                                    }
+  relations:
+    Post:                              { class: Post     , local: post_id     , foreign: id  , type: one  , alias: Post     , onDelete: CASCADE, onUpdate: CASCADE }
+    Category:                          { class: Category , local: category_id , foreign: id  , type: one  , alias: Category , onDelete: CASCADE, onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                   [ active ]
