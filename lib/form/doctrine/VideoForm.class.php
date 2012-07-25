@@ -10,7 +10,49 @@
  */
 class VideoForm extends BaseVideoForm
 {
+  public function initialize()
+  {
+    $this->labels = array
+    (
+      'title'                => 'Titulo',
+      'embed'                => 'Código Embed',
+      'description'          => 'Descripción',
+      'path'                 => 'Documento',
+      'active'               => 'Activo?',
+    );
+  }
+  
   public function configure()
   {
+    $this->setWidgets(array
+    (
+      'id'          => new sfWidgetFormInputHidden(),
+      'active'      => new sfWidgetFormInputHidden(),
+      'title'       => new sfWidgetFormInputText(array(), array('size' => 60)),
+      'embed'       => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 5)),
+      'description' => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 5)),
+    ));
+    
+    $this->setDefault('active', '1');
+    
+    
+    $this->types = array
+    (
+      'id'                      => '=',
+      'title'                   => 'text',
+      'embed'                   => '=',
+      'description'             => 'text',
+      'rank'                    => '-',
+      'slug'                    => '-',
+      'active'                  => 'pass',
+      'created_at'              => '-',
+      'updated_at'              => '-',
+      'posts_list'              => '-'
+        
+        
+     
+    );
+    
+    $this->validatorSchema['embed']->setOption('required', true);
   }
 }

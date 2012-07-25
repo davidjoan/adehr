@@ -6,7 +6,7 @@
       (
         'pager'              => $pager,
         'sort'               => true,
-        'sort_uri'           => '@post_sort',                                
+        'sort_uri'           => '@post_sort',
         'uri'                => '@post_list?filter_by=filter_by&filter=filter&order_by=order_by&order=order&max=max&page=page',
                                 
         'edit_field'         => 'title',

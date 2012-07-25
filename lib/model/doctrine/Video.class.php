@@ -12,5 +12,19 @@
  */
 class Video extends BaseVideo
 {
+    public function save(Doctrine_Connection $conn = null) {
+        if ($this->isNew()) {
+            $this->setNewRank();
+        }
+        parent::save($conn);
+    }
 
+    public function getFormattedCreatedAt($format = 'D') {
+        return $this->getTable()->getDateTimeFormatter()->format($this->getCreatedAt(), $format);
+    }
+
+    public function setNewRank() {
+        $rank = $this->getTable()->getNewRank();
+        $this->setRank($rank);
+    }
 }

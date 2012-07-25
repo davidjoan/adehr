@@ -12,5 +12,13 @@
  */
 class Menu extends BaseMenu
 {
-
+    public function getFormattedCreatedAt($format = 'D') {
+        return $this->getTable()->getDateTimeFormatter()->format($this->getCreatedAt(), $format);
+    }
+  
+  public function getActiveStr()
+  {  	
+  	$actives = $this->getTable()->getStatuss();
+  	return $actives[$this->getActive()];
+  }    
 }

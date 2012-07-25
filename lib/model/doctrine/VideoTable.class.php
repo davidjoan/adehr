@@ -16,4 +16,14 @@ class VideoTable extends DoctrineTable
     {
         return Doctrine_Core::getTable('Video');
     }
+    
+    public function getNewRank()
+  {
+  	 $q = $this->createQuery('a')
+  	           ->addSelect('MAX(rank)');
+  	           
+  	 $dato = $q->execute()->getFirst()->toArray();
+  	 return $dato['MAX']+1;
+  	 
+  }     
 }

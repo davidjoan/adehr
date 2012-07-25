@@ -19,6 +19,13 @@
           ?>
           <?php include_partial('General/tab', array
                 (
+                  'title'       => 'Menu', 
+                  'uri'         => '@menu_list',
+                  'image'       => 'backend/menu/marketing.gif',
+                ))
+          ?>            
+          <?php include_partial('General/tab', array
+                (
                   'title'       => 'Artículos', 
                   'uri'         => '@post_list',
                   'image'       => 'backend/menu/campaigns.gif',
@@ -44,7 +51,14 @@
                   'uri'         => '@photo_list',
                   'image'       => 'backend/menu/campaigns.gif',
                 ))
-          ?>                  
+          ?>            
+          <?php include_partial('General/tab', array
+                (
+                  'title'       => 'Videos', 
+                  'uri'         => '@video_list',
+                  'image'       => 'backend/menu/campaigns.gif',
+                ))
+          ?>            
           <?php include_partial('General/tab', array
                 (
                   'title'       => 'Usuarios', 

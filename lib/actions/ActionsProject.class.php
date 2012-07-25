@@ -20,5 +20,6 @@ abstract class ActionsProject extends sfActionsExt
     COMPANY_NAMESPACE                  = 'Company',
     USER_NAMESPACE                     = 'User',
     VIDEO_NAMESPACE                    = 'Video',
-    PHOTO_NAMESPACE                    = 'Photo';
+    PHOTO_NAMESPACE                    = 'Photo',
+    MENU_NAMESPACE                     = 'Menu';
 }

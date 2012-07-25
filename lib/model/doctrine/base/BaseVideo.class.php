@@ -60,7 +60,7 @@ abstract class BaseVideo extends DoctrineRecord
         $this->hasColumn('description', 'string', 10000, array(
              'type' => 'string',
              'length' => 10000,
-             'notnull' => true,
+             'notnull' => false,
              ));
         $this->hasColumn('rank', 'integer', 5, array(
              'type' => 'integer',

@@ -31,7 +31,7 @@ abstract class BaseVideoForm extends BaseFormDoctrine
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'title'       => new sfValidatorString(array('max_length' => 100)),
       'embed'       => new sfValidatorString(array('max_length' => 10000)),
-      'description' => new sfValidatorString(array('max_length' => 10000)),
+      'description' => new sfValidatorString(array('max_length' => 10000, 'required' => false)),
       'rank'        => new sfValidatorInteger(array('required' => false)),
       'active'      => new sfValidatorString(array('max_length' => 1, 'required' => false)),
       'slug'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),

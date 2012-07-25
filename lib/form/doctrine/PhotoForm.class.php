@@ -26,7 +26,7 @@ class PhotoForm extends BasePhotoForm
     (
       'id'                   => new sfWidgetFormInputHidden(),
       'active'               => new sfWidgetFormInputHidden(),
-      'title'                => new sfWidgetFormInput(array(), array('size' => '100')),
+      'title'       => new sfWidgetFormInputText(array(), array('size' => 60)),
       'path'                 => new sfWidgetFormInputFileEditable
                                 (
                                   array
