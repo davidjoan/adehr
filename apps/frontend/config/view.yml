@@ -13,9 +13,9 @@ default:
     - frontend/style.css: { position: first }        
 
   javascripts:
-    - frontend/jquery.js
     - frontend/menu.js
     - frontend/javascript.js
+    - frontend/jquery.cross-slide.min.js
     - frontend/jquery.jcarousel.min.js
 
   has_layout:     true

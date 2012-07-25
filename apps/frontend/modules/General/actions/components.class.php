@@ -13,7 +13,13 @@ class GeneralComponents extends ComponentsProject
 
   public function executeHeader()
   {
+      $institucional = Doctrine::getTable('Menu')->findOneById(1);
+      $this->tree_institucional =  $institucional->getNode()->getChildren();
       
+      $menu_principal = Doctrine::getTable('Menu')->findOneById(2);
+      $this->tree_menu_principal =  $menu_principal->getNode()->getChildren();
+      
+      $this->banners = Doctrine::getTable('CompanyImage')->getBanners();
   }
   
   public function executeBanner()

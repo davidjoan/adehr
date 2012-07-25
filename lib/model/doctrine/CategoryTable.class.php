@@ -30,5 +30,24 @@ class CategoryTable extends DoctrineTable
   public function getStatuss()
   {
     return self::$status;
-  }    
+  }
+  
+  public function getSections()
+  {
+    $q = $this->createAliasQuery()
+         ->where('c.active = 1')
+         ->orderBy('c.rank ASC')
+         ->limit(20);
+         
+    return $q->execute();
+  } 
+  
+  public function getNewRank()
+  {
+  	 $q = $this->createQuery('c')
+  	           ->addSelect('MAX(rank)');
+  	           
+  	 $dato = $q->execute()->getFirst()->toArray();
+  	 return $dato['MAX']+1;	 
+  }      
 }

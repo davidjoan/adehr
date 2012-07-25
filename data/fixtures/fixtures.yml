@@ -1,59 +1,59 @@
-Company:
-  Company_1:
-    description: "<p>empty</p>"
-    history: "<p>empty</p>"
-    vision: '<p>empty</p>'
-    mission: '<p>empty</p>'
-    name: ADEHR
-    active: 1
-    created_at: '2011-05-21 23:45:08'
-    updated_at: '2011-05-21 23:45:08'
-
-Tag:
-  Tag_1:
-    name: noticia
-  Tage_2:
-    name: actualidad
-  Tag_3:
-    name: tecnología
-  Tag_4:
-    name: entretenimiento
-    
-Category:
-  Category_1:
-    name: noticia
-  Category_2:
-    name: actualidad
-  Category_3:
-    name: tecnología
-  Category_4:
-    name: entretenimiento    
-    
-    
-Menu:
-  Menu_1:
-    name: 'menu superior'
-    root_id: 1
-    active: '1'  
-    children:
-      Menu_2:
-        name: 'nosotros'
-        active: '1'        
-  Menu_3:
-    name: 'menu inferior'
-    root_id: 2
-    active: '1'    
-    children:
-      Menu_4:
-        name: 'bienvenidos'
-        active: '1'        
-        
-Video:
-  Video_1:
-    title: 'Identifican a 12 de los 37 restos exhumados en Huanta - Abril 2010'
-    embed: '<iframe src="http://player.vimeo.com/video/12293099" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/12293099">Identifican a 12 de los 37 restos exhumados en Huanta - Abril 2010</a> from <a href="http://vimeo.com/adehrperu">ADEHR</a> on <a href="http://vimeo.com">Vimeo</a>.</p>'
-    description: 'Mediante irrefutables pruebas de ADN fueron identificados los cadáveres de doce personas denunciadas como desaparecidas tras su detención en agosto de 1984 por ronderos, policías y efectivos de la Marina de Huanta.Así lo informó el jueves 03 de junio de 2010 la Asociación para el Desarrollo Humano Runamasinchiqpaq (ADEHR) en el centro poblado de culluchaca, en la provincia ayacuchana de Huanta, al que acudió para reunirse con los comuneros e informarles sobre los avances del proceso.Once de los identificados son pobladores de la comunidad de Culluchaca, denunciados como desaparecidos desde el 10 de agosto de 1984, cuando fueron detenidos por un grupo de ronderos y miembros de la Marina y trasladados a la base militar.Además, se identificó el cuerpo de Alejandro Gutiérrez Taype, poblador de Luricocha, quien fue detenido por efectivos policiales cuando participaba en un censo organizado por la autoridad policial.Fuente: Este video fue realizado por la web Enlace Nacional (enlacenacional.com/)'
-  Video_2:
-    title: 'Buscando a Jaime Ayala - Cuarto Poder / 15-03-2009'
-    embed: '<iframe src="http://player.vimeo.com/video/5997816" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/5997816">Buscando a Jaime Ayala - Cuarto Poder / 15-03-2009</a> from <a href="http://vimeo.com/adehrperu">ADEHR</a> on <a href="http://vimeo.com">Vimeo</a>.</p>'
-    description: 'El domingo 15 de marzo de 2009 el programa dominical Cuarto Poder, en Perú, difundió un reportaje sobre la exhumación de la fosa hallada en Huanta, en la que se encontrarían los restos del periodista del diario La República, Jaime Ayala Sulca, y otras 49 personas asesinadas entre julio y agosto de 1984 por agentes de la Marina de Guerra.En el informe, tambien se muestra cómo era la realidad en dicha provincia ayacuchana durante la violencia interna que azotó al Perú. El hijo y la esposa del periodista desaparecido narran el largo camino de búsqueda del cuerpo de Jaime Ayala por cerca de 25 años y cómo hasta ahora no se hace justicia pese a todas las evidencias.Asimismo, se muestra un testimonio de un poblador que cuenta cómo fue torturado en el Estadio Municipal de Huanta, que en aquellos años funcionaba como la base militar de la Marina de Guerra. Del mismo modo, se muestra a los comuneros de Culluchaca, que luego de 25 años de haber perdido a 43 de sus integrantes a manos de efectivos militares, aún viven en medio de la extrema pobreza, olvidados por todos.'    
+#Company:
+#  Company_1:
+#    description: "<p>empty</p>"
+#    history: "<p>empty</p>"
+#    vision: '<p>empty</p>'
+#    mission: '<p>empty</p>'
+#    name: ADEHR
+#    active: 1
+#    created_at: '2011-05-21 23:45:08'
+#    updated_at: '2011-05-21 23:45:08'
+#
+#Tag:
+#  Tag_1:
+#    name: noticia
+#  Tage_2:
+#    name: actualidad
+#  Tag_3:
+#    name: tecnología
+#  Tag_4:
+#    name: entretenimiento
+#    
+#Category:
+#  Category_1:
+#    name: noticia
+#  Category_2:
+#    name: actualidad
+#  Category_3:
+#    name: tecnología
+#  Category_4:
+#    name: entretenimiento    
+#    
+#    
+#Menu:
+#  Menu_1:
+#    name: 'menu superior'
+#    root_id: 1
+#    active: '1'  
+#    children:
+#      Menu_2:
+#        name: 'nosotros'
+#        active: '1'        
+#  Menu_3:
+#    name: 'menu inferior'
+#    root_id: 2
+#    active: '1'    
+#    children:
+#      Menu_4:
+#        name: 'bienvenidos'
+#        active: '1'        
+#        
+#Video:
+#  Video_1:
+#    title: 'Identifican a 12 de los 37 restos exhumados en Huanta - Abril 2010'
+#    embed: '<iframe src="http://player.vimeo.com/video/12293099" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/12293099">Identifican a 12 de los 37 restos exhumados en Huanta - Abril 2010</a> from <a href="http://vimeo.com/adehrperu">ADEHR</a> on <a href="http://vimeo.com">Vimeo</a>.</p>'
+#    description: 'Mediante irrefutables pruebas de ADN fueron identificados los cadáveres de doce personas denunciadas como desaparecidas tras su detención en agosto de 1984 por ronderos, policías y efectivos de la Marina de Huanta.Así lo informó el jueves 03 de junio de 2010 la Asociación para el Desarrollo Humano Runamasinchiqpaq (ADEHR) en el centro poblado de culluchaca, en la provincia ayacuchana de Huanta, al que acudió para reunirse con los comuneros e informarles sobre los avances del proceso.Once de los identificados son pobladores de la comunidad de Culluchaca, denunciados como desaparecidos desde el 10 de agosto de 1984, cuando fueron detenidos por un grupo de ronderos y miembros de la Marina y trasladados a la base militar.Además, se identificó el cuerpo de Alejandro Gutiérrez Taype, poblador de Luricocha, quien fue detenido por efectivos policiales cuando participaba en un censo organizado por la autoridad policial.Fuente: Este video fue realizado por la web Enlace Nacional (enlacenacional.com/)'
+#  Video_2:
+#    title: 'Buscando a Jaime Ayala - Cuarto Poder / 15-03-2009'
+#    embed: '<iframe src="http://player.vimeo.com/video/5997816" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/5997816">Buscando a Jaime Ayala - Cuarto Poder / 15-03-2009</a> from <a href="http://vimeo.com/adehrperu">ADEHR</a> on <a href="http://vimeo.com">Vimeo</a>.</p>'
+#    description: 'El domingo 15 de marzo de 2009 el programa dominical Cuarto Poder, en Perú, difundió un reportaje sobre la exhumación de la fosa hallada en Huanta, en la que se encontrarían los restos del periodista del diario La República, Jaime Ayala Sulca, y otras 49 personas asesinadas entre julio y agosto de 1984 por agentes de la Marina de Guerra.En el informe, tambien se muestra cómo era la realidad en dicha provincia ayacuchana durante la violencia interna que azotó al Perú. El hijo y la esposa del periodista desaparecido narran el largo camino de búsqueda del cuerpo de Jaime Ayala por cerca de 25 años y cómo hasta ahora no se hace justicia pese a todas las evidencias.Asimismo, se muestra un testimonio de un poblador que cuenta cómo fue torturado en el Estadio Municipal de Huanta, que en aquellos años funcionaba como la base militar de la Marina de Guerra. Del mismo modo, se muestra a los comuneros de Culluchaca, que luego de 25 años de haber perdido a 43 de sus integrantes a manos de efectivos militares, aún viven en medio de la extrema pobreza, olvidados por todos.'    

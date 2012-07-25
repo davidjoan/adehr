@@ -92,5 +92,16 @@ class PostTable extends DoctrineTable
          ->limit($limit);
     
     return $q->execute();
-  }     
+  }
+  
+  public function getQueryForTenPrincipalPosts()
+  {
+    $q = $this->createAliasQuery()
+         ->leftJoin('p.Categories c')
+         ->where('p.status = ?', self::STATUS_PUBLISHED)
+         ->orderBy('p.rank ASC')
+         ->limit(10);
+         
+    return $q->execute();
+  }  
 }

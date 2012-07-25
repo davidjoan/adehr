@@ -28,7 +28,7 @@ class PhotoTable extends DoctrineTable
   }    
   
   
-    public function getNewRank()
+  public function getNewRank()
   {
   	 $q = $this->createQuery('a')
   	           ->addSelect('MAX(rank)');
@@ -44,5 +44,15 @@ class PhotoTable extends DoctrineTable
          ->limit($limit);
     
     return $q->execute();
-  }    
+  }
+  
+  public function getPhotoGallery()
+  {
+    $q = $this->createAliasQuery()
+         ->where('p.active = 1')
+         ->orderBy('p.rank ASC')
+         ->limit(20);
+         
+    return $q->execute();
+  }  
 }

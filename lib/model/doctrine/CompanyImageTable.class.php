@@ -42,4 +42,11 @@ const
   {
     return sfConfig::get('app_company_image_images_path');
   }    
+  
+  public function getBanners()
+  {
+    $q = $this->createAliasQuery('c')->where('c.active = 1');
+    
+    return $q->execute();
+  }   
 }    

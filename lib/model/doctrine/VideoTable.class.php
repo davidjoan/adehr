@@ -35,4 +35,14 @@ class VideoTable extends DoctrineTable
     
     return $q->execute();
   }  
+  
+  public function getVideoGallery()
+  {
+    $q = $this->createAliasQuery()
+         ->where('v.active = 1')
+         ->orderBy('v.rank ASC')
+         ->limit(20);
+         
+    return $q->execute();
+  }    
 }

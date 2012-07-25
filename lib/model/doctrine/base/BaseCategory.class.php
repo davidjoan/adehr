@@ -7,6 +7,7 @@
  * 
  * @property integer $id
  * @property string $name
+ * @property integer $rank
  * @property string $active
  * @property Doctrine_Collection $Posts
  * @property Doctrine_Collection $Menus
@@ -14,12 +15,14 @@
  * 
  * @method integer             getId()           Returns the current record's "id" value
  * @method string              getName()         Returns the current record's "name" value
+ * @method integer             getRank()         Returns the current record's "rank" value
  * @method string              getActive()       Returns the current record's "active" value
  * @method Doctrine_Collection getPosts()        Returns the current record's "Posts" collection
  * @method Doctrine_Collection getMenus()        Returns the current record's "Menus" collection
  * @method Doctrine_Collection getPostCategory() Returns the current record's "PostCategory" collection
  * @method Category            setId()           Sets the current record's "id" value
  * @method Category            setName()         Sets the current record's "name" value
+ * @method Category            setRank()         Sets the current record's "rank" value
  * @method Category            setActive()       Sets the current record's "active" value
  * @method Category            setPosts()        Sets the current record's "Posts" collection
  * @method Category            setMenus()        Sets the current record's "Menus" collection
@@ -45,6 +48,12 @@ abstract class BaseCategory extends DoctrineRecord
              'type' => 'string',
              'length' => 100,
              'notnull' => true,
+             ));
+        $this->hasColumn('rank', 'integer', 5, array(
+             'type' => 'integer',
+             'length' => 5,
+             'notnull' => true,
+             'default' => 0,
              ));
         $this->hasColumn('active', 'string', 1, array(
              'type' => 'string',

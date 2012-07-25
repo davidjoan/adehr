@@ -17,6 +17,46 @@ class HomeActions extends ActionsProject
   */
   public function executeIndex(sfWebRequest $request)
   {
-  	Doctrine::getTable('Visit')->createAndSave($request->getPathInfoArray());
+    Doctrine::getTable('Visit')->createAndSave($request->getPathInfoArray());
+    
+    $this->posts = Doctrine::getTable('Post')->getQueryForTenPrincipalPosts();     
+    
+    $this->photos = Doctrine::getTable('Photo')->getPhotoGallery();
+    
+    $this->videos = Doctrine::getTable('Video')->getVideoGallery();
+    
+    $this->sections = Doctrine::getTable('Category')->getSections();
   }
+  
+  public function executeShow(sfWebRequest $request)
+  {    
+   // $this->posts = Doctrine::getTable('Post')->findLastPosts(10);
+    
+    $this->post = Doctrine::getTable('Post')->findOneBySlug($request->getParameter('slug'));
+    $this->redirectUnless($this->post, '@homepage');
+    
+    $this->getResponse()->setTitle($this->post->getTitle().' | Articulo | Salud Online');
+    $this->getResponse()->addMeta('description', $this->post->getMetaDescription());
+    $this->getResponse()->addMeta('keywords'   , $this->post->getMetaKeywords());
+    
+    $this->commentForm = new CommentForm();
+    
+    if($this->getUser()->isAuthenticated() == true)
+    {
+      $this->commentForm->setDefaults(array('author_name' => $this->getUser()->getRealname(), 'author_email' => $this->getUser()->getUserEmail()));
+    }
+    
+    if ($request->isMethod('post'))
+    {
+      $params = $request->getParameter($this->commentForm->getName());
+      $params = array_merge($params, $this->getCommentParams($request));
+      $this->commentForm->bind($params);
+      
+      if ($this->commentForm->isValid())
+      {
+        $comment = $this->commentForm->save();
+        $this->redirect('@post_show?slug='.$this->post->getSlug());
+      }
+    }
+  }  
 }

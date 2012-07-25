@@ -6,6 +6,7 @@
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <?php include_javascripts() ?>
   </head>    
 <body onload="MM_preloadImages('/images/frontend/buscOver.jpg','/images/frontend/img_26over.png','/images/frontend/img_28over.png','/images/frontend/img_30Over.png','/images/frontend/img_32Over.png')">

@@ -14,11 +14,12 @@
                                 ),
         'columns'            => array
                                 (
-                                  array('2' , ''             , ''            , ''              ),
-                                  array('50', 'name'         , 'Nombre'        , 'getName'       ),
-                                  array('20', 'created_at'    , 'Fecha Creación' , 'getFormattedCreatedAt'       ),
-                                  array('6' , 'disable_image' , 'Activo'  , 'getDisableImage', 'center', false),
-                                  array('2' , ''             , ''            , 'checkbox'      ),
+                                  array('2' , ''              , ''               , ''                      ),
+                                  array('30', 'name'          , 'Nombre'         , 'getName'               ),
+                                  array('20', 'root_id'       , 'Menu'           , 'getRootIdString'             ),
+                                  array('20', 'created_at'    , 'Fecha Creación' , 'getFormattedCreatedAt' ),
+                                  array('6' , 'disable_image' , 'Activo'         , 'getDisableImage', 'center', false),
+                                  array('2' , ''              , ''               , 'checkbox'      ),
                                 )
       ))
 ?>

@@ -1,57 +1,57 @@
 <!-- header -->
 <div id="header">
     <div id="cmenu">
-        <div>Institucional: <a href="#">¿Quiénes Somos?</a> <a href="#">Misión y Visión</a> <a href="#">Objetivos Estratégicos</a> <a href="#">Programas</a> <a href="#">Memoria</a> <a href="#">Donaciones</a> <a href="#">Contáctenos</a> <a href="#">Mapa de Sitio</a></div>
+        <div>Institucional: 
+            <?php foreach($tree_institucional as $node): ?>
+            <a href="#"><?php echo $node['name']?></a>
+            <?php endforeach; ?>
+            <a href="#">Contáctenos</a> <a href="#">Mapa de Sitio</a></div>
     </div>
-    <div id="clogo"><img src="/images/frontend/logo.jpg" /><img src="/images/frontend/fdoImagenesSuperior.jpg" /></div>
+    <div id="clogo">
+        <a href="/"><img src="/images/frontend/logo.jpg" /></a>
+        <div id="placeholder" style="width: 785px; height: 91px;"></div>
+        <script>
+                 $('#placeholder').crossSlide({
+  sleep: 4,
+  fade: 1
+}, [
+    <?php foreach($banners as $key => $banner): ?>
+    <?php echo sprintf('{ src: "%s", dir: "%s" },',$banner->getFilePath('image'), ($key%2==0)?'up':'down');?>
+    <?php endforeach; ?>
+]);
+        </script>
+    </div>
     <div class="breaker"></div>
     <div id="csubmenu"> 
         <!-- Menu Naranja -->
         <div id="menu">
             <ul class="menu">
-                <li><a href="#" class="parent"><span>Inicio</span></a>
+                <li><a href="/" class="parent"><span>Inicio</span></a></li>
+                <?php foreach($tree_menu_principal as $node): ?>
+                <li><a href="/" class="parent"><span><?php echo $node['name']; ?></span></a>
+                <?php if($node->getNode()->hasChildren()): ?>    
                     <div>
                         <ul>
-                            <li><a href="#" class="parent"><span>Sub Item 1</span></a>
+                            <?php foreach($node->getNode()->getChildren() as $node): ?>
+                            <li><a href="#" <?php echo $node->getNode()->hasChildren()?'class="parent"':''; ?>><span><?php echo $node['name']; ?></span></a>
+                                <?php if($node->getNode()->hasChildren()): ?>    
+                                
                                 <div>
                                     <ul>
-                                        <li><a href="#" class="parent"><span>Sub Item 1.1</span></a>
-                                            <div>
-                                                <ul>
-                                                    <li><a href="#"><span>Sub Item 1.1.1</span></a></li>
-                                                    <li><a href="#"><span>Sub Item 1.1.2</span></a></li>
-                                                </ul>
-                                            </div>
+                                        <?php foreach($node->getNode()->getChildren() as $node): ?>
+                                        <li><a href="#" <?php echo $node->getNode()->hasChildren()?'class="parent"':''; ?>><span><?php echo $node['name']; ?></span></a>
                                         </li>
-                                        <li><a href="#"><span>Sub Item 1.2</span></a></li>
-                                        <li><a href="#"><span>Sub Item 1.3</span></a></li>
-                                        <li><a href="#"><span>Sub Item 1.4</span></a></li>
-                                        <li><a href="#"><span>Sub Item 1.5</span></a></li>
-                                        <li><a href="#"><span>Sub Item 1.6</span></a></li>
-                                        <li><a href="#" class="parent"><span>Sub Item 1.7</span></a>
-                                            <div>
-                                                <ul>
-                                                    <li><a href="#"><span>Sub Item 1.7.1</span></a></li>
-                                                    <li><a href="#"><span>Sub Item 1.7.2</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </div>
+                                <?php endif; ?>
                             </li>
-                            <li><a href="#"><span>Sub Item 2</span></a></li>
-                            <li><a href="#"><span>Sub Item 3</span></a></li>
+                           <?php endforeach; ?>
                         </ul>
-                    </div>
+                    </div>                    
+                <?php endif; ?>
                 </li>
-                <li><a href="#" class="parent"><span>Asesoría Legal</span></a></li>
-                <li><a href="#"><span>Notas de Prensa</span></a></li>
-                <li><a href="#"><span>Adehr en la Prensa</span></a></li>
-                <li><a href="#"><span>Noticias de DDHH</span></a></li>
-                <li><a href="#"><span>Multimedia</span></a></li>
-                <li><a href="#"><span>Especiales</span></a></li>
-                <li><a href="#"><span>Actividades/Campañas</span></a></li>
-                <li class="last"><a href="#"><span>Proyectos</span></a></li>
+                <?php endforeach; ?>  
             </ul>
         </div>
         <!-- /Menu Naranja --> 

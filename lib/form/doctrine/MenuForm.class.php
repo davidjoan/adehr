@@ -81,7 +81,7 @@ class MenuForm extends BaseMenuForm
       'id'          => '=',
       'post_id'     => 'combo',
       'category_id' => 'combo',
-      'name'        => 'name',
+      'name'        => 'text',
       'active'      => array('combo', array('choices' => array_keys($this->getTable()->getStatuss()))),
       'created_at'  => '-',
       'updated_at'  => '-',

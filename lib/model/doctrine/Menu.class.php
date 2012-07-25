@@ -18,7 +18,12 @@ class Menu extends BaseMenu
   
   public function getActiveStr()
   {  	
-  	$actives = $this->getTable()->getStatuss();
-  	return $actives[$this->getActive()];
-  }    
+    $actives = $this->getTable()->getStatuss();
+    return $actives[$this->getActive()];
+  }
+  
+  public function getRootIdString()
+  {
+      return ($this->getRootId() == 1)? 'Institucional':'Menu Principal';
+  }
 }
