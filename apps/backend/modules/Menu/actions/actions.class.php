@@ -10,4 +10,11 @@
  */
 class MenuActions extends ActionsCrud
 {
+
+ public function executeLoadPosts(sfWebRequest $request)
+  {
+    $posts = Doctrine::getTable('Post')->findByTitleLike($request->getParameter('term'), $request->getParameter('limit'));
+    $post = $posts->toCustomArray(array('id' => 'getId', 'title' => 'getTitle'));
+    return $this->renderJson($post);
+  }    
 }

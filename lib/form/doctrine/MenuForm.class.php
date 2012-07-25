@@ -34,6 +34,12 @@ class MenuForm extends BaseMenuForm
                                   'model'     => $this->getRelatedModelName('Post'),
                                   'add_empty' => '--- Seleccionar ---'
                                 )),
+       'post_id'             => new sfWidgetFormJQueryCompleter(array
+                                (
+                                  'url'             => $this->genUrl('@menu_load_post'),
+                                  'value_callback'  => array($this, 'getPostTitle'),
+                                  'config'          => sprintf('{ max: "20" }')
+                                ), array('size' => 50)),          
       'category_id'              => new sfWidgetFormDoctrineChoice(array
                                 (
                                   'model'     => $this->getRelatedModelName('Category'),
@@ -121,4 +127,17 @@ class MenuForm extends BaseMenuForm
       }
     }
   }  
+  
+   public function getPostTitle($post_id)
+  {
+    $title = '';
+    if ($post_id)
+    {
+      $post = Doctrine::getTable('Post')->findOneById($post_id);
+      
+      $title   = $post ? $post->getTitle() : '';
+    }
+    
+    return $title;
+  } 
 }

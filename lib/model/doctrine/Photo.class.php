@@ -21,6 +21,7 @@ class Photo extends BasePhoto {
 
     public function save(Doctrine_Connection $conn = null) {
         $this->createThumbnail('path', $this->getFullMime());
+        $this->createThumbnail('path', $this->getFullMime(), 90, 90);
         if ($this->isNew()) {
             $this->setNewRank();
         }

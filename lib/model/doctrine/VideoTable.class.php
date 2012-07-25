@@ -26,4 +26,13 @@ class VideoTable extends DoctrineTable
   	 return $dato['MAX']+1;
   	 
   }     
+  
+  public function findByTitleLike($name, $limit = 20)
+  {
+    $q = $this->createAliasQuery('v')
+         ->where('LOWER(v.title) LIKE ?', '%'.Stringkit::strtolower($name).'%')
+         ->limit($limit);
+    
+    return $q->execute();
+  }  
 }

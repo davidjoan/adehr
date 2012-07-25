@@ -1,3 +1,14 @@
+post_load_photo:
+  url:             /post/load_photos
+  param:           { module: Post, action: loadPhotos, secure: false } 
+
+post_load_video:
+  url:             /post/load_videos
+  param:           { module: Post, action: loadVideos, secure: false } 
+
+menu_load_post:
+  url:             /menu/load_articulos
+  param:           { module: Menu, action: loadPosts, secure: false }
 
 ######################
 ########## Menu ######

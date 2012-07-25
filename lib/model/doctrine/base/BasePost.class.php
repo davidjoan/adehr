@@ -234,7 +234,7 @@ abstract class BasePost extends DoctrineRecord
 
         $this->hasMany('Video as Videos', array(
              'refClass' => 'PostVideo',
-             'local' => 'video_id',
+             'local' => 'post_id',
              'foreign' => 'video_id'));
 
         $this->hasMany('Tag as Tags', array(

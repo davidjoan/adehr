@@ -34,7 +34,15 @@ class PhotoTable extends DoctrineTable
   	           ->addSelect('MAX(rank)');
   	           
   	 $dato = $q->execute()->getFirst()->toArray();
-  	 return $dato['MAX']+1;
-  	 
+  	 return $dato['MAX']+1;	 
   } 
+  
+  public function findByTitleLike($name, $limit = 20)
+  {
+    $q = $this->createAliasQuery('p')
+         ->where('LOWER(p.title) LIKE ?', '%'.Stringkit::strtolower($name).'%')
+         ->limit($limit);
+    
+    return $q->execute();
+  }    
 }

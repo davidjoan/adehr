@@ -21,7 +21,9 @@ class PostForm extends BasePostForm
       'status'               => 'Estado',
       'image'                => 'Imagen',
       'categories_list'      => 'Categorías',
-      'tags_list'            => 'Tags'
+      'tags_list'            => 'Tags',
+      'videos_list'          => 'Videos',
+      'photos_list'          => 'Fotos',
     );
   }
   
@@ -72,6 +74,23 @@ class PostForm extends BasePostForm
                                   'expanded'         => true,
                                   'multiple'         => true,
                                   'renderer_options' => array('formatter' => array($this->widgetFormatter, 'radioFormatter'))
+                                )),   
+        
+      'videos_list'        => new sfWidgetFormJQueryCompleterDoubleList(array
+                                (
+                                 'selected'   => $this->getVideos(),
+                                 'search_url' => $this->genUrl('@post_load_video'),
+                                 'label_selected' => 'Seleccionados',
+                                 'label_autocompleter' => 'Buscar',
+                                 'search_config'          => sprintf('{ max: "30" }')
+                                )),
+      'photos_list'        => new sfWidgetFormJQueryCompleterDoubleList(array
+                                (
+                                 'selected'   => $this->getPhotos(),
+                                 'search_url' => $this->genUrl('@post_load_photo'),
+                                 'label_selected' => 'Seleccionados',
+                                 'label_autocompleter' => 'Buscar',
+                                 'search_config'          => sprintf('{ max: "30" }')
                                 )),        
     ));
     
@@ -100,7 +119,9 @@ class PostForm extends BasePostForm
       'created_at'             => '-',
       'updated_at'             => '-',
       'categories_list'        => 'list',
-      'tags_list'        => 'list',
+      'tags_list'              => 'list',
+      'videos_list'            => 'list',
+      'photos_list'            => 'list',
     );
   }
   
@@ -134,4 +155,18 @@ class PostForm extends BasePostForm
  
     return $geshi->parse_code();
   }
+  
+   public function getVideos()
+  {
+  	$videos  = $this->getObject()->getVideos();
+  	$videoss = $videos->toCustomArray(array('title' => 'getTitle'));
+  	return $videoss;
+  }
+
+   public function getPhotos()
+  {
+  	$photos  = $this->getObject()->getPhotos();
+  	$photoss = $photos->toCustomArray(array('title' => 'getTitle'));
+  	return $photoss;
+  }  
 }

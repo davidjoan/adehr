@@ -12,7 +12,7 @@ class HomeActions extends sfActions
   public function executeShow(sfWebRequest $request)
   {
 $username = 'adehrperu';
-$album    = '21AniversarioDelAsesinatoDelPe';
+$album    = '21AniversarioDelAsesinatoDelPeriodistaHugoBustiosSaavedra';
 
 $pic = new Picasa();
 

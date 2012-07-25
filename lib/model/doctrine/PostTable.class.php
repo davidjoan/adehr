@@ -84,4 +84,13 @@ class PostTable extends DoctrineTable
   	 return $dato['MAX']+1;
   	 
   }  
+  
+  public function findByTitleLike($name, $limit = 20)
+  {
+    $q = $this->createAliasQuery('p')
+         ->where('LOWER(p.title) LIKE ?', '%'.Stringkit::strtolower($name).'%')
+         ->limit($limit);
+    
+    return $q->execute();
+  }     
 }

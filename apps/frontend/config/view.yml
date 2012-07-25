@@ -1,0 +1,22 @@
+default:
+  http_metas:
+    content-type: text/html
+  metas:
+    title:         Bienvenidos a ADEHR
+    description:   '"ADEHR. Asociación para el Desarrollo Humano Runamasinchiqpaq. Organismo sin fines de lucro de Perú dedicado a la promoción y defensa de los derechos humanos."'
+    keywords:      adehr, peru, asociacion, desarrollo, humano, runamasinchiqpaq, violencia, derechos, humanos,victimas, familiares, deudos, jaime, ayala, sulca, masacre, accomarca, pucayacu, matero, casos,asesoria, legal, memoria, ddhh, matanza, desaparicion, tortura
+    language:      es
+    robots:        index, follow
+   
+  stylesheets:
+    - frontend/menu.css: { position: first }    
+    - frontend/style.css: { position: first }        
+
+  javascripts:
+    - frontend/jquery.js
+    - frontend/menu.js
+    - frontend/javascript.js
+    - frontend/jquery.jcarousel.min.js
+
+  has_layout:     true
+  layout:         layout

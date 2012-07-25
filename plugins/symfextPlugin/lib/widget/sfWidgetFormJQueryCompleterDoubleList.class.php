@@ -56,7 +56,7 @@ class sfWidgetFormJQueryCompleterDoubleList extends sfWidgetForm
     $this->addOption('label_selected'     , 'Selected');
     $this->addOption('label_autocompleter', 'Search');
     $this->addOption('associate'          , sprintf('<img src="%s/general/icons/next.png" alt="associate" />'      , sfConfig::get('sf_images_path')));
-    $this->addOption('disassociate'       , sprintf('<img src="%s/general/icons/delete.gif" alt="unassociate" />'  , sfConfig::get('sf_images_path')));
+    $this->addOption('disassociate'       , sprintf('<img src="%s/general/icons/delete.png" alt="unassociate" />'  , sfConfig::get('sf_images_path')));
     $this->addOption('template', 
       <<<EOF
         <div class="%class%">
@@ -64,7 +64,7 @@ class sfWidgetFormJQueryCompleterDoubleList extends sfWidgetForm
             <div class="autocompleter_list_label">%label_autocompleter%</div>
             %autocompleter%
           </div>
-          <div style="float: left; margin-top: 2em">
+          <div style="float: left;">
             <br/><br/>
             %associate%
           </div>
