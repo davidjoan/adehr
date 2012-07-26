@@ -122,20 +122,25 @@
         <!-- Notas fila --> 
         
         <?php foreach($sections as $section): ?>
+        <?php $post = $section->getLastPost(); ?>
         
+        <?php if($post): ?>
         <!-- Nota item-->
         <div class="notaPe">
             <div class="notasTit">
                 <div class="notasTxt"><?php echo $section->getName(); ?></div>
             </div>
             <div class="notaT">
-                <div class="notaFe">20<br /><span>Ene</span></div>
-                <a href="#">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit</a><br />
+                
+                <div class="notaFe"><?php echo date("d",strtotime($post->getCreatedAt())); ?><br /><span><?php echo date("M",strtotime($post->getCreatedAt())); ?></span></div>
+                <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
+                <br />
             </div>
-            <img src="/images/frontend/dot.gif" width="297" height="169" /><br />
-            <span>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit Lorem ipsum dolor sit amet, conse ctetur adipisicing elit</span> </div>
+            <?php if($post->getImage() <> ''):?><?php echo image_tag(PostTable::getInstance()->getImagePath().'/'.$post->getImage(), array('size' => '297x169'));?><?php endif; ?>
+            <br />
+            <span><?php echo simple_format_text(truncate_text($posts[8]->getExcerpt(),380)); ?></span> </div>
         <!-- Nota item--> 
-       
+       <?php endif; ?>
         <?php endforeach; ?>
         
         <!-- /Notas fila --> 

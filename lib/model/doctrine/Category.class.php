@@ -23,5 +23,10 @@ class Category extends BaseCategory
     public function setNewRank() {
         $rank = $this->getTable()->getNewRank();
         $this->setRank($rank);
-    }    
+    }
+    
+    public function getLastPost()
+    {
+        return $this->getPosts()->getLast();
+    }
 }

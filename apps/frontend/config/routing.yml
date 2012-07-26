@@ -1,3 +1,8 @@
+post_section:
+  url:             /seccion/:slug
+  param:           { module: Home, action: section }
+  requirements:    { slug: \w+ }
+
 post_show:
   url:             /articulo/:slug
   param:           { module: Home, action: show }
