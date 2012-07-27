@@ -1,4 +1,5 @@
-        <!-- Barra Derecha-->
+<?php use_helper('Text') ?>    
+<!-- Barra Derecha-->
         <div class="derecha"> 
           <!-- Buscador -->
           <div id="buscador">
@@ -34,10 +35,19 @@
               <div class="archMulT2">Multimedia</div>
             </div>
             <div class="archMulTot">
+                <?php foreach($videos as $key => $video): ?>
+                <div class="<?php echo ($key%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
+                        <a class="single_1"  href="#inline_<?php echo $key; ?>">
+                            <?php echo truncate_text($video->getTitle(), 37); ?>
+                        </a>
+                    </span><span class="archMulRight">Video</span>
+                  <div class="breaker"></div>
+                </div>
+                <?php endforeach; ?>                                
                 <?php foreach($photos as $key => $photo): ?>
                 <div class="<?php echo ($key%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <a id="single_1" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>" title="<?php echo $photo->getTitle(); ?>">
-                            <?php echo $photo->getTitle(); ?>
+                        <a class="single_2" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
+                            <?php echo truncate_text($photo->getTitle(),37); ?>
                         </a>
                     </span><span class="archMulRight">Foto</span>
                   <div class="breaker"></div>
@@ -80,14 +90,35 @@
         </div>
         <!-- /Barra Derecha--->
         
+        <?php foreach($videos as $key => $video): ?>
+        <div id="inline_<?php echo $key; ?>" style="display:none;width:500px;">
+            <?php echo $video->getEmbed(); ?>
+        </div>
+        <?php endforeach; ?>
+
+        
         <script>
     $(document).ready(function() {
-    $("#single_1").fancybox({
+    $(".single_1").fancybox({
           helpers: {
               title : {
                   type : 'float'
               }
           }
-      });    
+      });  
     });
+    
+$(document).ready(function() {
+	$(".single_2").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});    
     </script>

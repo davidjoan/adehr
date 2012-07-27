@@ -487,6 +487,17 @@ table {
 	font-size:12px;
 	margin-top:4px;
 }
+
+.archMulOn a, .archMulOff a {
+	border: 0 solid blue;
+    color: #3D3D3B;
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+
+
+
 .archMulOff {
 	background-color:#FFFFFF;
 	height:25px;
@@ -670,6 +681,11 @@ table {
 	padding:12px 0px 0px 10px;		
 }
 .notasTxt {
+	color:#FFFFFF;
+	font-size:24px;		
+}
+
+.notasTxt a{
 	color:#FFFFFF;
 	font-size:24px;		
 }

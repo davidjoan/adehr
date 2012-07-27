@@ -95,7 +95,7 @@
         <!-- Nota item-->
         <div class="notaPe">
             <div class="notasTit">
-                <div class="notasTxt"><?php echo $section->getName(); ?></div>
+                <div class="notasTxt"><?php echo link_to($section->getName(),'@post_section?slug='.$section->getSlug()); ?></div>
             </div>
             <div class="notaT">
                 
@@ -116,10 +116,3 @@
     <!-- /Notas cajas-->
     <div class="breaker"></div>
 </div>
-
-       <script type="text/javascript">
-            jQuery(document).ready(function() {
-                jQuery('#mycarousel').jcarousel({
-                    wrap: 'circular'
-                });
-        </script>
