@@ -3,7 +3,7 @@
     <div id="cmenu">
         <div>Institucional: 
             <?php foreach($tree_institucional as $node): ?>
-            <a href="#"><?php echo $node['name']?></a>
+            <?php include_partial('General/link', array('node' => $node)); ?>
             <?php endforeach; ?>
             <a href="#">Contáctenos</a> <a href="#">Mapa de Sitio</a></div>
     </div>
@@ -28,18 +28,18 @@
             <ul class="menu">
                 <li><a href="/" class="parent"><span>Inicio</span></a></li>
                 <?php foreach($tree_menu_principal as $node): ?>
-                <li><a href="/" class="parent"><span><?php echo $node['name']; ?></span></a>
+                <li><?php include_partial('General/link_orange', array('node' => $node)); ?>
                 <?php if($node->getNode()->hasChildren()): ?>    
                     <div>
                         <ul>
                             <?php foreach($node->getNode()->getChildren() as $node): ?>
-                            <li><a href="#" <?php echo $node->getNode()->hasChildren()?'class="parent"':''; ?>><span><?php echo $node['name']; ?></span></a>
+                            <li><?php include_partial('General/link_orange', array('node' => $node)); ?>
                                 <?php if($node->getNode()->hasChildren()): ?>    
                                 
                                 <div>
                                     <ul>
                                         <?php foreach($node->getNode()->getChildren() as $node): ?>
-                                        <li><a href="#" <?php echo $node->getNode()->hasChildren()?'class="parent"':''; ?>><span><?php echo $node['name']; ?></span></a>
+                                        <li><?php include_partial('General/link_orange', array('node' => $node)); ?>
                                         </li>
                                         <?php endforeach; ?>
                                     </ul>

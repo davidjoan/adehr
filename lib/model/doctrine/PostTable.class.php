@@ -104,4 +104,16 @@ class PostTable extends DoctrineTable
          
     return $q->execute();
   }  
+  
+  public function findByCategorySlug($slug)
+  {
+    $q = $this->createAliasQuery()
+         ->leftJoin('p.Categories c')
+         ->where('p.status = ?', self::STATUS_PUBLISHED)
+         ->andWhere('c.slug = ?', $slug)
+         ->orderBy('p.rank ASC')
+         ->limit(100);
+         
+    return $q->execute();
+  }  
 }

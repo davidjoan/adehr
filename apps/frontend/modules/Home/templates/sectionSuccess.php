@@ -1,21 +1,42 @@
 <?php use_helper('Date', 'Text') ?>
 
-        <!-- Contenido centro -->
-        <div class="centro">
+<div class="centro">
+    <div class="notaDetalle">
+        <div class="catTitulo"><a href="#"><b><?php echo $category->getName() ?></b></a></div>
+    </div>
+    <?php foreach ($posts as $key => $post): ?>
+        <?php if($key < 50): ?>
+        <!-- item -->
         <div class="notaDetalle">
-			<div class="breadcrumb"><a href="#">Notas de Prensa</a> - Caso Chilcahuaycco</div>
-            <div class="lineaNegra"></div>
+            <div class="breaker"></div>    
+            <h2><?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug()) ?></h2>
+            <div class="iconos">
+                <div class="izquierda">Escrito por <?php echo $post->getUserRealname(); ?>. Publicado: <?php echo $post->getFormattedDatetime(); ?></div><div class="derecha"><a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a>&nbsp;<a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a>&nbsp;<a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a></div>
+            </div>
+            <p><?php echo simple_format_text($post->getExcerpt()); ?></p>
             <div class="breaker"></div>
-            <h2><?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?></h2>
-            <p>
-            <?php if($post->getImage() <> ''):?><?php echo image_tag(PostTable::getInstance()->getImagePath().'/'.$post->getImage(), array('widht' => '635'));?><?php endif; ?>
-                </p>
-            <?php echo simple_format_text($post->getPostIndex()->getContent()) ?>
-          	 
-            <div class="fecha">Escrito por <?php echo $post->getUserRealname(); ?>, <?php echo $post->getFormattedDatetime(); ?></div>
-            <div class="breaker"></div>
-            <br /><br />
-            <div class="breaker"></div>
+            <br />
         </div>
+        <!-- item -->
+        <?php elseif($key == 50): ?>
+                <!-- item -->
+        <div class="notaDetalle">
+            <div class="breaker"></div>    
+            <h2><?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug()) ?></h2>
+            <div class="iconos">
+                <div class="izquierda">Escrito por <?php echo $post->getUserRealname(); ?>. Publicado: <?php echo $post->getFormattedDatetime(); ?></div><div class="derecha"><a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a>&nbsp;<a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a>&nbsp;<a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a></div>
+            </div>
+            <p><?php echo simple_format_text($post->getExcerpt()); ?></p>
+            <div class="breaker"></div>
+            <br />
         </div>
-        <!-- /Contenido centro--> 
+        <!-- item -->
+        <div class="masArticulos">
+        <b>M&Aacute;S ART&Iacute;CULOS:</b><br /><br />
+        </div>
+        <?php else: ?>
+           <?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug()) ?>
+        <?php endif; ?> 
+        
+    <?php endforeach; ?>
+</div>        

@@ -30,5 +30,13 @@ class TagTable extends DoctrineTable
   public function getStatuss()
   {
     return self::$status;
-  }     
+  }   
+  
+    public function getActiveTags()
+  {
+    $q = $this->createAliasQuery()
+         ->where('t.active = 1');
+         
+    return $q->execute();
+  }  
 }

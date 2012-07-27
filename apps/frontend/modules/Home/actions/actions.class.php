@@ -35,7 +35,7 @@ class HomeActions extends ActionsProject
     $this->post = Doctrine::getTable('Post')->findOneBySlug($request->getParameter('slug'));
     $this->redirectUnless($this->post, '@homepage');
     
-    $this->getResponse()->setTitle($this->post->getTitle().' | Articulo | Salud Online');
+    $this->getResponse()->setTitle($this->post->getTitle().' | Articulo | ADEHR');
     $this->getResponse()->addMeta('description', $this->post->getMetaDescription());
     $this->getResponse()->addMeta('keywords'   , $this->post->getMetaKeywords());
     
@@ -58,5 +58,11 @@ class HomeActions extends ActionsProject
         $this->redirect('@post_show?slug='.$this->post->getSlug());
       }
     }
-  }  
+  }
+  
+  public function executeSection(sfWebRequest $request)
+  {
+      $this->category = Doctrine::getTable('Category')->findOneBySlug($request->getParameter('slug'));
+      $this->posts = Doctrine::getTable('Post')->findByCategorySlug($request->getParameter('slug'));
+  }
 }

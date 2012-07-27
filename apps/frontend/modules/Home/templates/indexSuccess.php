@@ -80,40 +80,7 @@
     <div class="breaker"></div>
     
     
-    <!-- Galerias-->
-    <div class="galerias"> 
-        <!-- Galeria -->
-        <div class="galeria">
-            <div class="galTit">
-                <div class="galTxt">Videos</div>
-            </div>
-            <a href="#">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit</a>
-            <div class="galImg"> 
-                <img src="/images/frontend/dot.gif" width="292" height="130" />
-                <div class="galLeft"></div>
-                <div class="galRight"></div>
-                <div class="galControl"></div>
-            </div>
-        </div>
-        <!-- /Galeria --> 
-        <!-- Galeria -->
-        <div class="galeria">
-            <div class="galTit">
-                <div class="galTxt">Fotos</div>
-            </div>
-            <a href="#">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit</a>
-            <div class="galImg"> <img src="/images/frontend/dot.gif" width="292" height="130" />
-                <div class="galLeft"></div>
-                <div class="galRight"></div>
-                <div class="galControl"></div>
-            </div>
-            <div class="breaker"></div>
-        </div>
-        <!-- /Galeria --> 
-    </div>
-    
-    
-    <!-- /Galerias-->
+
     <div class="breaker"></div>
     <div class="lineaDot" style="margin:25px 15px 15px 15px;"></div>
     <div class="breaker"></div>          
@@ -138,7 +105,7 @@
             </div>
             <?php if($post->getImage() <> ''):?><?php echo image_tag(PostTable::getInstance()->getImagePath().'/'.$post->getImage(), array('size' => '297x169'));?><?php endif; ?>
             <br />
-            <span><?php echo simple_format_text(truncate_text($posts[8]->getExcerpt(),380)); ?></span> </div>
+            <span><?php echo simple_format_text(truncate_text($post->getExcerpt(),380)); ?></span> </div>
         <!-- Nota item--> 
        <?php endif; ?>
         <?php endforeach; ?>

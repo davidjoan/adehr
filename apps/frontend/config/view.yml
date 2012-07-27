@@ -11,12 +11,15 @@ default:
   stylesheets:
     - frontend/menu.css: { position: first }    
     - frontend/style.css: { position: first }        
+    - fancybox/jquery.fancybox.css: { position: first }
 
   javascripts:
     - frontend/menu.js
     - frontend/javascript.js
     - frontend/jquery.cross-slide.min.js
     - frontend/jquery.jcarousel.min.js
+    - fancybox/jquery.fancybox.pack.js
+    
 
   has_layout:     true
   layout:         layout

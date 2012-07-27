@@ -24,6 +24,12 @@ class GeneralComponents extends ComponentsProject
   
   public function executeBanner()
   {
-      
+    $this->tags = Doctrine::getTable('Tag')->getActiveTags();
+    
+    $this->posts = Doctrine::getTable('Post')->findLastPosts(30);
+    
+    $this->photos = Doctrine::getTable('Photo')->getPhotoGallery();
+    
+    $this->videos = Doctrine::getTable('Video')->getVideoGallery();
   }  
 }

@@ -850,3 +850,26 @@ table {
 	color:#de510a;
 	text-decoration:underline;
 }
+
+.fondoGaleria {
+	border:0px solid blue;
+	min-height:254px;
+	margin:15px auto 15px auto;
+	width:649px;
+	background-color:#9E9E9E;	
+}
+#copyR {
+	margin:200px auto 30px auto;
+	width:450px;
+	font-size:12px;
+	border:0px solid red;
+	font-weight:600;
+}
+#copyR a {
+	font-size:14px;
+	color:#FFFFFF;	
+}
+
+.inferior {
+	border:0px solid blue;	
+}
