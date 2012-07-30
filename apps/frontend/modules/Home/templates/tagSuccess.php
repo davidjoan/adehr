@@ -2,7 +2,7 @@
 
 <div class="centro">
     <div class="notaDetalle">
-        <div class="catTitulo"><a href="#"><b><?php echo $category->getName() ?></b></a></div>
+        <div class="catTitulo"><a href="#"><b>Articulos para el Tag "<?php echo $tag->getName() ?>"</b></a></div>
     </div>
     <?php foreach ($posts as $key => $post): ?>
         <?php if($key < 50): ?>

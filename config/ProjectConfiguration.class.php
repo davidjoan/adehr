@@ -31,7 +31,7 @@ class ProjectConfiguration extends sfProjectConfigurationExt
     
   //  $this->setConfigDirPathVariable('brand_images'         , sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.'brand_images'         );
     $this->setConfigDirPathVariable('company_image_images'         , sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.'company_images'         );
-    $this->setConfigDirPathVariable('post'         , sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.'post'         );
+    $this->setConfigDirPathVariable('post' , sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.'post' );
     $this->setConfigDirPathVariable('photo', sfConfig::get('sf_upload_dir').DIRECTORY_SEPARATOR.'photo');
      }
 }

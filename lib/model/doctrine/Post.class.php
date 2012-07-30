@@ -24,21 +24,33 @@ class Post extends BasePost {
         return $cant;
     }
 
+    public function generateImageFilename($file) {
+        $this->setSize(filesize($file->getTempName()));
+        $this->setFullMime($file->getType());
+
+        return Stringkit::fixFilename($file->getOriginalName()) . '_' . rand(11111, 99999) . $file->getOriginalExtension();
+    }
+
     public function save(Doctrine_Connection $conn = null) {
+        
+        $this->createThumbnail('image', $this->getFullMime(), 684, 315);
+        $this->createThumbnail('image', $this->getFullMime(), 128, 60);
+        $this->createThumbnail('image', $this->getFullMime(), 142, 90);
+        $this->createThumbnail('image', $this->getFullMime(), 297, 169);
+        
         if ($this->isNew() && sfContext::hasInstance()) {
             $this->setUserId(sfContext::getInstance()->getUser()->getUserId());
             $this->setDatetime(date('Y-m-d H:i:s'));
         }
-        
-        if($this->isNew())
-    {
-    	$this->setNewRank();
-    }
+
+        if ($this->isNew()) {
+            $this->setNewRank();
+        }
 
         if ($this->isColumnModified('content')) {
             $this->setExcerpt(substr(strip_tags($this->getContent()), 0, 1000) . '...');
         }
-
+        
         parent::save($conn);
     }
 
@@ -48,10 +60,6 @@ class Post extends BasePost {
 
     public function getLink() {
         return link_to($this->getTitle(), '@post_show?slug=' . $this->getSlug());
-    }
-
-    public function generateImageFilename($file) {
-        return Stringkit::fixFilename($file->getOriginalName()) . '_' . rand(11111, 99999) . $file->getOriginalExtension();
     }
 
     public function getCategoryName() {
@@ -75,20 +83,19 @@ class Post extends BasePost {
     public function getName() {
         return $this->getTitle();
     }
-    
-  public function setNewRank()
-  {
-  	$rank = $this->getTable()->getNewRank();
-  	$this->setRank($rank);
-  }  
-  
+
+    public function setNewRank() {
+        $rank = $this->getTable()->getNewRank();
+        $this->setRank($rank);
+    }
+
     public function getCategoryNameForList() {
         $result = "";
         foreach ($this->getCategories() as $category) {
             $result = $result . $category->getName() . ',';
         }
 
-        return substr($result,0,23)."...";
-    }  
+        return substr($result, 0, 23) . "...";
+    }
 
 }

@@ -2,31 +2,15 @@ Category:
   Category_1:
     name: noticia
     active: '1'
-    rank: 1
-    slug: noticia
-    created_at: '2012-07-25 18:33:51'
-    updated_at: '2012-07-25 18:33:51'
   Category_2:
     name: actualidad
     active: '1'
-    rank: 2
-    slug: actualidad
-    created_at: '2012-07-25 18:33:51'
-    updated_at: '2012-07-25 18:33:51'
   Category_3:
     name: tecnología
     active: '1'
-    rank: 3
-    slug: tecnologia
-    created_at: '2012-07-25 18:33:51'
-    updated_at: '2012-07-25 18:33:51'
   Category_4:
     name: entretenimiento
     active: '1'
-    rank: 4
-    slug: entretenimiento
-    created_at: '2012-07-25 18:33:51'
-    updated_at: '2012-07-25 18:33:51'
 Company:
   Company_1:
     name: ADEHR
@@ -37,9 +21,6 @@ Company:
     facebook: ''
     twitter: ''
     active: '1'
-    created_at: '2011-05-21 23:45:08'
-    updated_at: '2012-07-25 21:59:56'
-    slug: adehr
 CompanyImage:
   CompanyImage_1:
     Company: Company_1
@@ -66,7 +47,7 @@ Menu:
     rgt: '8'
     level: '0'
     slug: menu_superior
-  Menu_3:
+  Menu_2:
     name: 'menu inferior'
     active: '1'
     created_at: '2012-07-25 18:33:51'
@@ -76,7 +57,7 @@ Menu:
     rgt: '10'
     level: '0'
     slug: menu_inferior
-  Menu_5:
+  Menu_3:
     name: 'Quiénes Somos'
     active: '1'
     created_at: '2012-07-25 21:14:21'
@@ -86,7 +67,7 @@ Menu:
     rgt: '3'
     level: '1'
     slug: quienes_somos
-  Menu_6:
+  Menu_4:
     name: 'Misión y Visión'
     active: '1'
     created_at: '2012-07-25 21:15:20'
@@ -96,7 +77,7 @@ Menu:
     rgt: '5'
     level: '1'
     slug: mision_y_vision
-  Menu_7:
+  Menu_5:
     name: Programas
     active: '1'
     created_at: '2012-07-25 21:15:52'
@@ -106,7 +87,7 @@ Menu:
     rgt: '7'
     level: '1'
     slug: programas
-  Menu_8:
+  Menu_6:
     Category: Category_1
     name: 'Asesoría Legal'
     active: '1'
@@ -117,7 +98,7 @@ Menu:
     rgt: '9'
     level: '1'
     slug: asesoria_legal
-  Menu_9:
+  Menu_7:
     Category: Category_2
     name: 'Caso Huanta 1984'
     active: '1'
@@ -128,7 +109,7 @@ Menu:
     rgt: '8'
     level: '2'
     slug: caso_huanta_1984
-  Menu_10:
+  Menu_8:
     Category: Category_2
     name: 'El Caso'
     active: '1'
@@ -139,7 +120,7 @@ Menu:
     rgt: '5'
     level: '3'
     slug: el_caso
-  Menu_11:
+  Menu_9:
     name: 'Jaime Ayala Sulca'
     active: '1'
     created_at: '2012-07-25 21:55:33'
@@ -184,125 +165,134 @@ Post:
   Post_1:
     User: User_1
     title: 'Exhumaciones Accomarca - octubre 2008'
-    image: img_10_jpg_99826.jpg
+    image: img_10_jpg_97075.jpg
+    size: '194012'
+    full_mime: image/jpeg
     content: "<p style=\"text-align: justify;\">Los restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.</p>\r\n<p style=\"text-align: justify;\">Los restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.</p>\r\n<div id=\"_mcePaste\" class=\"mcePaste\" style=\"position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden; text-align: justify;\">\r\n<pre style=\"color: #000000; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; word-wrap: break-word; white-space: pre-wrap;\">Exhumaciones Accomarca - octubre 2008\r\n\r\nLos restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.</pre>\r\n</div>"
     excerpt: "Los restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.\r\nLos restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 20..."
     meta_description: demo
     meta_keywords: frmo
     datetime: '2012-07-25 18:35:11'
-    rank: '0'
     status: PU
     slug: exhumaciones_accomarca_octubre_2008
     created_at: '2012-07-25 18:35:12'
-    updated_at: '2012-07-25 22:54:40'
+    updated_at: '2012-07-30 18:02:46'
   Post_2:
     User: User_1
     title: 'Festival de la Memoria por las víctimas'
-    image: img_10_jpg_70803.jpg
+    image: img_10_jpg_89743.jpg
+    size: '194012'
+    full_mime: image/jpeg
     content: '<p>Ante un gran marco de huantinos, familiares de v&iacute;ctimas, autoridades locales, y organismos de derechos humanos se realiz&oacute; el domingo 02 de agosto de 2009 el &lsquo;Festival de la Memoria de las V&iacute;ctimas de la Violencia Pol&iacute;tica de Huanta (1980 &ndash; 2000)&rdquo;, organizada por la Asociaci&oacute;n Para el Desarrollo Humano Runamasinchiqpaq (ADEHR), la Asociaci&oacute;n FREPROAVIPH y la Municipalidad de Huanta, en el que deudos y poblaci&oacute;n en general pudieron observar fotograf&iacute;as sobre la violencia interna.<br /><br />Tambi&eacute;n, ADEHR junto a otras organizaciones como Paz y Esperanza, EPAF y FREPROAVIPH colocaron stands informativos en el que mostraron la labor que realizan, adem&aacute;s de entregar folletos, libros, entre otros trabajos que buscan evitar que hechos como los registrados hace unas d&eacute;cadas se vuelvan a repetir.<br /><br />Como plato de fondo estuvo la presentaci&oacute;n de la cantante folcl&oacute;rica Margot Palomino, quien ofreci&oacute; un recital en homenaje de los desaparecidos, en el que interpret&oacute; canciones como &ldquo;d&oacute;nde est&aacute;n&rdquo;, en el que se exige saber d&oacute;nde est&aacute;n los restos de las v&iacute;ctimas de la violencia como Jaime Ayala. Tambi&eacute;n cant&oacute; &ldquo;Lucia&rdquo;, &ldquo;No podr&aacute;n&rdquo;, entre otros. Pero el momento m&aacute;s importante fue cuando interpret&oacute; &ldquo;la flor de retama&rdquo;, que rob&oacute; los aplausos de los presentes.<br /><br />Del mismo modo, se rindi&oacute; homenaje al periodista Jaime Ayala Sulca ante la presencia de sus seres queridos. Tambi&eacute;n se mostr&oacute; el mural con su rostro en el Estadio Municipal de Huanta. Finalmente, se coloc&oacute; una placa recordatoria en la entrada principal del recinto deportivo en memoria de todas las v&iacute;ctimas.<br /><br />Objetivos principales del Festival de la Memoria:<br /><br />Rendir un homenaje a todas las v&iacute;ctimas del conflicto armado interno 1980-2000.<br />Dar a conocer la magnitud del conflicto y las secuelas de la violencia en la Provincia de Huanta.<br />Hacer un fuerte llamado de atenci&oacute;n a las autoridades nacionales sobre la impunidad en que se encuentran los casos de violaciones de derechos humanos perpetrados.<br />Poner &eacute;nfasis en la importancia de rescatar y mantener la memoria de lo ocurrido&nbsp; para que estos hechos atroces ocurridos no vuelvan a repetirse.<br />Incidir en la importancia de poner en marcha un plan de exhumaciones, identificaci&oacute;n y restituci&oacute;n de los&nbsp; cuerpos a los familiares de las v&iacute;ctimas como parte del proceso de verdad,&nbsp; justicia y reconciliaci&oacute;n.<br />Llamar la atenci&oacute;n del Estado para que se cumpla con las recomendaciones de la Comisi&oacute;n de la Verdad y Reconciliaci&oacute;n.<br /><br /></p>'
     excerpt: 'Ante un gran marco de huantinos, familiares de v&iacute;ctimas, autoridades locales, y organismos de derechos humanos se realiz&oacute; el domingo 02 de agosto de 2009 el &lsquo;Festival de la Memoria de las V&iacute;ctimas de la Violencia Pol&iacute;tica de Huanta (1980 &ndash; 2000)&rdquo;, organizada por la Asociaci&oacute;n Para el Desarrollo Humano Runamasinchiqpaq (ADEHR), la Asociaci&oacute;n FREPROAVIPH y la Municipalidad de Huanta, en el que deudos y poblaci&oacute;n en general pudieron observar fotograf&iacute;as sobre la violencia interna.Tambi&eacute;n, ADEHR junto a otras organizaciones como Paz y Esperanza, EPAF y FREPROAVIPH colocaron stands informativos en el que mostraron la labor que realizan, adem&aacute;s de entregar folletos, libros, entre otros trabajos que buscan evitar que hechos como los registrados hace unas d&eacute;cadas se vuelvan a repetir.Como plato de fondo estuvo la presentaci&oacute;n de la cantante folcl&oacute;rica Margot Palomino, quien ofreci&oacut...'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 22:37:24'
-    rank: '0'
     status: PU
     slug: festival_de_la_memoria_por_las_victimas
     created_at: '2012-07-25 22:37:24'
-    updated_at: '2012-07-25 23:10:18'
+    updated_at: '2012-07-30 18:03:11'
   Post_3:
     User: User_1
     title: 'Navidad en Orccohuasi'
     image: img_10_jpg_80284.jpg
+    size: '0'
+    full_mime: ''
     content: '<p>A una hora de Huamanga, capital del departamento de Ayacucho, se halla Orccohuasi, una peque&ntilde;a comunidad campesina donde se registraron casos de violaciones de derechos humanos en 1990.<br /><br />Orccohuasi est&aacute; compuesta por unas 30 familias pobres con unos 50 ni&ntilde;os y ni&ntilde;as. Ah&iacute; no existe presencia alguna del Estado. La &uacute;nica escuela primaria que existe en la comunidad es un aula improvisada con un solo profesor para todos los grados, en la que asisten no m&aacute;s de 19 alumnos.<br /><br />Para que los ni&ntilde;os de Orccohuasi puedan continuar sus estudios de secundaria tienen que trasladarse hasta el distrito de Ticcllas, que est&aacute; a m&aacute;s de dos horas de caminata. Asimismo, este peque&ntilde;o pueblo carece de los servicios b&aacute;sicos como agua y desag&uuml;e y su poblaci&oacute;n es proclive a las enfermedades.<br /><br />Es por ello que la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) decidi&oacute; emprender una peque&ntilde;a campa&ntilde;a de recolecci&oacute;n de prendas y art&iacute;culos de primera necesidad al ver la cruenta realidad de los pobladores de esa comunidad.<br /><br /><br />Gracias al apoyo desinteresado de personas particulares y de diversas organizaciones se pudo reunir una considerable cantidad de art&iacute;culos y prendas que fueron transportados desde Lima a Ayacucho.<br /><br /><br />El s&aacute;bado 16 de diciembre del 2006, parte del equipo de ADEHR se desplaz&oacute; a la comunidad de Orccohuasi para entregar todo lo recolectado a los pobladores de esta comunidad, con el fin de que al menos pasen una feliz Navidad.<br /><br /><br />Afortunadamente la acci&oacute;n fue positiva y se pudo, al menos, rescatar una sonrisa de los adultos y ni&ntilde;os de Orccohuasi, quienes recibieron prendas y zapatos en buen estado, adem&aacute;s de art&iacute;culos de primera necesidad. Los peque&ntilde;os adicionalmente recibieron juguetes donados, gesto muy importante para ellos, que pocas veces tienen la oportunidad de relajarse y jugar.<br /><br /><br />ADEHR agradece de coraz&oacute;n a todas las personas e instituciones que hicieron posible esta acci&oacute;n, pues con su colaboraci&oacute;n la poblaci&oacute;n de Orccohuasi pas&oacute; una &iexcl;Feliz Navidad! Y tuvo motivos para sonre&iacute;r y creer que a&uacute;n hay esperanzas para los que menos tienen.<br /><br /><br />ADEHR ofrece un agradecimiento especial a Gustavo Barrig, un joven periodista del diario La Rep&uacute;blica, quien nos brind&oacute; su ayuda de manera desinteresada, logrando que sus compa&ntilde;eros de trabajo y estudiantes de su universidad colaboren con la campa&ntilde;a. A todos ellos &iexcl;Muchas Gracias!<br /><br /></p>'
     excerpt: 'A una hora de Huamanga, capital del departamento de Ayacucho, se halla Orccohuasi, una peque&ntilde;a comunidad campesina donde se registraron casos de violaciones de derechos humanos en 1990.Orccohuasi est&aacute; compuesta por unas 30 familias pobres con unos 50 ni&ntilde;os y ni&ntilde;as. Ah&iacute; no existe presencia alguna del Estado. La &uacute;nica escuela primaria que existe en la comunidad es un aula improvisada con un solo profesor para todos los grados, en la que asisten no m&aacute;s de 19 alumnos.Para que los ni&ntilde;os de Orccohuasi puedan continuar sus estudios de secundaria tienen que trasladarse hasta el distrito de Ticcllas, que est&aacute; a m&aacute;s de dos horas de caminata. Asimismo, este peque&ntilde;o pueblo carece de los servicios b&aacute;sicos como agua y desag&uuml;e y su poblaci&oacute;n es proclive a las enfermedades.Es por ello que la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) decidi&oacute; emprender una peque&ntilde;a camp...'
     meta_description: 'demo 3'
     meta_keywords: demo
     datetime: '2012-07-25 22:38:28'
-    rank: '0'
     status: PU
     slug: navidad_en_orccohuasi
     created_at: '2012-07-25 22:38:28'
-    updated_at: '2012-07-25 23:11:06'
+    updated_at: '2012-07-30 17:43:36'
   Post_4:
     User: User_1
     title: 'Adehr en Acción: Enero 2007'
-    image: img_10_jpg_99397.jpg
+    image: img_10_jpg_89773.jpg
+    size: '194012'
+    full_mime: image/jpeg
     content: '<p style="text-align: justify;">Continuando con el ciclo de talleres Psicojur&iacute;dicos, Psicosociales y Vivenciales en distintos distritos del departamento de Ayacucho, la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) ha desarrollado una serie de actividades, siendo las m&aacute;s importantes las siguientes :<br /><br /><strong>Taller con Familiares V&iacute;ctimas de la Violencia Pol&iacute;tica</strong><br /><br />El 22 de enero del 2007, el equipo de ADEHR se traslad&oacute; hasta el distrito de Accomarca, en Ayacucho, donde se llev&oacute; a cabo el tercer taller con familiares v&iacute;ctimas de la violencia pol&iacute;tica tanto de las Fuerzas Armadas como de grupos subversivos, denominado &ldquo;Fortaleciendo las Capacidades Propositivas de los Familiares V&iacute;ctimas de la Violencia en Accomarca&rdquo;.<br /><br />El taller reuni&oacute; a m&aacute;s de 40 personas entre hombres y mujeres, quienes participaron en discusiones sobre propuestas relacionadas al Acceso a la Justicia y Lucha Contra la Impunidad, Memoria Individual, Colectiva y Reparaciones.<br /><br />Estos mismos temas fueron discutidos al d&iacute;a siguiente (23 de enero) entre los pobladores y&nbsp; el alcalde del distrito de Accomarca, profesor Alfredo G&oacute;mez Palomino, y dem&aacute;s autoridades del Gobierno Local.<br /><br />En la reuni&oacute;n tambien estuvo presente Rosa Peralta Balde&oacute;n, gobernadora del distrito de Accomarca, Mar&iacute;a Gamboa, responsable del Programa Juntos, la Jueza de Paz no Letrado (accesitaria) y miembros de ADEHR.<br /><br />Taller con Mujeres de Accomarca<br /><br />El 23 de enero tambien se desarroll&oacute; el "Primer Encuentro de Mujeres de Accomarca", evento en el que participaron m&aacute;s de 60 mujeres, pertenecientes a diferentes organizaciones de base as&iacute; como mujeres v&iacute;ctimas de la violencia pol&iacute;tica.<br /><br />Entre las participantes estuvieron las lideresas del Vaso de Leche, Programa Social Juntos, Regidora del Gobierno Local, la gobernadora del distrito de Accomarca,&nbsp; y la jueza de Paz accesitaria, entre otras autoridades.<br /><br />El encuentro fue facilitado por ADEHR y cont&oacute; con el apoyo de la enfermera del distrito de Accomarca, la se&ntilde;ora Odilia.<br /><br />En este encuentro las Mujeres de Accomarca analizaron la problem&aacute;tica principal del distrito, identificaron las demandas comunes y debatieron alternativas de soluci&oacute;n, propiciando propuestas que est&aacute;n siendo sistematizadas para su presentaci&oacute;n en una Asamblea Comunal con las autoridades del Gobierno Local.<br /><br />El encuentro ha constituido por primera vez en el Distrito de Accomarca la integraci&oacute;n de las mujeres de diversos grupos, asociaciones y programas sociales, ha servido adem&aacute;s como un espacio de reconocimiento e identidad colectiva de las mujeres accomarquinas.<br /><br /></p>'
     excerpt: 'Continuando con el ciclo de talleres Psicojur&iacute;dicos, Psicosociales y Vivenciales en distintos distritos del departamento de Ayacucho, la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) ha desarrollado una serie de actividades, siendo las m&aacute;s importantes las siguientes :Taller con Familiares V&iacute;ctimas de la Violencia Pol&iacute;ticaEl 22 de enero del 2007, el equipo de ADEHR se traslad&oacute; hasta el distrito de Accomarca, en Ayacucho, donde se llev&oacute; a cabo el tercer taller con familiares v&iacute;ctimas de la violencia pol&iacute;tica tanto de las Fuerzas Armadas como de grupos subversivos, denominado &ldquo;Fortaleciendo las Capacidades Propositivas de los Familiares V&iacute;ctimas de la Violencia en Accomarca&rdquo;.El taller reuni&oacute; a m&aacute;s de 40 personas entre hombres y mujeres, quienes participaron en discusiones sobre propuestas relacionadas al Acceso a la Justicia y Lucha Contra la Impunidad, Memoria Individual, Colec...'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 23:08:39'
-    rank: '4'
     status: PU
     slug: adehr_en_accion_enero_2007
     created_at: '2012-07-25 23:08:39'
-    updated_at: '2012-07-25 23:08:39'
+    updated_at: '2012-07-30 17:59:27'
   Post_5:
     User: User_1
     title: 'ADEHR en Museografía de la Memoria'
-    image: img_10_jpg_38235.jpg
+    image: callqui_7_jpg_75922.JPG
+    size: '112546'
+    full_mime: image/jpeg
     content: '<p>La Embajada de Francia en el Per&uacute; co-organiz&oacute; con la Comisi&oacute;n Presidencial de Alto Nivel un taller sobre Museograf&iacute;a de la Memoria, realizado los d&iacute;as 4 y 5 de noviembre de 2010 en la casa de la Defensor&iacute;a del Pueblo.<br /><br />En este primer encuentro, participar&oacute;n expertos de museos de la memoria de Brasil, de Chile, de Colombia, de Francia y tambien de representantes de los lugares de la memoria de Huancavelica, de Ayacucho y de Huanta asi como de representantes de asociaciones de victimas y de ONG de derechos Humanos, entre ellas la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR).<br /><br />Cabe resaltar que este taller se inaugur&oacute; de manera simb&oacute;lica el mismo d&iacute;a que se pus&oacute; la primera piedra del futuro lugar de la memoria de Lima.<br /><br />Al terminar las jornadas de trabajo, se llev&oacute; a cabo un cokt&eacute;l en la Residencia de Francia.<br /><br /></p>'
     excerpt: 'La Embajada de Francia en el Per&uacute; co-organiz&oacute; con la Comisi&oacute;n Presidencial de Alto Nivel un taller sobre Museograf&iacute;a de la Memoria, realizado los d&iacute;as 4 y 5 de noviembre de 2010 en la casa de la Defensor&iacute;a del Pueblo.En este primer encuentro, participar&oacute;n expertos de museos de la memoria de Brasil, de Chile, de Colombia, de Francia y tambien de representantes de los lugares de la memoria de Huancavelica, de Ayacucho y de Huanta asi como de representantes de asociaciones de victimas y de ONG de derechos Humanos, entre ellas la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR).Cabe resaltar que este taller se inaugur&oacute; de manera simb&oacute;lica el mismo d&iacute;a que se pus&oacute; la primera piedra del futuro lugar de la memoria de Lima.Al terminar las jornadas de trabajo, se llev&oacute; a cabo un cokt&eacute;l en la Residencia de Francia....'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 23:09:16'
-    rank: '5'
     status: PU
     slug: adehr_en_museografia_de_la_memoria
     created_at: '2012-07-25 23:09:16'
-    updated_at: '2012-07-25 23:09:16'
+    updated_at: '2012-07-30 17:48:04'
   Post_6:
     User: User_1
     title: 'Carmen Cecilia Gamboa Lévano'
-    image: img_10_jpg_91351.jpg
+    image: img_10_jpg_85560.jpg
+    size: '194012'
+    full_mime: image/jpeg
     content: '<p>Responsable del programa de Cultura de Paz y Derechos Humanos de Adehr.<br /><br />Es Bachiller en Psicolog&iacute;a, de la Universidad Ricardo Palma. Tambien sigui&oacute; estudios de Artes Pl&aacute;sticas y Artes Gr&aacute;ficas. Tiene experiencia en realizaci&oacute;n de actividades de Promoci&oacute;n, Asesor&iacute;a y Asistencia Psicosocial a poblaciones migrantes y zonas urbano marginales, as&iacute; como de poblaciones rurales.<br /><br />Adem&aacute;s, en la Elaboraci&oacute;n de Diagn&oacute;sticos Socio Econ&oacute;mico y participaci&oacute;n en Proyectos Psicosociales, as&iacute; como en investigaci&oacute;n de hechos de violaciones de Derechos Humanos, sistematizaci&oacute;n, an&aacute;lisis e informes en el marco de investigaciones de casos judicializables, por delitos de lesa humanidad.<br /><br />Tambien tiene experiencia en la conducci&oacute;n de talleres participativos tanto con ni&ntilde;os, j&oacute;venes y adultos.<br /><br />Realiz&oacute; trabajos de coordinaci&oacute;n a nivel nacional con instituciones estatales para la implementaci&oacute;n de las recomendaciones de la Comisi&oacute;n Interamericana de Derechos Humanos en materia de reparaciones integrales (Decreto Supremo N&ordm;&nbsp;&nbsp; 005-2002-JUS).<br /><br />Tiene experiencia en la asistencia a familiares de v&iacute;ctimas de violaciones de derechos humanos y desplazados por la violencia pol&iacute;tica. Tambien en la elaboraci&oacute;n de informes relacionado a los casos del Decreto Supremo N&ordm; 005-2002-JUS (Casos de la Comisi&oacute;n Interamericana de Derechos Humanos).<br /><br /><br /><br /></p>'
     excerpt: 'Responsable del programa de Cultura de Paz y Derechos Humanos de Adehr.Es Bachiller en Psicolog&iacute;a, de la Universidad Ricardo Palma. Tambien sigui&oacute; estudios de Artes Pl&aacute;sticas y Artes Gr&aacute;ficas. Tiene experiencia en realizaci&oacute;n de actividades de Promoci&oacute;n, Asesor&iacute;a y Asistencia Psicosocial a poblaciones migrantes y zonas urbano marginales, as&iacute; como de poblaciones rurales.Adem&aacute;s, en la Elaboraci&oacute;n de Diagn&oacute;sticos Socio Econ&oacute;mico y participaci&oacute;n en Proyectos Psicosociales, as&iacute; como en investigaci&oacute;n de hechos de violaciones de Derechos Humanos, sistematizaci&oacute;n, an&aacute;lisis e informes en el marco de investigaciones de casos judicializables, por delitos de lesa humanidad.Tambien tiene experiencia en la conducci&oacute;n de talleres participativos tanto con ni&ntilde;os, j&oacute;venes y adultos.Realiz&oacute; trabajos de coordinaci&oacute;n a nivel nacional con instituciones est...'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 23:28:47'
-    rank: '7'
     status: PU
     slug: carmen_cecilia_gamboa_levano
     created_at: '2012-07-25 23:28:47'
-    updated_at: '2012-07-25 23:34:58'
+    updated_at: '2012-07-30 18:00:30'
   Post_7:
     User: User_1
     title: 'Jassal Boris Ayala Pallqui'
-    image: img_10_jpg_88568.jpg
+    image: img_10_jpg_54774.jpg
+    size: '194012'
+    full_mime: image/jpeg
     content: '<p>Licenciado en Periodismo. es hijo del periodista del Diario La Rep&uacute;blica, Jaime Ayala Sulca, quien fuera desaparecido el 02 de agosto de 1984, luego de ingresar al estadio municipal de Huanta, en ese entonces base militar de la Marina de Guerra del Per&uacute;.<br /><br />Jaime ingres&oacute; a dicho recinto tras enterarse de que un grupo de militares hab&iacute;an ingresado a la fuerza al hogar de su se&ntilde;ora madre, agredi&eacute;ndola a ella y al hermano del hombre de prensa. Asimismo, estaba investigando el asesinato de seis evang&eacute;licos de Callqui, registrado el 01 de agosto de 1984.<br /><br />Su hijo, Boris Ayala, sigue el ejemplo de su padre y es Director del &Aacute;rea de Comunicaci&oacute;n de ADEHR. Del mismo modo, colabora con otras instituciones de derechos humanos y medios digitales.</p>'
     excerpt: 'Licenciado en Periodismo. es hijo del periodista del Diario La Rep&uacute;blica, Jaime Ayala Sulca, quien fuera desaparecido el 02 de agosto de 1984, luego de ingresar al estadio municipal de Huanta, en ese entonces base militar de la Marina de Guerra del Per&uacute;.Jaime ingres&oacute; a dicho recinto tras enterarse de que un grupo de militares hab&iacute;an ingresado a la fuerza al hogar de su se&ntilde;ora madre, agredi&eacute;ndola a ella y al hermano del hombre de prensa. Asimismo, estaba investigando el asesinato de seis evang&eacute;licos de Callqui, registrado el 01 de agosto de 1984.Su hijo, Boris Ayala, sigue el ejemplo de su padre y es Director del &Aacute;rea de Comunicaci&oacute;n de ADEHR. Del mismo modo, colabora con otras instituciones de derechos humanos y medios digitales....'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 23:32:19'
-    rank: '8'
     status: PU
     slug: jassal_boris_ayala_pallqui
     created_at: '2012-07-25 23:32:19'
-    updated_at: '2012-07-25 23:34:58'
+    updated_at: '2012-07-30 18:01:03'
   Post_8:
     User: User_1
     title: 'Karim Virginia Ninaquispe Gil'
-    image: img_10_jpg_46402.jpg
+    image: img_10_jpg_54880.jpg
+    size: '194012'
+    full_mime: image/jpeg
     content: '<p>Directora Ejecutiva y Responsable del programa "Justicia y Desarrollo Humano" de Adehr. <br /><br />Egresada en Derecho y Ciencia Pol&iacute;tica de la Universidad Nacional Mayor de San Marcos (UNMSM). Ha culminado estudios de Pos Grado en la Maestr&iacute;a en Ciencias Penales en la UNMSM; diplomada en Derechos Humanos y Procesos de Democratizaci&oacute;n por el Centro de Derechos Humanos de la Facultad de Derecho de la Universidad de Chile y el International Center for Transitional Justice (ICTJ). Actualmente cursa estudios de Pos Grado en la Maestr&iacute;a de Derecho Constitucional y Derechos Humanos en la UNMSM.<br /><br />Karim es abogada de profesi&oacute;n. Ha laborado en instituciones de derechos humanos, ha tenido a su cargo la investigaci&oacute;n y defensa de importantes casos de violaciones de derechos humanos del Conflicto Armado Interno Peruano; as&iacute; como casos de violaciones de derechos humanos con recomendaci&oacute;n de la Comisi&oacute;n Interamericana de Derechos Humanos. Entre los principales casos tenemos: Graves Violaciones a los Derechos Humanos en el Cuartel Los Cabitos de Ayacucho; Ejecuciones Extrajudiciales en Cayara y Accomarca; la Desaparici&oacute;n Forzada de Jaime Ayala Sulca,&nbsp; Albino Quino Sulca, Guadalupe Ccallocunto, Eladio Quispe Mendoza, entre otros casos.<br /><br /></p>'
     excerpt: 'Directora Ejecutiva y Responsable del programa "Justicia y Desarrollo Humano" de Adehr. Egresada en Derecho y Ciencia Pol&iacute;tica de la Universidad Nacional Mayor de San Marcos (UNMSM). Ha culminado estudios de Pos Grado en la Maestr&iacute;a en Ciencias Penales en la UNMSM; diplomada en Derechos Humanos y Procesos de Democratizaci&oacute;n por el Centro de Derechos Humanos de la Facultad de Derecho de la Universidad de Chile y el International Center for Transitional Justice (ICTJ). Actualmente cursa estudios de Pos Grado en la Maestr&iacute;a de Derecho Constitucional y Derechos Humanos en la UNMSM.Karim es abogada de profesi&oacute;n. Ha laborado en instituciones de derechos humanos, ha tenido a su cargo la investigaci&oacute;n y defensa de importantes casos de violaciones de derechos humanos del Conflicto Armado Interno Peruano; as&iacute; como casos de violaciones de derechos humanos con recomendaci&oacute;n de la Comisi&oacute;n Interamericana de Derechos Humanos. Entre los p...'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 23:34:00'
-    rank: '6'
     status: PU
     slug: karim_virginia_ninaquispe_gil
     created_at: '2012-07-25 23:34:00'
-    updated_at: '2012-07-25 23:34:58'
+    updated_at: '2012-07-30 17:59:59'
   Post_9:
     User: User_1
     title: 'Nora Aurora Quispe Ccallocunto'
     image: img_10_jpg_71128.jpg
+    size: '0'
+    full_mime: ''
     content: '<p>Responsable del Programa Fortalecimiento Institucional de Adehr<br /><br />Nora es hija de Eladio Quispe Mendoza y Guadalupe Ccallocunto Olano, ambos detenidos y desaparecidos por las Fuerzas Armadas en Ayacucho durante el Conflicto Armado Interno. Eladio Quispe fue detenido y desaparecido en 1983 en el Cuartel los Cabitos, mientras Guadalupe Ccallocunto fue detenida y desaparecida en 1990 por el Ejercito, como represalia a su incesante defensa por los detenidos-desaparecidos de Ayacucho.<br /><br />Desde muy joven, activa en diversos grupos y organizaciones de familiares v&iacute;ctimas de la violencia pol&iacute;tica en Ayacucho; desde su experiencia como dirigente, contribuye en el fortalecimiento de nuevas organizaciones de familiares y de derechos humanos a nivel nacional.<br /><br />No s&oacute;lo se caracteriza, por su activismo en el campo de derechos humanos, sino tambien por su incansable lucha contra la impunidad y la b&uacute;squeda de verdad y justicia de las poblaciones afectadas por la violencia pol&iacute;tica.</p>'
     excerpt: 'Responsable del Programa Fortalecimiento Institucional de AdehrNora es hija de Eladio Quispe Mendoza y Guadalupe Ccallocunto Olano, ambos detenidos y desaparecidos por las Fuerzas Armadas en Ayacucho durante el Conflicto Armado Interno. Eladio Quispe fue detenido y desaparecido en 1983 en el Cuartel los Cabitos, mientras Guadalupe Ccallocunto fue detenida y desaparecida en 1990 por el Ejercito, como represalia a su incesante defensa por los detenidos-desaparecidos de Ayacucho.Desde muy joven, activa en diversos grupos y organizaciones de familiares v&iacute;ctimas de la violencia pol&iacute;tica en Ayacucho; desde su experiencia como dirigente, contribuye en el fortalecimiento de nuevas organizaciones de familiares y de derechos humanos a nivel nacional.No s&oacute;lo se caracteriza, por su activismo en el campo de derechos humanos, sino tambien por su incansable lucha contra la impunidad y la b&uacute;squeda de verdad y justicia de las poblaciones afectadas por la violencia pol&iacute...'
     meta_description: demo
     meta_keywords: demo
     datetime: '2012-07-25 23:34:33'
-    rank: '9'
     status: PU
     slug: nora_aurora_quispe_ccallocunto
     created_at: '2012-07-25 23:34:33'
@@ -2226,3 +2216,115 @@ Visit:
     datetime: '2012-07-26 00:14:35'
     created_at: '2012-07-26 00:14:35'
     updated_at: '2012-07-26 00:14:35'
+  Visit_247:
+    remote_address: 127.0.0.1
+    remote_port: '54425'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:42:56'
+    created_at: '2012-07-30 17:42:56'
+    updated_at: '2012-07-30 17:42:56'
+  Visit_248:
+    remote_address: 127.0.0.1
+    remote_port: '54521'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:44:49'
+    created_at: '2012-07-30 17:44:49'
+    updated_at: '2012-07-30 17:44:49'
+  Visit_249:
+    remote_address: 127.0.0.1
+    remote_port: '54558'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:45:45'
+    created_at: '2012-07-30 17:45:45'
+    updated_at: '2012-07-30 17:45:45'
+  Visit_250:
+    remote_address: 127.0.0.1
+    remote_port: '54558'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:45:51'
+    created_at: '2012-07-30 17:45:51'
+    updated_at: '2012-07-30 17:45:51'
+  Visit_251:
+    remote_address: 127.0.0.1
+    remote_port: '54599'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:46:43'
+    created_at: '2012-07-30 17:46:43'
+    updated_at: '2012-07-30 17:46:43'
+  Visit_252:
+    remote_address: 127.0.0.1
+    remote_port: '54704'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:48:09'
+    created_at: '2012-07-30 17:48:09'
+    updated_at: '2012-07-30 17:48:09'
+  Visit_253:
+    remote_address: 127.0.0.1
+    remote_port: '54727'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:48:35'
+    created_at: '2012-07-30 17:48:35'
+    updated_at: '2012-07-30 17:48:35'
+  Visit_254:
+    remote_address: 127.0.0.1
+    remote_port: '54746'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:48:55'
+    created_at: '2012-07-30 17:48:55'
+    updated_at: '2012-07-30 17:48:55'
+  Visit_255:
+    remote_address: 127.0.0.1
+    remote_port: '55077'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:57:56'
+    created_at: '2012-07-30 17:57:56'
+    updated_at: '2012-07-30 17:57:56'
+  Visit_256:
+    remote_address: 127.0.0.1
+    remote_port: '55146'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 17:59:35'
+    created_at: '2012-07-30 17:59:35'
+    updated_at: '2012-07-30 17:59:35'
+  Visit_257:
+    remote_address: 127.0.0.1
+    remote_port: '55176'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 18:00:05'
+    created_at: '2012-07-30 18:00:05'
+    updated_at: '2012-07-30 18:00:05'
+  Visit_258:
+    remote_address: 127.0.0.1
+    remote_port: '55226'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 18:00:36'
+    created_at: '2012-07-30 18:00:36'
+    updated_at: '2012-07-30 18:00:36'
+  Visit_259:
+    remote_address: 127.0.0.1
+    remote_port: '55262'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 18:01:21'
+    created_at: '2012-07-30 18:01:21'
+    updated_at: '2012-07-30 18:01:21'
+  Visit_260:
+    remote_address: 127.0.0.1
+    remote_port: '55262'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 18:01:37'
+    created_at: '2012-07-30 18:01:37'
+    updated_at: '2012-07-30 18:01:37'
+  Visit_261:
+    remote_address: 127.0.0.1
+    remote_port: '55262'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 18:01:42'
+    created_at: '2012-07-30 18:01:42'
+    updated_at: '2012-07-30 18:01:42'
+  Visit_262:
+    remote_address: 127.0.0.1
+    remote_port: '55375'
+    http_user_agent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0'
+    datetime: '2012-07-30 18:03:14'
+    created_at: '2012-07-30 18:03:14'
+    updated_at: '2012-07-30 18:03:14'

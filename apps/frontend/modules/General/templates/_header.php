@@ -5,7 +5,9 @@
             <?php foreach($tree_institucional as $node): ?>
             <?php include_partial('General/link', array('node' => $node)); ?>
             <?php endforeach; ?>
-            <a href="#">Contáctenos</a> <a href="#">Mapa de Sitio</a></div>
+            <?php echo link_to('Contáctenos', '@contact'); ?>
+            <?php echo link_to('Mapa de Sitio', '@sitemap'); ?>
+        </div>
     </div>
     <div id="clogo">
         <a href="/"><img src="/images/frontend/logo.jpg" /></a>
@@ -29,7 +31,7 @@
                 <li><a href="/" class="parent"><span>Inicio</span></a></li>
                 <?php foreach($tree_menu_principal as $node): ?>
                 <li><?php include_partial('General/link_orange', array('node' => $node)); ?>
-                <?php if($node->getNode()->hasChildren()): ?>    
+                <?php if($node->getNode()->hasChildren()): ?>
                     <div>
                         <ul>
                             <?php foreach($node->getNode()->getChildren() as $node): ?>

@@ -109,6 +109,8 @@ class PostForm extends BasePostForm
       'user_id'                => '-',
       'title'                  => 'text',
       'image'                  => 'file',
+      'size'                   => '-',
+      'full_mime'              => '-',
       'content'                => '=',
       'meta_description'       => '=',
       'meta_keywords'          => '=',
@@ -123,6 +125,8 @@ class PostForm extends BasePostForm
       'videos_list'            => 'list',
       'photos_list'            => 'list',
     );
+    
+    $this->widgetSchema->setHelp('image' , 'Tamaño recomendado 680x310px' );
   }
   
   protected function updateTitleColumn($title)

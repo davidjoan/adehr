@@ -12,8 +12,10 @@ default:
     - frontend/menu.css: { position: first }    
     - frontend/style.css: { position: first }        
     - fancybox/jquery.fancybox.css: { position: first }
+    - general/jquery-ui-1.8.custom.css: { media: screen }
 
   javascripts:
+    - jquery/jquery-ui-1.8.min.js
     - frontend/menu.js
     - frontend/javascript.js
     - frontend/jquery.cross-slide.min.js

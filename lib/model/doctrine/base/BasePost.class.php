@@ -10,6 +10,8 @@
  * @property integer $picassa_id
  * @property string $title
  * @property string $image
+ * @property integer $size
+ * @property string $full_mime
  * @property string $content
  * @property string $excerpt
  * @property string $meta_description
@@ -36,6 +38,8 @@
  * @method integer             getPicassaId()        Returns the current record's "picassa_id" value
  * @method string              getTitle()            Returns the current record's "title" value
  * @method string              getImage()            Returns the current record's "image" value
+ * @method integer             getSize()             Returns the current record's "size" value
+ * @method string              getFullMime()         Returns the current record's "full_mime" value
  * @method string              getContent()          Returns the current record's "content" value
  * @method string              getExcerpt()          Returns the current record's "excerpt" value
  * @method string              getMetaDescription()  Returns the current record's "meta_description" value
@@ -61,6 +65,8 @@
  * @method Post                setPicassaId()        Sets the current record's "picassa_id" value
  * @method Post                setTitle()            Sets the current record's "title" value
  * @method Post                setImage()            Sets the current record's "image" value
+ * @method Post                setSize()             Sets the current record's "size" value
+ * @method Post                setFullMime()         Sets the current record's "full_mime" value
  * @method Post                setContent()          Sets the current record's "content" value
  * @method Post                setExcerpt()          Sets the current record's "excerpt" value
  * @method Post                setMetaDescription()  Sets the current record's "meta_description" value
@@ -116,6 +122,17 @@ abstract class BasePost extends DoctrineRecord
         $this->hasColumn('image', 'string', 200, array(
              'type' => 'string',
              'length' => 200,
+             'notnull' => true,
+             ));
+        $this->hasColumn('size', 'integer', 10, array(
+             'type' => 'integer',
+             'length' => 10,
+             'notnull' => true,
+             'default' => 0,
+             ));
+        $this->hasColumn('full_mime', 'string', 100, array(
+             'type' => 'string',
+             'length' => 100,
              'notnull' => true,
              ));
         $this->hasColumn('content', 'string', 20000, array(
@@ -279,7 +296,9 @@ abstract class BasePost extends DoctrineRecord
              ),
              ));
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $thumbnailable0 = new Doctrine_Template_Thumbnailable();
         $this->actAs($sluggableext0);
         $this->actAs($timestampable0);
+        $this->actAs($thumbnailable0);
     }
 }

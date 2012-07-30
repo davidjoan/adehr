@@ -63,7 +63,8 @@
             <div class="nubeTag">
               <?php foreach($tags as $tag): ?>
               <div class="nubeTagImg"></div>
-              <div class="nubeTagBg"><?php echo $tag->getName(); ?></div>
+              <div class="nubeTagBg">
+                  <?php echo link_to($tag->getName(),'@post_tag?slug='.$tag->getSlug()); ?></div>
               <div class="nubeTagF"></div>
               <?php endforeach; ?>
             </div>

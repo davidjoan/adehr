@@ -1,3 +1,31 @@
+#Sitemap
+sitemap:
+  url:             /sitemap
+  param:           { module: Home, action: sitemap }
+
+#Feed
+feed_last_posts:
+  url:             /feed
+  param:           { module: Feed, action: lastPosts }
+
+feed_category_last_posts:
+  url:             /categoria/:category_slug/feed
+  param:           { module: Feed, action: lastPosts }
+
+#Contactenos
+image:
+  url:             /imagen
+  param:           { module: Home, action: image }
+
+contact:
+  url:             /contactenos
+  param:           { module: Home, action: contact }
+
+post_tag:
+  url:             /tag/:slug
+  param:           { module: Home, action: tag }
+  requirements:    { slug: \w+ }
+
 post_section:
   url:             /seccion/:slug
   param:           { module: Home, action: section }

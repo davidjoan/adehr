@@ -65,7 +65,7 @@ class PostTable extends DoctrineTable
          
     return $q->execute();
   }
-  public function getPathDir()
+  public function getImageDir()
   {
     return sfConfig::get('app_post_dir');
   }
@@ -116,4 +116,18 @@ class PostTable extends DoctrineTable
          
     return $q->execute();
   }  
+  
+  public function findByTagSlug($slug)
+  {
+    $q = $this->createAliasQuery()
+         ->leftJoin('p.Tags t')
+         ->where('p.status = ?', self::STATUS_PUBLISHED)
+         ->andWhere('t.slug = ?', $slug)
+         ->orderBy('p.rank ASC')
+         ->limit(100);
+         
+    return $q->execute();
+  }
+  
+  
 }

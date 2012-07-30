@@ -10,6 +10,14 @@
     <?php include_javascripts() ?>
   </head>    
 <body onload="MM_preloadImages('/images/frontend/buscOver.jpg','/images/frontend/img_26over.png','/images/frontend/img_28over.png','/images/frontend/img_30Over.png','/images/frontend/img_32Over.png')">
+    <div id="fb-root"></div>
+<script>/*(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=298486193583518";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));*/</script>
 <div class="principal">
   <div class="superior">
     <div class="contenido"> 

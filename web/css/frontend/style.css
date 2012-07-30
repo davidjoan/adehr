@@ -253,6 +253,11 @@ table {
 	float:left;
 	border:0px solid red;
 }
+
+.centro p {
+    text-align:justify;
+}
+
 .derecha {
 	width:340px;
 	float:right;
@@ -279,6 +284,12 @@ table {
 	font-size:14px;
 	font-weight:100;
 	display:block;
+}
+
+.cdestacado img {
+    border: 3px solid #EBEBEB;
+    border-radius: 5px 5px 5px 5px;
+    margin: 8px;
 }
 .cbarra {
 	background-color:#9e9e9e;
@@ -775,7 +786,7 @@ table {
 }
 .notaDetalle {
 	font-size:12px;
-	text-align:justify;	
+	text-align:justify;
 }
 .notaDetalle span {
 	font-size:16px;
@@ -788,9 +799,13 @@ table {
 	margin:15px 0px 10px 30px;
 }
 .notaDetalle p img {
-	margin:0px 10px 10px 5px;
+	/*margin:0px 10px 10px 5px;*/
 	background-color:#CCC;
 	float:left;	
+        
+    border: 3px solid #EBEBEB;
+    border-radius: 5px 5px 5px 5px;
+    margin: 8px;      
 }
 .notaDetalle p {
 	margin:15px 0px 10px 30px;
@@ -888,4 +903,52 @@ table {
 
 .inferior {
 	border:0px solid blue;	
+}
+
+
+/*Contact Style*/
+
+#contacts-form {
+    clear: right;
+    overflow: hidden;
+    width: 100%;
+}
+#contacts-form fieldset {
+    border: medium none;
+    float: left;
+}
+#contacts-form .field {
+    clear: both;
+}
+#contacts-form label {
+    float: left;
+    font-weight: bold;
+    line-height: 18px;
+    padding-bottom: 6px;
+    width: 110px;
+}
+#contacts-form input {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #E5E5E5;
+    color: #616161;
+    float: left;
+    padding: 1px 0 1px 3px;
+    width: 205px;
+}
+#contacts-form input:invalid {
+    border-color: red;
+}
+#contacts-form textarea {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #E5E5E5;
+    color: #616161;
+    float: left;
+    height: 215px;
+    margin-bottom: 12px;
+    overflow: auto;
+    padding: 1px 0 1px 3px;
+    width: 450px;
+}
+#contacts-form div:last-child {
+    padding-left: 110px;
 }

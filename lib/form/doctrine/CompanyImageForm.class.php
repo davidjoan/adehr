@@ -71,5 +71,8 @@ class CompanyImageForm extends BaseCompanyImageForm
       'created_at'    => '-',
       'updated_at'    => '-'
     );
+  
+  $this->widgetSchema->setHelp('image' , 'Tamaño recomendado 785x91 px' );
+  
   }
 }
