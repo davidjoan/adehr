@@ -20,7 +20,7 @@ var sfWidgetFormJQueryCompleterDoubleList =
     
     $("#" + id + " option").each(function (key, object)
     {
-      $("#" + associated_div).append($("<div></div").html($(object).text()).addClass("option")
+      $("#" + associated_div).append($("<div></div>").html($(object).text()).addClass("option")
       .click
       (
         function ()
@@ -52,7 +52,7 @@ var sfWidgetFormJQueryCompleterDoubleList =
     var value = $("#list_" + id + "_search div.selected :input").val();
     if ($("#" + associated_div + " div :input[value=" + value + "]").length == 0 && value)
     {
-      $("#" + associated_div).append($("<div></div").html($("#list_" + id + "_search div.selected").html()).addClass("option")
+      $("#" + associated_div).append($("<div></div>").html($("#list_" + id + "_search div.selected").html()).addClass("option")
       .click
       (
         function ()
@@ -87,7 +87,6 @@ var sfWidgetFormJQueryCompleterDoubleList =
   submit: function(id)
   {
 		var associated_div = id + "_associated_div";
-    
     $("#" + id).empty();
     
     $("#" + associated_div + " div input").each(function (index)

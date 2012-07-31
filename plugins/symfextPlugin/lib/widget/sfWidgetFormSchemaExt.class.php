@@ -5,7 +5,7 @@
  *
  * @package    symfext
  * @subpackage widget
- * @author     David Joan Tataje Mendoza <new.skin007@gmail.com>
+ * @author     Jonathan Olger Nieto Lajo <jonathan_nieto@hotmail.com>
  */
 class sfWidgetFormSchemaExt extends sfWidgetFormSchema
 {
@@ -83,14 +83,13 @@ class sfWidgetFormSchemaExt extends sfWidgetFormSchema
     
     return $formFormat->formatErrorRow($errors).implode('', $rows);
   }
-  
   /**
    * Updates the errors.
    * 
    * Iterates through the errors and formats the messages depending
    * whether it is a normal widget or a embedded form.
    *
-   * @param array $errors An array of errors
+   * @param array  $errors     An array of errors
    *
    * @return array|sfValidatorErrorSchema A container with the errors
    */
@@ -113,7 +112,7 @@ class sfWidgetFormSchemaExt extends sfWidgetFormSchema
           if ($this[$name] instanceof sfWidgetFormSchema)
           {
             $label   = strip_tags($this->getFormFormatter()->generateLabelName($name)); // strips link_to from sfDynamicFormEmbedder
-            $message = sprintf("El formulario '%s' contiene algunos errores.", $label);
+            $message = sprintf("The '%s' form has some errors.", $label);
             $errorSchema->addError(new sfValidatorError(new sfValidatorPass(), $message), $name);
           }
           else // normal widgets
@@ -128,9 +127,8 @@ class sfWidgetFormSchemaExt extends sfWidgetFormSchema
       $errors = $errorSchema;
     }
     
-    return $errors;
+    return null;
   }
-  
   /**
    * Updates the fields.
    * 
@@ -161,7 +159,6 @@ class sfWidgetFormSchemaExt extends sfWidgetFormSchema
 
     return $field;
   }
-  
   /**
    * Generates a lazy form name.
    * 
@@ -178,7 +175,6 @@ class sfWidgetFormSchemaExt extends sfWidgetFormSchema
   {
     return '@@@'.$name.'@@@';
   }
-  
   /**
    * Generates a lazy form id.
    * 

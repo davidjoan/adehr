@@ -2,15 +2,13 @@
 
 /**
  * sfWidgetFormSchemaFormatterExtendedRow
- * 
- * Contains a row format for an extended row.
  *
  * @package    symfext
  * @subpackage widget
- * @author     David Joan Tataje Mendoza <new.skin007@gmail.com>
+ * @author     Jonathan Olger Nieto Lajo <jonathan_nieto@hotmail.com>
  */
 class sfWidgetFormSchemaFormatterExtendedRow extends sfWidgetFormSchemaFormatterExt
 {
   protected
-    $rowFormat = "<td class=\"label\">\n  <span %class%>%label%</span>\n</td>\n  <td class=\"field\">\n  %field%%help%%hidden_fields% \n</td>\n";
+    $rowFormat                 = "<td class=\"label\">\n  <span %class%>%label%</span>\n</td>\n  <td class=\"field\">\n  %field%%help%%hidden_fields% \n</td>\n";
 }

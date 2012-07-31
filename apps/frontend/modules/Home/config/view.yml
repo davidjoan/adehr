@@ -1,2 +1,5 @@
 sitemapSuccess:
   stylesheets: [sitemap/slickmap.css]
+showSuccess:  
+  stylesheets: [galleriffic/basic.css,galleriffic/galleriffic-5.css]
+  javascripts: [galleriffic/jquery.history.js,galleriffic/jquery.galleriffic.js,galleriffic/jquery.opacityrollover.js]

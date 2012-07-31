@@ -123,7 +123,7 @@ class PostForm extends BasePostForm
       'categories_list'        => 'list',
       'tags_list'              => 'list',
       'videos_list'            => 'list',
-      'photos_list'            => 'list',
+      'photos_list'            => 'list'
     );
     
     $this->widgetSchema->setHelp('image' , 'Tamaño recomendado 680x310px' );
@@ -171,6 +171,7 @@ class PostForm extends BasePostForm
   {
   	$photos  = $this->getObject()->getPhotos();
   	$photoss = $photos->toCustomArray(array('title' => 'getTitle'));
+        
   	return $photoss;
   }  
 }
