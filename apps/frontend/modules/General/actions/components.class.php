@@ -31,5 +31,7 @@ class GeneralComponents extends ComponentsProject
     $this->photos = Doctrine::getTable('Photo')->getPhotoGallery();
     
     $this->videos = Doctrine::getTable('Video')->getVideoGallery();
+    
+    $this->form = new SearchFrontendForm();
   }  
 }

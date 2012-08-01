@@ -6,7 +6,7 @@
             <div id="txtBuscar"><b>Buscar</b></div>
             <div id="cajaBuscar">
               <div class="cajaBuscarIn">
-                <input type="text" name="txtbuscar" id="txtbuscar" />
+                <?php echo $form['post_id']->render(); ?>
               </div>
               <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('imgBuscador','','/images/frontend/buscOver.jpg',1)"><img src="/images/frontend/img_14.jpg" alt="Buscar" name="imgBuscador" width="44" height="34" border="0" id="imgBuscador" /></a></div>
           </div>
@@ -37,7 +37,7 @@
             <div class="archMulTot">
                 <?php foreach($videos as $key => $video): ?>
                 <div class="<?php echo ($key%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <a class="single_1"  href="#inline_<?php echo $key; ?>">
+                        <a class="fancybox-media"  href="<?php echo trim($video->getDescription()); ?>">
                             <?php echo truncate_text($video->getTitle(), 37); ?>
                         </a>
                     </span><span class="archMulRight">Video</span>
@@ -46,7 +46,7 @@
                 <?php endforeach; ?>                                
                 <?php foreach($photos as $key => $photo): ?>
                 <div class="<?php echo ($key%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <a class="single_2" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
+                        <a class="fancybox-media" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
                             <?php echo truncate_text($photo->getTitle(),37); ?>
                         </a>
                     </span><span class="archMulRight">Foto</span>
@@ -89,37 +89,16 @@
           </div>
           <!-- /Redes--> 
         </div>
-        <!-- /Barra Derecha--->
-        
-        <?php foreach($videos as $key => $video): ?>
-        <div id="inline_<?php echo $key; ?>" style="display:none;width:500px;">
-            <?php echo $video->getEmbed(); ?>
-        </div>
-        <?php endforeach; ?>
-
-        
+        <!-- /Barra Derecha--->        
         <script>
-    $(document).ready(function() {
-    $(".single_1").fancybox({
-          helpers: {
-              title : {
-                  type : 'float'
-              }
-          }
-      });  
-    });
-    
+   
 $(document).ready(function() {
-	$(".single_2").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+	$(".fancybox-media").fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
 	});
 });    
     </script>

@@ -16,6 +16,7 @@ class PostActions extends ActionsCrud
   protected function complementList(sfWebRequest $request, DoctrineQuery $q)
   {
     Doctrine::getTable($this->modelClass)->updateQueryForList($q);
+    sfDynamicFormEmbedder::resetParams('menu');
   }
   
   public function executeLoadVideos(sfWebRequest $request)
@@ -30,5 +31,7 @@ class PostActions extends ActionsCrud
     $photos = Doctrine::getTable('Photo')->findByTitleLike($request->getParameter('term'), $request->getParameter('limit'));
     $result = $photos->toCustomArray(array('id' => 'getId', 'content' => 'getTitle'));
     return $this->renderJson($result);
-  }     
+  }  
+  
+ 
 }

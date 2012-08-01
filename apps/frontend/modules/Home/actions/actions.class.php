@@ -73,8 +73,9 @@ class HomeActions extends ActionsProject
   public function executeTag(sfWebRequest $request)
   {
       $this->tag = Doctrine::getTable('Tag')->findOneBySlug($request->getParameter('slug'));
-      $this->response->setTitle('ADEHR | Articulos para el Tag '.$this->tag->getName());
       $this->posts = Doctrine::getTable('Post')->findByTagSlug($request->getParameter('slug'));
+      
+      $this->response->setTitle('ADEHR | Articulos para el Tag '.$this->tag->getName());
   }  
   
   public function executeContact(sfWebRequest $request)
@@ -148,6 +149,8 @@ class HomeActions extends ActionsProject
   
   public function executeSitemap()
   {
+      $this->response->setTitle('ADEHR | Mapa del Sitio');
+      
       $institucional = Doctrine::getTable('Menu')->findOneById(1);
       $this->tree_institucional =  $institucional->getNode()->getChildren();
       

@@ -29,11 +29,11 @@ class MenuForm extends BaseMenuForm
     (
       'id'                   => new sfWidgetFormInputHidden(),
       'name'                 => new sfWidgetFormInputText(array(), array('size' => 60)),
-      'post_id'              => new sfWidgetFormDoctrineChoice(array
+    /*  'post_id'              => new sfWidgetFormDoctrineChoice(array
                                 (
                                   'model'     => $this->getRelatedModelName('Post'),
                                   'add_empty' => '--- Seleccionar ---'
-                                )),
+                                )),*/
        'post_id'             => new sfWidgetFormJQueryCompleter(array
                                 (
                                   'url'             => $this->genUrl('@menu_load_post'),

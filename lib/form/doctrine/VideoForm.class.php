@@ -16,7 +16,7 @@ class VideoForm extends BaseVideoForm
     (
       'title'                => 'Titulo',
       'embed'                => 'Código Embed',
-      'description'          => 'Descripción',
+      'description'          => 'Url del video',
       'path'                 => 'Documento',
       'active'               => 'Activo?',
     );
@@ -30,7 +30,7 @@ class VideoForm extends BaseVideoForm
       'active'      => new sfWidgetFormInputHidden(),
       'title'       => new sfWidgetFormInputText(array(), array('size' => 60)),
       'embed'       => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 5)),
-      'description' => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 5)),
+      'description' => new sfWidgetFormInputText(array(), array('size' => 60)),
     ));
     
     $this->setDefault('active', '1');
@@ -41,7 +41,7 @@ class VideoForm extends BaseVideoForm
       'id'                      => '=',
       'title'                   => 'text',
       'embed'                   => '=',
-      'description'             => 'text',
+      'description'             => 'url',
       'rank'                    => '-',
       'slug'                    => '-',
       'active'                  => 'pass',
@@ -53,6 +53,7 @@ class VideoForm extends BaseVideoForm
      
     );
     
+    $this->validatorSchema['description']->setOption('required', true);
     $this->validatorSchema['embed']->setOption('required', true);
   }
 }

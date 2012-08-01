@@ -1,3 +1,22 @@
+menu_load_post:
+  url:             /menu/load_articulos
+  param:           { module: Post, action: loadPosts }
+
+post_pdf:
+  url:             /articulo/pdf/:slug
+  param:           { module: Post, action: pdf }
+  requirements:    { slug: \w+ }
+  
+post_email:
+  url:             /articulo/email/:slug
+  param:           { module: Post, action: email }
+  requirements:    { slug: \w+ }  
+  
+post_print:
+  url:             /articulo/print/:slug
+  param:           { module: Post, action: print }
+  requirements:    { slug: \w+ }    
+
 #Sitemap
 sitemap:
   url:             /sitemap

@@ -61,9 +61,11 @@ class sfWidgetFormTextareaTinyMCE extends sfWidgetFormTextarea
 <script type="text/javascript">
   tinyMCE.init({
     mode:                              "exact",
+    skin :                             "o2k7",
+    skin_variant :                     "silver",
     elements:                          "%s",
     theme:                             "%s",
-    plugins :                          "paste,preelementfix",
+    plugins :                          "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
     %s
     %s
     theme_advanced_toolbar_location:   "top",

@@ -17,7 +17,8 @@ class ProjectConfiguration extends sfProjectConfigurationExt
              'symfextPlugin',
              'sfPicasaPlugin',
              'sfDoctrineNestedSetPlugin',
-             'sfImageTransformPlugin'
+             'sfImageTransformPlugin',
+             'sfFeed2Plugin'
            );
   }
   

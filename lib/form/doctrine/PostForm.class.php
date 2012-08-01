@@ -10,6 +10,9 @@
  */
 class PostForm extends BasePostForm
 {
+    
+  protected
+    $menuDynamicFormManager = null;    
   public function initialize()
   {
     $this->labels = array
@@ -37,7 +40,14 @@ class PostForm extends BasePostForm
                                 (
                                   'width'            => 550,
                                   'height'           => 350,
-                                  'config'           => 'theme_advanced_disable: "anchor,cleanup,help"',
+                                  'config'           => 'theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
+                                                         theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+                                                         theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+                                                         theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
+                                                         theme_advanced_toolbar_location : "top",
+                                                         theme_advanced_toolbar_align : "left",
+                                                         theme_advanced_statusbar_location : "bottom",
+                                                         theme_advanced_resizing : true',
                                 )),
       'image'                 => new sfWidgetFormInputFileEditable
                                 (
@@ -75,8 +85,25 @@ class PostForm extends BasePostForm
                                   'multiple'         => true,
                                   'renderer_options' => array('formatter' => array($this->widgetFormatter, 'radioFormatter'))
                                 )),   
+     'videos_list'      => new sfWidgetFormDoctrineChoice(array
+                                (
+                                  'model'            => $this->getRelatedModelName('Videos'),
+                                  'expanded'         => true,
+                                  'multiple'         => true,
+                                  'renderer_class'     => 'sfWidgetFormSelectDoubleList',
+                                  'renderer_options' => array('label_unassociated' => 'No Asociados','label_associated'   => 'Asociados')
+                                )),        
         
-      'videos_list'        => new sfWidgetFormJQueryCompleterDoubleList(array
+     'photos_list'      => new sfWidgetFormDoctrineChoice(array
+                                (
+                                  'model'            => $this->getRelatedModelName('Photos'),
+                                  'expanded'         => true,
+                                  'multiple'         => true,
+                                  'renderer_class'     => 'sfWidgetFormSelectDoubleList',
+                                  'renderer_options' => array('label_unassociated' => 'No Asociadas','label_associated'   => 'Asociadas')
+                                )),        
+        
+  /*    'videos_list'        => new sfWidgetFormJQueryCompleterDoubleList(array
                                 (
                                  'selected'   => $this->getVideos(),
                                  'search_url' => $this->genUrl('@post_load_video'),
@@ -91,7 +118,7 @@ class PostForm extends BasePostForm
                                  'label_selected' => 'Seleccionados',
                                  'label_autocompleter' => 'Buscar',
                                  'search_config'          => sprintf('{ max: "30" }')
-                                )),        
+                                )), */       
     ));
     
     $this->addValidators(array
@@ -127,6 +154,13 @@ class PostForm extends BasePostForm
     );
     
     $this->widgetSchema->setHelp('image' , 'Tamaño recomendado 680x310px' );
+     
+    $this->addMenusForm();
+  }
+  
+    public function addMenusForm()
+  {
+    $this->menuDynamicFormManager = new sfDynamicFormEmbedderManager('menu', $this->object->getMenus()->getRelation(), 'Menus', $this, null, new sfCallable(array($this->object, 'getMenus')));
   }
   
   protected function updateTitleColumn($title)
