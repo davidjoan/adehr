@@ -145,6 +145,7 @@ class PostForm extends BasePostForm
       'datetime'               => '-',
       'status'                 => array('combo', array('choices' => array_keys($this->getTable()->getStatuss()))),
       'slug'                   => '-',
+      'rank'                   => '-',
       'created_at'             => '-',
       'updated_at'             => '-',
       'categories_list'        => 'list',
@@ -155,7 +156,7 @@ class PostForm extends BasePostForm
     
     $this->widgetSchema->setHelp('image' , 'Tamaño recomendado 680x310px' );
      
-    $this->addMenusForm();
+   // $this->addMenusForm();
   }
   
     public function addMenusForm()

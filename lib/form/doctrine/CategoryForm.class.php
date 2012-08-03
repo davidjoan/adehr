@@ -16,6 +16,8 @@ class CategoryForm extends BaseCategoryForm
     (
       'name'                => 'Nombre',
       'active'                => 'Activo?',
+      'posts_list'          => 'Articulos'
+        
     );
   }  
   public function configure()
@@ -29,7 +31,15 @@ class CategoryForm extends BaseCategoryForm
                                   'choices'          => $this->getTable()->getStatuss(),
                                   'expanded'         => true,
                                   'renderer_options' => array('formatter' => array($this->widgetFormatter, 'radioFormatter'))
-                                ))      
+                                )),
+       'posts_list'      => new sfWidgetFormDoctrineChoice(array
+                                (
+                                  'model'            => $this->getRelatedModelName('Posts'),
+                                  'expanded'         => true,
+                                  'multiple'         => true,
+                                  'renderer_class'     => 'sfWidgetFormSelectDoubleList',
+                                  'renderer_options' => array('label_unassociated' => 'No Asociados','label_associated'   => 'Asociados')
+                                )),  
     ));  
 
     $this->types = array
@@ -40,7 +50,7 @@ class CategoryForm extends BaseCategoryForm
       'slug'                   => '-',
       'created_at'             => '-',
       'updated_at'             => '-',
-      'posts_list'             => '-'
+      'posts_list'             => 'list'
     ); 
   }
 }

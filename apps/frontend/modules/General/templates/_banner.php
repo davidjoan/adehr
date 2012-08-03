@@ -33,9 +33,12 @@
             </div>
           </div>
           <!-- /Ultimos Art--> 
+          <div class="breaker"></div>
           
           <!-- Archivos Multimedia-->
           <div class="archMul">
+              <h2>Lo más visto</h2>
+              
             <div class="archMulTit">
               <div class="archMulT1">Archivos</div>
               <div class="archMulT2">Multimedia</div>
@@ -63,6 +66,17 @@
                 </div>
                 <?php endforeach; ?>
             </div>
+            <div class="archMulTot">
+                <?php $counter = 0; ?>
+                <?php foreach($posts as $key => $post): ?>
+                <?php $counter = $counter + 1; ?>
+                <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
+                        <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
+                    </span><span class="archMulRight"><?php echo $key+1; ?></span>
+                  <div class="breaker"></div>
+                </div>
+                <?php endforeach; ?>
+            </div>              
             <div class="breaker"></div>
           </div>
           <!-- /Archivos Multimedia--> 
