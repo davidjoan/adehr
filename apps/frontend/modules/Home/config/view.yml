@@ -1,3 +1,6 @@
+indexSuccess:
+  javascripts: [jquery/jquery.jcarousel.min.js]
+  stylesheets: [skins/tango/skin.css]
 sitemapSuccess:
   stylesheets: [sitemap/slickmap.css]
 showSuccess:  

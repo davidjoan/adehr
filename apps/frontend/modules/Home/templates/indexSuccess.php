@@ -78,7 +78,7 @@
     </div>
     <div class="breaker"></div>
     
-    
+      <?php include_partial('Home/photos_videos', array('photos' => $photos, 'videos' => $videos)) ?>
 
     <div class="breaker"></div>
     <div class="lineaDot" style="margin:25px 15px 15px 15px;"></div>

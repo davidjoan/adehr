@@ -5,10 +5,16 @@
           <div id="buscador">
             <div id="txtBuscar"><b>Buscar</b></div>
             <div id="cajaBuscar">
+                <form id="form_search" action="<?php echo url_for('@post_search') ?>" method="post">
               <div class="cajaBuscarIn">
-                <?php echo $form['post_id']->render(); ?>
+                <?php echo $form['search']->render(); ?>
               </div>
-              <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('imgBuscador','','/images/frontend/buscOver.jpg',1)"><img src="/images/frontend/img_14.jpg" alt="Buscar" name="imgBuscador" width="44" height="34" border="0" id="imgBuscador" /></a></div>
+                    <a href="#"  onclick="javascript: document.getElementById('form_search').submit();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('imgBuscador','','/images/frontend/buscOver.jpg',1)">
+                  <img src="/images/frontend/img_14.jpg" alt="Buscar" name="imgBuscador" width="44" height="34" border="0" id="imgBuscador" />
+              </a>
+                    </form>
+              
+            </div>
           </div>
           <!-- /Buscador -->
           <div class="breaker"></div>
@@ -35,8 +41,10 @@
               <div class="archMulT2">Multimedia</div>
             </div>
             <div class="archMulTot">
+                <?php $counter = 0; ?>
                 <?php foreach($videos as $key => $video): ?>
-                <div class="<?php echo ($key%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
+                <?php $counter = $counter + 1; ?>
+                <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
                         <a class="fancybox-media"  href="<?php echo trim($video->getDescription()); ?>">
                             <?php echo truncate_text($video->getTitle(), 37); ?>
                         </a>
@@ -45,8 +53,9 @@
                 </div>
                 <?php endforeach; ?>                                
                 <?php foreach($photos as $key => $photo): ?>
-                <div class="<?php echo ($key%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <a class="fancybox-media" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
+                <?php $counter = $counter + 1; ?>
+                <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
+                        <a class="fancybox-photo" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
                             <?php echo truncate_text($photo->getTitle(),37); ?>
                         </a>
                     </span><span class="archMulRight">Foto</span>
@@ -94,6 +103,15 @@
    
 $(document).ready(function() {
 	$(".fancybox-media").fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+                type: 'html',
+		helpers : {
+			media : {}
+		}
+	});
+        
+        	$(".fancybox-photo").fancybox({
 		openEffect  : 'none',
 		closeEffect : 'none',
 		helpers : {

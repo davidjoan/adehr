@@ -97,7 +97,7 @@ class HomeActions extends ActionsProject
 		  ->setSubject($this->form->getValue('subject'))
 		  ->setBody($this->getPartial('send'), 'text/html');
  
-           //  $this->getMailer()->send($mensage); //enable in production
+             $this->getMailer()->send($mensage); //enable in production
 
              $this->getUser()->setFlash('notice', sfConfig::get('app_contact_form_notice'));
              $this->redirect('@contact');
@@ -157,4 +157,24 @@ class HomeActions extends ActionsProject
       $menu_principal = Doctrine::getTable('Menu')->findOneById(2);
       $this->tree_menu_principal =  $menu_principal->getNode()->getChildren();        
   }
+  
+  
+  public function executeSearch(sfWebRequest $request)
+  {
+      if($request->isMethod('post')):
+
+       $search = $request->getParameter('search');
+       $this->param = $search['search'];
+      
+       $this->posts = Doctrine::getTable('Post')->findByTitleLike($this->param, 100);
+       
+       $this->response->setTitle('ADEHR | Articulos encontrados para "'.$this->param.'"');
+  
+      else:
+          return $this->redirect('@homepage');
+      endif;
+     
+      
+      
+  }    
 }

@@ -112,12 +112,5 @@ class PostActions extends ActionsProject
     $slug    = $request->getParameter('slug');
     $this->post = Doctrine::getTable('Post')->findOneBySlug($slug);
     $this->forward404Unless($this->post);
-  } 
-  
-  public function executeLoadPosts(sfWebRequest $request)
-  {
-    $posts = Doctrine::getTable('Post')->findByTitleLike($request->getParameter('term'), $request->getParameter('limit'));
-    $post = $posts->toCustomArray(array('id' => 'getId', 'title' => 'getTitle'));
-    return $this->renderJson($post);
-  }    
+  }   
 }
