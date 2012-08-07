@@ -3,9 +3,6 @@
 <!-- Contenido centro -->
 <div class="centro">
     <div class="notaDetalle">
-        <div class="breadcrumb"><a href="#">Notas de Prensa</a> - Caso Chilcahuaycco</div>
-        <div class="lineaNegra"></div>
-        <div class="breaker"></div>
         <h2><?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug()) ?></h2>
         <div class="iconos">
             <div class="izquierda">Escrito por <?php echo $post->getUserRealname(); ?>. Publicado: <?php echo $post->getFormattedDatetime(); ?></div>
@@ -39,10 +36,6 @@
         <h2><?php echo $video->getTitle(); ?></h2>
         <br/>
         <p><?php echo $video->getEmbed(); ?></p>
-        <br/>
-        <p>
-        <?php echo $video->getDescription(); ?>
-        </p>
         <br/>
         <div class="breaker"></div>
         

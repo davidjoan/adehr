@@ -3,9 +3,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 audio, canvas, video {
 	display: inline-block;
-*display: inline;
-*zoom: 1;
+display: inline;
+zoom: 1;
 }
+
+a:active
+{
+outline: none;
+}
+
+a:focus
+{
+-moz-outline-style: none;
+}
+
 audio:not([controls]) {
 	display: none;
 	height: 0;
@@ -485,6 +496,13 @@ table {
 	color:#FFFFFF;
 	font-size:20px;
 }
+
+.archMulT1 a, .archMulT2 a {
+	float:left;
+	color:#FFFFFF;
+	font-size:20px;
+}
+
 .archMulT2 {
 	float:right;
 	margin-right:55px;
@@ -584,7 +602,7 @@ table {
 .redesImg {
 	text-align:center;
 	margin-top:15px;
-	margin-left:32px;
+	/*margin-left:32px;*/
 }
 .redesImgB {
 	float:left;
@@ -641,6 +659,7 @@ table {
 	height:130px;
 	margin-left:13px;
 	background-color:#CCC;
+        margin-top: 20px;
 }
 .galLeft {
 	background-image:url(/images/frontend/modelo_adehr-OK_56.png);

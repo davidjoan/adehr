@@ -21,11 +21,16 @@ class HomeActions extends ActionsProject
     
     $this->posts = Doctrine::getTable('Post')->getQueryForTenPrincipalPosts();     
     
-    $this->photos = Doctrine::getTable('Photo')->getPhotoGallery();
+    //$this->photos = Doctrine::getTable('Photo')->getPhotoGallery();
     
-    $this->videos = Doctrine::getTable('Video')->getVideoGallery();
+    //$this->videos = Doctrine::getTable('Video')->getVideoGallery();
     
     $this->sections = Doctrine::getTable('Category')->getSections();
+    
+    $this->post_with_videos = Doctrine::getTable('Post')->getPostOnlyWithVideos();
+    
+    $this->post_with_photos = Doctrine::getTable('Post')->getPostOnlyWithPhotos();
+    
   }
   
   public function executeShow(sfWebRequest $request)

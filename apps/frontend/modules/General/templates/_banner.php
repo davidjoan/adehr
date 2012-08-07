@@ -40,10 +40,21 @@
               <h2>Lo más visto</h2>
               
             <div class="archMulTit">
-              <div class="archMulT1">Archivos</div>
-              <div class="archMulT2">Multimedia</div>
+                <div class="archMulT1"><a class="tabs_banner active" href="#tab1" >Archivos</a></div>
+              <div class="archMulT2"><a class="tabs_banner " href="#tab2" >Multimedia</a></div>
             </div>
-            <div class="archMulTot">
+            <div id="tab1" class="archMulTot tabContents">
+                <?php $counter = 0; ?>
+                <?php foreach($old_posts as $key => $post): ?>
+                <?php $counter = $counter + 1; ?>
+                <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
+                        <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
+                    </span><span class="archMulRight"><?php echo $key+1; ?></span>
+                  <div class="breaker"></div>
+                </div>
+                <?php endforeach; ?>
+            </div>               
+            <div id="tab2" class="archMulTot tabContents">
                 <?php $counter = 0; ?>
                 <?php foreach($videos as $key => $video): ?>
                 <?php $counter = $counter + 1; ?>
@@ -65,18 +76,7 @@
                   <div class="breaker"></div>
                 </div>
                 <?php endforeach; ?>
-            </div>
-            <div class="archMulTot">
-                <?php $counter = 0; ?>
-                <?php foreach($posts as $key => $post): ?>
-                <?php $counter = $counter + 1; ?>
-                <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
-                    </span><span class="archMulRight"><?php echo $key+1; ?></span>
-                  <div class="breaker"></div>
-                </div>
-                <?php endforeach; ?>
-            </div>              
+            </div>             
             <div class="breaker"></div>
           </div>
           <!-- /Archivos Multimedia--> 
@@ -99,6 +99,8 @@
             <div class="redesTit"><span>Síguenos</span></div>
             <div class="breaker"></div>
             <div class="redesImg">
+                <div class="redesImgB"><a href="<?php echo url_for("@feed_last_posts");?>" target="BLANK" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('imgRss','','/images/frontend/rss.png',1)"><img src="/images/frontend/rss.png" alt="RSS" name="imgRss" width="51" height="50" border="0" id="imgrSS" /><br />
+                <span>RSS</span></a></div>
                 <div class="redesImgB"><a href="https://www.facebook.com/pages/ADEHR/111874458833632" target="BLANK" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('imgFace','','/images/frontend/img_26over.png',1)"><img src="/images/frontend/img_26.png" alt="FaceBook" name="imgFace" width="53" height="51" border="0" id="imgFace" /><br />
                 <span>Facebook</span></a></div>
               <div class="redesImgB"><a href="http://www.youtube.com" target="BLANK" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('imgYou','','/images/frontend/img_28over.png',1)"><img src="/images/frontend/img_28.png" alt="YouTube" name="imgYou" width="54" height="51" border="0" id="imgYou" /><br />
@@ -132,5 +134,20 @@ $(document).ready(function() {
 			media : {}
 		}
 	});
-});    
+
+
+		$(".tabContents").hide(); // Hide all tab conten divs by default
+		$(".tabContents:first").show(); // Show the first div of tab content by default
+		
+		$(".tabs_banner").click(function(){ //Fire the click event
+			
+			var activeTab = $(this).attr("href"); // Catch the click link
+			$(".tabs_banner").removeClass("active"); // Remove pre-highlighted link
+			$(this).addClass("active"); // set clicked link to highlight state
+			$(".tabContents").hide(); // hide currently visible tab content div
+			$(activeTab).fadeIn(); // show the target tab content div by matching clicked link.
+                        return false;
+		});
+});
+
     </script>

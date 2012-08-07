@@ -48,7 +48,7 @@
     <?php endforeach; ?>
         
         <div class="masArticulos">
-        <b>Su búsqueda dio <?php echo $cant; ?> resultados.</b><br /><br />
+        <b>Su búsqueda dio <?php echo $cant; ?> resultado<?php echo ($cant == 1)? '': 's'?>.</b><br /><br />
         </div>
 </div>
 <script type="text/javascript">

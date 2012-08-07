@@ -130,4 +130,53 @@ class PostTable extends DoctrineTable
   }
   
   
+  public function getPostOnlyWithVideos()
+  {
+      
+        $query = DoctrineQuery::create()
+             ->select('COUNT(pv.post_id)')
+             ->from('PostVideo pv')
+             ->where('pv.post_id = p.id');   
+            
+    $q = $this->createAliasQuery()
+         ->leftJoin('p.Categories c')
+         ->where('p.status = ?', self::STATUS_PUBLISHED)
+         ->andWhere('('.$query->getDql().') > 0')
+		 ->andWhere('p.image <> ?', '')
+         ->orderBy('p.datetime DESC')
+         ->limit(20);
+    
+         
+    return $q->execute();
+  }
+  
+  public function getPostOnlyWithPhotos()
+  {
+      
+    $query = DoctrineQuery::create()
+             ->select('COUNT(pp.post_id)')
+             ->from('PostPhoto pp')
+             ->where('pp.post_id = p.id');     
+            
+    $q = $this->createAliasQuery()
+         ->leftJoin('p.Categories c')
+         ->where('p.status = ?', self::STATUS_PUBLISHED)
+         ->andWhere('('.$query->getDql().') > 0')
+		 ->andWhere('p.image <> ?', '')
+         ->orderBy('p.datetime DESC')
+         ->limit(20);
+         
+    return $q->execute();
+  }  
+  
+  public function getOldPosts()
+  {   
+    $q = $this->createAliasQuery()
+         ->leftJoin('p.Categories c')
+         ->where('p.status = ?', self::STATUS_PUBLISHED)
+         ->orderBy('p.datetime ASC')
+         ->limit(20);
+         
+    return $q->execute();
+  }    
 }
