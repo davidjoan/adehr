@@ -48,7 +48,7 @@
                 <?php foreach($old_posts as $key => $post): ?>
                 <?php $counter = $counter + 1; ?>
                 <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
+                        <?php echo link_to(truncate_text($post->getTitle(),37), '@post_show?slug='.$post->getSlug()) ?>
                     </span><span class="archMulRight"><?php echo $key+1; ?></span>
                   <div class="breaker"></div>
                 </div>

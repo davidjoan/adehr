@@ -97,5 +97,21 @@ class Post extends BasePost {
 
         return substr($result, 0, 23) . "...";
     }
+    
+    public function getVideoName() {
+        $result = "<ul>";
+        foreach ($this->getVideos() as $video) {
+            $result = $result ."<li>".$video->getTitle() . '</li>';
+        }
+        return $result."</ul>";
+    }
+    
+    public function getPhotoName() {
+        $result = "<ul>";
+        foreach ($this->getPhotos() as $photo) {
+            $result = $result . "<li>".$photo->getTitle() . '</li>';
+        }
+        return $result."</ul>";
+    }    
 
 }

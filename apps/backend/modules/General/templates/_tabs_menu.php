@@ -3,16 +3,16 @@
     <td width="99%">
       <table class="submenu">
         <tr>
-          <?php include_partial('General/tab', array
+          <?php /*include_partial('General/tab', array
                 (
                   'title'       => 'Inicio', 
                   'uri'         => '@home',
                   'image'       => 'backend/menu/home.gif',
-                ))
+                ))*/
           ?>       
           <?php include_partial('General/tab', array
                 (
-                  'title'       => 'Nuestra Empresa', 
+                  'title'       => 'Info & Banner', 
                   'uri'         => '@company_list',
                   'image'       => 'backend/menu/marketing.gif',
                 ))

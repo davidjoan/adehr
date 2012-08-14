@@ -703,6 +703,11 @@ table {
 	margin-left:17px;
 	min-height:100px;		
 }
+
+.notaPe  span {
+	margin: 0;		
+}
+margin:0px 15px 10px 15px;
 .notasTit {
 	background-image:url(/images/frontend/fdoNar1.jpg);
 	background-repeat:no-repeat;
@@ -820,7 +825,7 @@ table {
 .notaDetalle p img {
 	/*margin:0px 10px 10px 5px;*/
 	background-color:#CCC;
-	float:left;	
+	/*float:left;*/	
         
     border: 3px solid #EBEBEB;
     border-radius: 5px 5px 5px 5px;

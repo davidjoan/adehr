@@ -18,10 +18,10 @@ class CompanyForm extends BaseCompanyForm
     $this->labels = array
     (
       'name'        => 'Nombre',
-      'description' => 'Descripci&oacute;n',
+     /* 'description' => 'Descripci&oacute;n',
       'history'     => 'Historia',
       'vision'      => 'Visi&oacute;n',
-      'mission'     => 'Misi&oacute;n',        
+      'mission'     => 'Misi&oacute;n',      */  
       'facebook'    => 'Cuenta Facebook',
       'twitter'     => 'Cuenta Twitter',
       'active'      => 'Activo',
@@ -33,7 +33,7 @@ class CompanyForm extends BaseCompanyForm
     (
       'id'                   => new sfWidgetFormInputHidden(),
       'name'                => new sfWidgetFormInputText(array(), array('size' => 60)),
-      'description'          => new sfWidgetFormTextareaTinyMCE(array
+    /*  'description'          => new sfWidgetFormTextareaTinyMCE(array
                                 (
                                   'width'            => 450,
                                   'height'           => 250,
@@ -56,7 +56,7 @@ class CompanyForm extends BaseCompanyForm
                                   'width'            => 450,
                                   'height'           => 250,
                                   'config'           => 'theme_advanced_disable: "anchor,cleanup,help"',
-                                )),            
+                                )),  */          
       'facebook'             => new sfWidgetFormInputText(array(), array('size' => 80)),
       'twitter'              => new sfWidgetFormInputText(array(), array('size' => 80)),
       'active'               => new sfWidgetFormChoice(array
@@ -74,10 +74,10 @@ class CompanyForm extends BaseCompanyForm
       'active'      => array('combo', array('choices' => array_keys($this->getTable()->getStatuss()))),
       'created_at'  => '-',
       'updated_at'  => '-',
-      'description' => '=',
-      'history'     => '=',
-      'vision'      => '=',
-      'mission'     => '=',
+      'description' => '-',
+      'history'     => '-',
+      'vision'      => '-',
+      'mission'     => '-',
       'created_by'  => '-',
       'updated_by'  => '-',
       'facebook'    => '=',
@@ -92,7 +92,7 @@ class CompanyForm extends BaseCompanyForm
   
     public function addCompanyImagesForm()
   {
-    $this->contactDynamicFormManager = new sfDynamicFormEmbedderManager('company_image', $this->object->getCompanyImages()->getRelation(), 'Imagenes', $this, null, new sfCallable(array($this->object, 'getCompanyImages')));
+    $this->contactDynamicFormManager = new sfDynamicFormEmbedderManager('company_image', $this->object->getCompanyImages()->getRelation(), 'Imagenes Banner Superior', $this, null, new sfCallable(array($this->object, 'getCompanyImages')));
   }
   
 }

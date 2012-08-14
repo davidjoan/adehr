@@ -21,7 +21,7 @@ class LogActions extends ActionsProject
         $user = Doctrine::getTable('User')->findOneByLowerCaseUsername($this->form->getValue('username'));
         $this->getUser()->login($user);
         
-        return $this->redirect('@home');
+        return $this->redirect('@post_list');
       }
     }
   }

@@ -29,4 +29,13 @@ class Category extends BaseCategory
     {
         return $this->getPosts()->getLast();
     }
+    
+    public function getPostName()
+    {
+        $result = "<ul>";
+        foreach ($this->getPosts() as $post) {
+            $result = $result . "<li>".$post->getTitle() . '</li>';
+        }
+        return $result."</ul>";        
+    }
 }

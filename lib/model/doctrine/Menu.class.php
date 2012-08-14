@@ -26,4 +26,19 @@ class Menu extends BaseMenu
   {
       return ($this->getRootId() == 1)? 'Institucional':'Menu Principal';
   }
+  
+  public function getMenuName()
+  {
+      $result = "";
+      if($this->getNode()->getParent() == null)
+      {
+      $result = "vacio";
+      }
+      else
+      {
+          $result = $this->getNode()->getParent()->getName();
+      }
+    
+      return $result; 
+  }
 }
