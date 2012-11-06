@@ -18,7 +18,8 @@ class ProjectConfiguration extends sfProjectConfigurationExt
              'sfPicasaPlugin',
              'sfDoctrineNestedSetPlugin',
              'sfImageTransformPlugin',
-             'sfFeed2Plugin'
+             'sfFeed2Plugin',
+             'sfJqueryTreeDoctrineManagerPlugin'
            );
   }
   
