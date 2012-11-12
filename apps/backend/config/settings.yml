@@ -26,8 +26,8 @@ all:
     escaping_strategy:      false
     escaping_method:        ESC_SPECIALCHARS
 
-    standard_helpers:       [ Cache, JavascriptBase, Partial, FormExt, Toolkit, UrlExt, I18N ]
-    enabled_modules:        [ Crud, Error, Generic, Pager, sfDependentSelectAuto, sfMediaBrowser,sfJqueryTreeDoctrineManager]
+    standard_helpers:       [ Cache, JavascriptBase, Partial, FormExt, Toolkit, UrlExt ]
+    enabled_modules:        [ Crud, Error, Generic, Pager, sfDependentSelectAuto, sfMediaBrowser,sfJqueryTreeDoctrineManager,sfNestedSetManager]
     i18n:                   true
     use_database:           true
     

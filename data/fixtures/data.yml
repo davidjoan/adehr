@@ -1,3 +1,54 @@
+Homepage:
+  Homepage_1:
+    Post: Post_1
+    name: primero
+    rank: 1
+    active: 1
+  Homepage_2:
+    Post: Post_2
+    name: primero
+    rank: 2
+    active: 1
+  Homepage_3:
+    Post: Post_3
+    name: primero
+    rank: 3
+    active: 1
+  Homepage_4:
+    Post: Post_4
+    name: primero
+    rank: 4
+    active: 1
+  Homepage_5:
+    Post: Post_5
+    name: primero
+    rank: 5
+    active: 1
+  Homepage_6:
+    Post: Post_6
+    name: primero
+    rank: 6
+    active: 1
+  Homepage_7:
+    Post: Post_7
+    name: primero
+    rank: 7
+    active: 1
+  Homepage_8:
+    Post: Post_8
+    name: primero
+    rank: 8
+    active: 1
+  Homepage_9:
+    Post: Post_9
+    name: primero
+    rank: 9
+    active: 1
+  Homepage_10:
+    Post: Post_9
+    name: primero
+    rank: 10
+    active: 1    
 Category:
   Category_1:
     name: noticia

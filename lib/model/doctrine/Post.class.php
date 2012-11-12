@@ -32,25 +32,21 @@ class Post extends BasePost {
     }
 
     public function save(Doctrine_Connection $conn = null) {
-        
+
         $this->createThumbnail('image', $this->getFullMime(), 684, 315);
         $this->createThumbnail('image', $this->getFullMime(), 128, 60);
         $this->createThumbnail('image', $this->getFullMime(), 142, 90);
         $this->createThumbnail('image', $this->getFullMime(), 297, 169);
-        
+
         if ($this->isNew() && sfContext::hasInstance()) {
             $this->setUserId(sfContext::getInstance()->getUser()->getUserId());
             $this->setDatetime(date('Y-m-d H:i:s'));
         }
 
-        if ($this->isNew()) {
-            $this->setNewRank();
-        }
-
         if ($this->isColumnModified('content')) {
             $this->setExcerpt(substr(strip_tags($this->getContent()), 0, 1000) . '...');
         }
-        
+
         parent::save($conn);
     }
 
@@ -84,10 +80,6 @@ class Post extends BasePost {
         return $this->getTitle();
     }
 
-    public function setNewRank() {
-        $rank = $this->getTable()->getNewRank();
-        $this->setRank($rank);
-    }
 
     public function getCategoryNameForList() {
         $result = "";
@@ -97,21 +89,21 @@ class Post extends BasePost {
 
         return substr($result, 0, 23) . "...";
     }
-    
+
     public function getVideoName() {
         $result = "<ul>";
         foreach ($this->getVideos() as $video) {
-            $result = $result ."<li>".$video->getTitle() . '</li>';
+            $result = $result . "<li>" . $video->getTitle() . '</li>';
         }
-        return $result."</ul>";
+        return $result . "</ul>";
     }
-    
+
     public function getPhotoName() {
         $result = "<ul>";
         foreach ($this->getPhotos() as $photo) {
-            $result = $result . "<li>".$photo->getTitle() . '</li>';
+            $result = $result . "<li>" . $photo->getTitle() . '</li>';
         }
-        return $result."</ul>";
-    }    
+        return $result . "</ul>";
+    }
 
 }

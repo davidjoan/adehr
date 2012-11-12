@@ -75,16 +75,6 @@ class PostTable extends DoctrineTable
     return sfConfig::get('app_post_path');
   }
   
-  public function getNewRank()
-  {
-  	 $q = $this->createQuery('a')
-  	           ->addSelect('MAX(rank)');
-  	           
-  	 $dato = $q->execute()->getFirst()->toArray();
-  	 return $dato['MAX']+1;
-  	 
-  }  
-  
   public function findByTitleLike($name, $limit = 20)
   {
     $q = $this->createAliasQuery('p')

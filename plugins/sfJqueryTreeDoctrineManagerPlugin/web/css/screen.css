@@ -1,5 +1,5 @@
-/*#sf_admin_container .nested_set_manager_holder ul li a { padding: 0; background : none;}*/
-/*
+#sf_admin_container .nested_set_manager_holder ul li a { padding: 0; background : none;}
+
 #sf_admin_container .waiting
 {
   margin: 4px 0;
@@ -11,4 +11,4 @@
 }
 
 
-#jstree-contextmenu .edit  ins {background-position : 0 0;}*/
+#jstree-contextmenu .edit  ins {background-position : 0 0;}

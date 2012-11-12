@@ -19,7 +19,7 @@ class HomeActions extends ActionsProject
   {
     Doctrine::getTable('Visit')->createAndSave($request->getPathInfoArray());
     
-    $this->posts = Doctrine::getTable('Post')->getQueryForTenPrincipalPosts();     
+    $this->posts = Doctrine::getTable('Homepage')->getHomepage();
     
     //$this->photos = Doctrine::getTable('Photo')->getPhotoGallery();
     

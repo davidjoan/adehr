@@ -17,14 +17,12 @@ Post:
     meta_description:                  { type: string   , length: 5000                  , notnull: true                                                        }
     meta_keywords:                     { type: string   , length: 1000                  , notnull: true                                                        }
     datetime:                          { type: datetime                                 , notnull: true                                                        }
-    rank:                              { type: integer  , length: 5                     , notnull: true , default: 0                                           }
     status:                            { type: string   , length: 2  , fixed: true      , notnull: true , default: PE                                          }
   indexes:
     u_title:                           { fields: [ title ]                              , type: unique                                                         }
     i_content:                         { fields: { content: { length: 400 } }                                                                                  }
     i_excerpt:                         { fields: { excerpt: { length: 100 } }                                                                                  }
     i_datetime:                        { fields: [ datetime ]                                                                                                  }
-    i_rank:                            { fields: [ rank ]                                                                                                      }
     i_status:                          { fields: [ status ]                                                                                                    }
   relations:
     User:                              { class: User        , local: user_id       , foreign: id           , type: one , alias: User      , onDelete: RESTRICT, onUpdate: CASCADE }
@@ -39,7 +37,7 @@ Post:
   options:
     symfony:                           { filter: false, form: true }
     type_columns:                      [ status ]
-    
+
 PostIndex:
   tableName:                           t_post_index
   actAs:
@@ -92,3 +90,22 @@ Comment:
     symfony:                           { filter: false, form: true }
     boolean_columns:                   [ approved ]
     
+Homepage:
+  tableName:                           t_homepage
+  actAs:
+    SluggableExt:                      { fields: [ name ] }
+    Timestampable:
+    Thumbnailable:
+  columns:
+    id:                                { type: integer  , length: 20 , primary: true    , autoincrement: true                                                  }
+    post_id:                           { type: integer  , length: 20                    , notnull: false                                                       }
+    name:                              { type: string   , length: 100                   , notnull: true                                                        }
+    rank:                              { type: integer  , length: 5                     , notnull: true , default: 0                                           }
+    active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 0                                           }
+  indexes:
+    i_rank:                            { fields: [ rank ]                                                                                                      }
+  relations:
+    Post:                              { class: Post        , local:  post_id       , foreign: id           , type: one , alias: Post      , onDelete: 'SET NULL', onUpdate: CASCADE }
+  options:
+    symfony:                           { filter: false, form: true }
+    boolean_columns:                      [ active ]

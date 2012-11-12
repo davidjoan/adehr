@@ -17,7 +17,6 @@
  * @property string $meta_description
  * @property string $meta_keywords
  * @property datetime $datetime
- * @property integer $rank
  * @property string $status
  * @property User $User
  * @property PostIndex $PostIndex
@@ -29,6 +28,7 @@
  * @property Doctrine_Collection $Menus
  * @property Picassa $Picassa
  * @property Doctrine_Collection $PostCategory
+ * @property Doctrine_Collection $Homepage
  * @property Doctrine_Collection $PostPhoto
  * @property Doctrine_Collection $PostTag
  * @property Doctrine_Collection $PostVideo
@@ -45,7 +45,6 @@
  * @method string              getMetaDescription()  Returns the current record's "meta_description" value
  * @method string              getMetaKeywords()     Returns the current record's "meta_keywords" value
  * @method datetime            getDatetime()         Returns the current record's "datetime" value
- * @method integer             getRank()             Returns the current record's "rank" value
  * @method string              getStatus()           Returns the current record's "status" value
  * @method User                getUser()             Returns the current record's "User" value
  * @method PostIndex           getPostIndex()        Returns the current record's "PostIndex" value
@@ -57,6 +56,7 @@
  * @method Doctrine_Collection getMenus()            Returns the current record's "Menus" collection
  * @method Picassa             getPicassa()          Returns the current record's "Picassa" value
  * @method Doctrine_Collection getPostCategory()     Returns the current record's "PostCategory" collection
+ * @method Doctrine_Collection getHomepage()         Returns the current record's "Homepage" collection
  * @method Doctrine_Collection getPostPhoto()        Returns the current record's "PostPhoto" collection
  * @method Doctrine_Collection getPostTag()          Returns the current record's "PostTag" collection
  * @method Doctrine_Collection getPostVideo()        Returns the current record's "PostVideo" collection
@@ -72,7 +72,6 @@
  * @method Post                setMetaDescription()  Sets the current record's "meta_description" value
  * @method Post                setMetaKeywords()     Sets the current record's "meta_keywords" value
  * @method Post                setDatetime()         Sets the current record's "datetime" value
- * @method Post                setRank()             Sets the current record's "rank" value
  * @method Post                setStatus()           Sets the current record's "status" value
  * @method Post                setUser()             Sets the current record's "User" value
  * @method Post                setPostIndex()        Sets the current record's "PostIndex" value
@@ -84,6 +83,7 @@
  * @method Post                setMenus()            Sets the current record's "Menus" collection
  * @method Post                setPicassa()          Sets the current record's "Picassa" value
  * @method Post                setPostCategory()     Sets the current record's "PostCategory" collection
+ * @method Post                setHomepage()         Sets the current record's "Homepage" collection
  * @method Post                setPostPhoto()        Sets the current record's "PostPhoto" collection
  * @method Post                setPostTag()          Sets the current record's "PostTag" collection
  * @method Post                setPostVideo()        Sets the current record's "PostVideo" collection
@@ -159,12 +159,6 @@ abstract class BasePost extends DoctrineRecord
              'type' => 'datetime',
              'notnull' => true,
              ));
-        $this->hasColumn('rank', 'integer', 5, array(
-             'type' => 'integer',
-             'length' => 5,
-             'notnull' => true,
-             'default' => 0,
-             ));
         $this->hasColumn('status', 'string', 2, array(
              'type' => 'string',
              'length' => 2,
@@ -203,12 +197,6 @@ abstract class BasePost extends DoctrineRecord
              'fields' => 
              array(
               0 => 'datetime',
-             ),
-             ));
-        $this->index('i_rank', array(
-             'fields' => 
-             array(
-              0 => 'rank',
              ),
              ));
         $this->index('i_status', array(
@@ -274,6 +262,10 @@ abstract class BasePost extends DoctrineRecord
              'onUpdate' => 'CASCADE'));
 
         $this->hasMany('PostCategory', array(
+             'local' => 'id',
+             'foreign' => 'post_id'));
+
+        $this->hasMany('Homepage', array(
              'local' => 'id',
              'foreign' => 'post_id'));
 
