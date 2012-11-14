@@ -5,7 +5,7 @@
         <tr>
           <?php include_partial('General/tab', array
                 (
-                  'title'       => 'Pagina de InicioInicio', 
+                  'title'       => 'Pagina de Inicio', 
                   'uri'         => '@homepage_list',
                   'image'       => 'backend/menu/home.gif',
                 ))

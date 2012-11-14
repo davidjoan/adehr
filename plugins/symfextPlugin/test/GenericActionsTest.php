@@ -2,7 +2,7 @@
 
 include(dirname(__FILE__).'/../../bootstrap/functional.php');
 
-$browser = new adehrBackendTestFunctional(new sfBrowserExt());
+$browser = new FlexiwikBackendTestFunctional(new sfBrowserExt());
 
 
 $browser->

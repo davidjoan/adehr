@@ -16,7 +16,7 @@
  * @property string $excerpt
  * @property string $meta_description
  * @property string $meta_keywords
- * @property datetime $datetime
+ * @property date $datetime
  * @property string $status
  * @property User $User
  * @property PostIndex $PostIndex
@@ -44,7 +44,7 @@
  * @method string              getExcerpt()          Returns the current record's "excerpt" value
  * @method string              getMetaDescription()  Returns the current record's "meta_description" value
  * @method string              getMetaKeywords()     Returns the current record's "meta_keywords" value
- * @method datetime            getDatetime()         Returns the current record's "datetime" value
+ * @method date                getDatetime()         Returns the current record's "datetime" value
  * @method string              getStatus()           Returns the current record's "status" value
  * @method User                getUser()             Returns the current record's "User" value
  * @method PostIndex           getPostIndex()        Returns the current record's "PostIndex" value
@@ -155,8 +155,8 @@ abstract class BasePost extends DoctrineRecord
              'length' => 1000,
              'notnull' => true,
              ));
-        $this->hasColumn('datetime', 'datetime', null, array(
-             'type' => 'datetime',
+        $this->hasColumn('datetime', 'date', null, array(
+             'type' => 'date',
              'notnull' => true,
              ));
         $this->hasColumn('status', 'string', 2, array(

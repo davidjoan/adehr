@@ -23,7 +23,7 @@ class CategoryTable extends DoctrineTable
   protected static
     $status                = array
                              (
-                               self::STATUS_ACTIVE     => 'Si'  ,
+                               self::STATUS_ACTIVE     => 'Si' ,
                                self::STATUS_INACTIVE   => 'No',
                              );
                              

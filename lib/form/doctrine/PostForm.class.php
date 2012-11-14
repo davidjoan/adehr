@@ -27,6 +27,7 @@ class PostForm extends BasePostForm
       'tags_list'            => 'Tags',
       'videos_list'          => 'Videos',
       'photos_list'          => 'Fotos',
+      'datetime'             => 'Fecha de publicaci&oacute;n'
     );
   }
   
@@ -62,7 +63,13 @@ class PostForm extends BasePostForm
                                                       )
                                   ),
                                   array('size'         => '60',)
-                                ),        
+                                ),
+      'datetime'             => new sfWidgetFormDateExt(array
+                                (
+                                  'format' => $this->widgetFormatter->getStandardDateFormat(),
+                                  'year_start' => 2008,
+                                  'year_end' => date('Y')+6
+                                )), 
       'meta_description'     => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 5)),
       'meta_keywords'        => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 2)),
       'status'               => new sfWidgetFormChoice(array
@@ -121,6 +128,8 @@ class PostForm extends BasePostForm
                                 )), */       
     ));
     
+    $this->setDefault('datetime', date('Y-m-d'));
+    
     $this->addValidators(array
     (
       'image'                 => new sfValidatorFile(array
@@ -142,7 +151,7 @@ class PostForm extends BasePostForm
       'meta_description'       => '=',
       'meta_keywords'          => '=',
       'excerpt'                => '-',
-      'datetime'               => '-',
+      'datetime'               => 'date',
       'status'                 => array('combo', array('choices' => array_keys($this->getTable()->getStatuss()))),
       'slug'                   => '-',
       'rank'                   => '-',
