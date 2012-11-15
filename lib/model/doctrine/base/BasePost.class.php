@@ -17,6 +17,7 @@
  * @property string $meta_description
  * @property string $meta_keywords
  * @property date $datetime
+ * @property string $show_dates
  * @property string $status
  * @property User $User
  * @property PostIndex $PostIndex
@@ -45,6 +46,7 @@
  * @method string              getMetaDescription()  Returns the current record's "meta_description" value
  * @method string              getMetaKeywords()     Returns the current record's "meta_keywords" value
  * @method date                getDatetime()         Returns the current record's "datetime" value
+ * @method string              getShowDates()        Returns the current record's "show_dates" value
  * @method string              getStatus()           Returns the current record's "status" value
  * @method User                getUser()             Returns the current record's "User" value
  * @method PostIndex           getPostIndex()        Returns the current record's "PostIndex" value
@@ -72,6 +74,7 @@
  * @method Post                setMetaDescription()  Sets the current record's "meta_description" value
  * @method Post                setMetaKeywords()     Sets the current record's "meta_keywords" value
  * @method Post                setDatetime()         Sets the current record's "datetime" value
+ * @method Post                setShowDates()        Sets the current record's "show_dates" value
  * @method Post                setStatus()           Sets the current record's "status" value
  * @method Post                setUser()             Sets the current record's "User" value
  * @method Post                setPostIndex()        Sets the current record's "PostIndex" value
@@ -158,6 +161,13 @@ abstract class BasePost extends DoctrineRecord
         $this->hasColumn('datetime', 'date', null, array(
              'type' => 'date',
              'notnull' => true,
+             ));
+        $this->hasColumn('show_dates', 'string', 1, array(
+             'type' => 'string',
+             'length' => 1,
+             'fixed' => 1,
+             'notnull' => true,
+             'default' => 1,
              ));
         $this->hasColumn('status', 'string', 2, array(
              'type' => 'string',

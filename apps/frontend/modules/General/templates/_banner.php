@@ -40,7 +40,7 @@
               <h2>Lo más visto</h2>
               
             <div class="archMulTit">
-                <div class="archMulT1"><a class="tabs_banner active" href="#tab1" >Archivos</a></div>
+                <div class="archMulT1"><a class="tabs_banner active" href="#tab1" >Art&iacute;culos</a></div>
               <div class="archMulT2"><a class="tabs_banner " href="#tab2" >Multimedia</a></div>
             </div>
             <div id="tab1" class="archMulTot tabContents">

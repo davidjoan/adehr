@@ -16,7 +16,6 @@ class ProjectConfiguration extends sfProjectConfigurationExt
              'sfDoctrinePlugin',
              'symfextPlugin',
              'sfPicasaPlugin',
-             'sfDoctrineNestedSetPlugin',
              'sfImageTransformPlugin',
              'sfFeed2Plugin',
              'sfJqueryTreeDoctrineManagerPlugin'

@@ -1,7 +1,7 @@
 <?php use_helper('I18N', 'Date', 'JavascriptBase') ?>
 <?php include_partial('sfJqueryTreeDoctrineManager/assets') ?>
 <div id="sf_admin_container">
-    <h1><?php echo sfInflector::humanize(sfInflector::underscore($model)); ?> Nested Set Manager</h1>
+    <h1>Reordena el <?php echo sfInflector::humanize(sfInflector::underscore($model)); ?></h1>
     <?php include_partial('sfJqueryTreeDoctrineManager/flashes') ?>
 		<?php if ($hasManyRoots && !$sf_request->hasParameter('root') ):?>
 			<?php include_partial('sfJqueryTreeDoctrineManager/manager_roots', array('model' => $model, 'field' => $field, 'root' => $root, 'roots' => $roots)) ?>

@@ -51,7 +51,7 @@
 				var opts = $.extend(true, {}, $.tree.plugins.hotkeys.defaults, this.settings.plugins.hotkeys);
 				var obj = this.hovered || this.selected;
 				if(obj) {
-					if(obj.hasClass("closed"))	this.open_branch(obj);
+					if(obj.hasClass("open"))	this.open_branch(obj);
 					else {
 						return opts.hover_mode ? this.hover_branch(obj.find("li:eq(0)")) : this.select_branch(obj.find("li:eq(0)"));
 					}

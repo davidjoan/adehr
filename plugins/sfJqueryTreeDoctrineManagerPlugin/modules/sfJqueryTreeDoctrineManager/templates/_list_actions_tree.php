@@ -1,18 +1,9 @@
 <ul class="sf_admin_actions">
 	<?php if($hasManyRoots):?>
  		<li class="sf_admin_action_list">
-		<?php echo link_to( __('Back to root list') ,$sf_request->getParameter('module') . '/' . $sf_request->getParameter('action') );?>
+		<?php echo link_to( 'Regresar' ,$sf_request->getParameter('module') . '/' . $sf_request->getParameter('action') );?>
 	<?php endif;?>
-	<li class="sf_admin_action_insert_node">
-		<button disabled="disabled" class="nodeinteraction createnode">
-        <img alt="" src="/sfJqueryTreeDoctrineManagerPlugin/images/node-insert-next.png"/><?php echo __('Insert Node');?>
-    </button>
-	</li>
-	<li class="sf_admin_action_delete_node">
-	<button disabled="disabled" class="nodeinteraction deletenode">
-      <img alt="" src="/sfJqueryTreeDoctrineManagerPlugin/images/node-delete-next.png"/><?php echo __('Delete Node');?>
-  </button>
-	</li>
+
 </ul>
 
 <?php echo javascript_tag();?>

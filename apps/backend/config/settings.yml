@@ -27,7 +27,7 @@ all:
     escaping_method:        ESC_SPECIALCHARS
 
     standard_helpers:       [ Cache, JavascriptBase, Partial, FormExt, Toolkit, UrlExt ]
-    enabled_modules:        [ Crud, Error, Generic, Pager, sfDependentSelectAuto, sfMediaBrowser,sfJqueryTreeDoctrineManager,sfNestedSetManager]
+    enabled_modules:        [ Crud, Error, Generic, Pager, sfDependentSelectAuto, sfMediaBrowser,sfJqueryTreeDoctrineManager]
     i18n:                   true
     use_database:           true
     

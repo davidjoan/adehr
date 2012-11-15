@@ -27,6 +27,7 @@ class PostForm extends BasePostForm
       'tags_list'            => 'Tags',
       'videos_list'          => 'Videos',
       'photos_list'          => 'Fotos',
+      'show_dates'           => 'Mostrar Fechas',
       'datetime'             => 'Fecha de publicaci&oacute;n'
     );
   }
@@ -70,6 +71,12 @@ class PostForm extends BasePostForm
                                   'year_start' => 2008,
                                   'year_end' => date('Y')+6
                                 )), 
+      'show_dates'           => new sfWidgetFormChoice(array
+                                (
+                                  'choices'          => $this->getTable()->getShowDates(),
+                                  'expanded'         => true,
+                                  'renderer_options' => array('formatter' => array($this->widgetFormatter, 'radioFormatter'))
+                                )),
       'meta_description'     => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 5)),
       'meta_keywords'        => new sfWidgetFormTextarea(array(), array('cols' => 50, 'rows' => 2)),
       'status'               => new sfWidgetFormChoice(array
@@ -153,6 +160,7 @@ class PostForm extends BasePostForm
       'excerpt'                => '-',
       'datetime'               => 'date',
       'status'                 => array('combo', array('choices' => array_keys($this->getTable()->getStatuss()))),
+      'show_dates'             => array('combo', array('choices' => array_keys($this->getTable()->getShowDates()))),
       'slug'                   => '-',
       'rank'                   => '-',
       'created_at'             => '-',

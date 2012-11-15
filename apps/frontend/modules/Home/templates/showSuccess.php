@@ -4,6 +4,7 @@
 <div class="centro">
     <div class="notaDetalle">
         <h2><?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug()) ?></h2>
+        <?php if($post->getShowDates() == '1'): ?>
         <div class="iconos">
             <div class="izquierda">Escrito por <?php echo $post->getUserRealname(); ?>. Publicado: <?php echo $post->getFormattedDatetime(); ?></div>
             <div class="derecha">                    
@@ -12,6 +13,7 @@
                 <a href="#"><?php echo link_to(image_tag('frontend/post/print'), '@post_print?slug='.$post->getSlug(),array('data-fancybox-type' => "iframe",'class' => "various")); ?></a>&nbsp;
             </div>
         </div>
+        <?php endif; ?>
 
 
         <p>
@@ -19,7 +21,9 @@
         </p>
         <?php echo simple_format_text($post->getPostIndex()->getContent()) ?>
 
+        <?php if($post->getShowDates() == '1'): ?>
         <div class="fecha">Escrito por <?php echo $post->getUserRealname(); ?>, <?php echo $post->getFormattedDatetime(); ?></div>
+        <?php endif; ?>
         <div class="breaker"></div>
         <br />
 
@@ -27,6 +31,7 @@
 
 
         <br />
+        <?php if($post->getShowDates() == '1'): ?>
         <div class="breaker"></div>
         <?php if(count($post->getVideos()->toArray()) > 0): ?>
         <h2>Videos</h2>  
@@ -73,6 +78,7 @@
             </div>
         </div>
         
+        <?php endif; ?>
         <?php endif; ?>
     </div>
 </div>

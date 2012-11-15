@@ -22,10 +22,22 @@ class PostTable extends DoctrineTable
                                self::STATUS_PUBLISHED => 'Publicado',
                                self::STATUS_PENDING   => 'Pendiente',
                              );
-                             
+
+    protected static
+    $show_dates            = array
+                             (
+                               '0' => 'Ocultar',
+                               '1' => 'Mostrar',
+                             );
+  
   public function getStatuss()
   {
     return self::$status;
+  }
+  
+  public function getShowDates()
+  {
+    return self::$show_dates;
   }
   
   public function updateQueryForList(DoctrineQuery $q)
@@ -89,7 +101,7 @@ class PostTable extends DoctrineTable
     $q = $this->createAliasQuery()
          ->leftJoin('p.Categories c')
          ->where('p.status = ?', self::STATUS_PUBLISHED)
-         ->orderBy('p.rank ASC')
+         ->orderBy('p.datetime DESC')
          ->limit(10);
          
     return $q->execute();
@@ -101,7 +113,7 @@ class PostTable extends DoctrineTable
          ->leftJoin('p.Categories c')
          ->where('p.status = ?', self::STATUS_PUBLISHED)
          ->andWhere('c.slug = ?', $slug)
-         ->orderBy('p.rank ASC')
+         ->orderBy('p.datetime DESC')
          ->limit(100);
          
     return $q->execute();
@@ -113,7 +125,7 @@ class PostTable extends DoctrineTable
          ->leftJoin('p.Tags t')
          ->where('p.status = ?', self::STATUS_PUBLISHED)
          ->andWhere('t.slug = ?', $slug)
-         ->orderBy('p.rank ASC')
+         ->orderBy('p.datetime DESC')
          ->limit(100);
          
     return $q->execute();
