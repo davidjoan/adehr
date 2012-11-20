@@ -12,6 +12,12 @@
  */
 class Post extends BasePost {
 
+
+    public function getShowDatesName()
+    {
+  	$actives = $this->getTable()->getShowDates();
+  	return $actives[$this->getShowDates()];        
+    }
     public function getUserRealname() {
         return $this->getUser()->getRealname();
     }

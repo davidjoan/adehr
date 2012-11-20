@@ -1,6 +1,5 @@
 cache/*
 log/*
-web/uploads/*
 config/propel.ini
 data/sql/*
 lib/model/om/*

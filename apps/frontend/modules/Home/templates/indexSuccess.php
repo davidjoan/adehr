@@ -6,7 +6,7 @@
     <div class="cdestacado"> 
     <?php if($posts[0]->getPost()->getImage() <> ''):?><?php echo image_tag($posts[0]->getPost()->getThumbnailFilePath('image',684 ), array('size' => '660x310'));?><?php endif; ?>
     <h1><?php echo link_to($posts[0]->getPost()->getTitle(), '@post_show?slug='.$posts[0]->getPost()->getSlug()) ?></h1>
-    <span><?php echo simple_format_text(truncate_text($posts[0]->getPost()->getExcerpt(), 440, ' ...')); ?></span>
+    <span><?php echo simple_format_text(truncate_text($posts[0]->getPost()->getExcerpt(), 250, ' ...')); ?></span>
     </div>
 
     <div class="cbarra"></div>
@@ -36,7 +36,7 @@
             <?php if($posts[5]->getPost()->getImage() <> ''):?><?php echo image_tag($posts[5]->getPost()->getThumbnailFilePath('image',142 ), array('size' => '142x90'));?><?php endif; ?>
             <div>
                 <h2><?php echo link_to($posts[5]->getPost()->getTitle(), '@post_show?slug='.$posts[5]->getPost()->getSlug()) ?></h2>
-                <span><?php echo simple_format_text(truncate_text($posts[5]->getPost()->getExcerpt(),300)); ?></span>
+                <span><?php echo simple_format_text(truncate_text($posts[5]->getPost()->getExcerpt(),250)); ?></span>
             </div>
         </div>
         <div class="breaker"></div>
@@ -47,7 +47,7 @@
             <?php if($posts[6]->getPost()->getImage() <> ''):?><?php echo image_tag($posts[6]->getPost()->getThumbnailFilePath('image',142 ), array('size' => '142x90'));?><?php endif; ?>
             <div>
                 <h2><?php echo link_to($posts[6]->getPost()->getTitle(), '@post_show?slug='.$posts[6]->getPost()->getSlug()) ?></h2>
-                <span><?php echo simple_format_text(truncate_text($posts[6]->getPost()->getExcerpt(),300)); ?></span>
+                <span><?php echo simple_format_text(truncate_text($posts[6]->getPost()->getExcerpt(),250)); ?></span>
             </div>
         </div>
         <div class="breaker"></div>
@@ -58,7 +58,7 @@
             <?php if($posts[7]->getPost()->getImage() <> ''):?><?php echo image_tag($posts[7]->getPost()->getThumbnailFilePath('image',142 ), array('size' => '142x90'));?><?php endif; ?>
             <div>
                 <h2><?php echo link_to($posts[7]->getPost()->getTitle(), '@post_show?slug='.$posts[7]->getPost()->getSlug()) ?></h2>
-                <span><?php echo simple_format_text(truncate_text($posts[7]->getPost()->getExcerpt(),300)); ?></span>
+                <span><?php echo simple_format_text(truncate_text($posts[7]->getPost()->getExcerpt(),250)); ?></span>
             </div>
         </div>
         <div class="breaker"></div>
@@ -69,7 +69,7 @@
             <?php if($posts[8]->getPost()->getImage() <> ''):?><?php echo image_tag($posts[8]->getPost()->getThumbnailFilePath('image',142 ), array('size' => '142x90'));?><?php endif; ?>
             <div>
                 <h2><?php echo link_to($posts[8]->getPost()->getTitle(), '@post_show?slug='.$posts[8]->getPost()->getSlug()) ?></h2>
-                <span><?php echo simple_format_text(truncate_text($posts[8]->getPost()->getExcerpt(),300)); ?></span>
+                <span><?php echo simple_format_text(truncate_text($posts[8]->getPost()->getExcerpt(),250)); ?></span>
             </div>
         </div>
         <div class="breaker"></div>
@@ -104,7 +104,7 @@
             </div>
             <?php if($post->getImage() <> ''):?><?php echo image_tag($post->getThumbnailFilePath('image',297 ), array('size' => '297x169'));?><?php endif; ?>
             <br />
-            <span><?php echo simple_format_text(truncate_text($post->getExcerpt(),380)); ?></span> </div>
+            <span><?php echo simple_format_text(truncate_text($post->getExcerpt(),250)); ?></span> </div>
         <!-- Nota item--> 
        <?php endif; ?>
         <?php endforeach; ?>

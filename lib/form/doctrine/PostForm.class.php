@@ -172,6 +172,8 @@ class PostForm extends BasePostForm
     );
     
     $this->widgetSchema->setHelp('image' , 'Tamaño recomendado 680x310px' );
+    
+    $this->validatorSchema['image']->setOption('required', true);
      
    // $this->addMenusForm();
   }

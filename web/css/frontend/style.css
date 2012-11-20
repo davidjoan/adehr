@@ -548,6 +548,7 @@ table {
 #nubeTags {
 	margin:40px 0px 30px;
 	min-height:10px;
+	padding-bottom: 20px;
 }
 .nubeTag {
 	float:left;
@@ -563,6 +564,7 @@ table {
 	width:20px;
 	height:21px;
 	float:left;
+	margin-left:4px;
 }
 .nubeTagBg {
 	background-image:url(/images/frontend/modelo_adehr-OK_44.jpg);

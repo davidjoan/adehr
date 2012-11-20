@@ -1,67 +1,32 @@
-Homepage:
-  Homepage_1:
-    Post: Post_1
-    name: primero
-    rank: 1
-    active: 1
-  Homepage_2:
-    Post: Post_2
-    name: primero
-    rank: 2
-    active: 1
-  Homepage_3:
-    Post: Post_3
-    name: primero
-    rank: 3
-    active: 1
-  Homepage_4:
-    Post: Post_4
-    name: primero
-    rank: 4
-    active: 1
-  Homepage_5:
-    Post: Post_5
-    name: primero
-    rank: 5
-    active: 1
-  Homepage_6:
-    Post: Post_6
-    name: primero
-    rank: 6
-    active: 1
-  Homepage_7:
-    Post: Post_7
-    name: primero
-    rank: 7
-    active: 1
-  Homepage_8:
-    Post: Post_8
-    name: primero
-    rank: 8
-    active: 1
-  Homepage_9:
-    Post: Post_9
-    name: primero
-    rank: 9
-    active: 1
-  Homepage_10:
-    Post: Post_9
-    name: primero
-    rank: 10
-    active: 1    
 Category:
   Category_1:
-    name: noticia
+    name: 'Notas de Prensa'
+    rank: '0'
     active: '1'
+    slug: notas_de_prensa
+    created_at: '2012-11-15 00:46:21'
+    updated_at: '2012-11-20 01:08:36'
   Category_2:
-    name: actualidad
+    name: 'Campañas y Act.'
+    rank: '0'
     active: '1'
+    slug: campanas_y_act
+    created_at: '2012-11-15 00:46:21'
+    updated_at: '2012-11-20 01:08:21'
   Category_3:
-    name: tecnología
+    name: 'Noticias DD HH'
+    rank: '0'
     active: '1'
+    slug: noticias_dd_hh
+    created_at: '2012-11-15 00:46:21'
+    updated_at: '2012-11-20 01:07:54'
   Category_4:
-    name: entretenimiento
+    name: 'Prensa Especial'
+    rank: '2'
     active: '1'
+    slug: prensa_especial
+    created_at: '2012-11-15 00:46:21'
+    updated_at: '2012-11-20 01:07:54'
 Company:
   Company_1:
     name: ADEHR
@@ -72,6 +37,9 @@ Company:
     facebook: ''
     twitter: ''
     active: '1'
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+    slug: adehr
 CompanyImage:
   CompanyImage_1:
     Company: Company_1
@@ -87,6 +55,87 @@ CompanyImage:
     active: '1'
     created_at: '2012-07-25 22:22:57'
     updated_at: '2012-07-25 22:22:57'
+Homepage:
+  Homepage_1:
+    Post: Post_1
+    name: primero
+    rank: '1'
+    active: '1'
+    slug: primero
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_2:
+    Post: Post_2
+    name: primero
+    rank: '2'
+    active: '1'
+    slug: primero_1
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_3:
+    Post: Post_3
+    name: primero
+    rank: '3'
+    active: '1'
+    slug: primero_2
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_4:
+    Post: Post_4
+    name: primero
+    rank: '4'
+    active: '1'
+    slug: primero_3
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_5:
+    Post: Post_5
+    name: primero
+    rank: '5'
+    active: '1'
+    slug: primero_4
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_6:
+    Post: Post_6
+    name: primero
+    rank: '6'
+    active: '1'
+    slug: primero_5
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_7:
+    Post: Post_7
+    name: primero
+    rank: '7'
+    active: '1'
+    slug: primero_6
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_8:
+    Post: Post_8
+    name: primero
+    rank: '8'
+    active: '1'
+    slug: primero_7
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_9:
+    Post: Post_9
+    name: primero
+    rank: '9'
+    active: '1'
+    slug: primero_8
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
+  Homepage_10:
+    Post: Post_9
+    name: primero
+    rank: '10'
+    active: '1'
+    slug: primero_9
+    created_at: '2012-11-15 00:46:22'
+    updated_at: '2012-11-15 00:46:22'
 Menu:
   Menu_1:
     name: 'menu superior'
@@ -114,8 +163,8 @@ Menu:
     created_at: '2012-07-25 21:14:21'
     updated_at: '2012-07-25 21:14:21'
     root_id: '1'
-    lft: '2'
-    rgt: '3'
+    lft: '4'
+    rgt: '5'
     level: '1'
     slug: quienes_somos
   Menu_4:
@@ -124,8 +173,8 @@ Menu:
     created_at: '2012-07-25 21:15:20'
     updated_at: '2012-07-25 21:15:20'
     root_id: '1'
-    lft: '4'
-    rgt: '5'
+    lft: '2'
+    rgt: '3'
     level: '1'
     slug: mision_y_vision
   Menu_5:
@@ -154,7 +203,7 @@ Menu:
     name: 'Caso Huanta 1984'
     active: '1'
     created_at: '2012-07-25 21:51:50'
-    updated_at: '2012-07-25 21:51:50'
+    updated_at: '2012-11-15 02:19:42'
     root_id: '2'
     lft: '3'
     rgt: '8'
@@ -216,33 +265,35 @@ Post:
   Post_1:
     User: User_1
     title: 'Exhumaciones Accomarca - octubre 2008'
-    image: img_10_jpg_97075.jpg
+    image: img_10_jpg_80284_jpg_86459.jpg
     size: '194012'
     full_mime: image/jpeg
     content: "<p style=\"text-align: justify;\">Los restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.</p>\r\n<p style=\"text-align: justify;\">Los restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.</p>\r\n<div id=\"_mcePaste\" class=\"mcePaste\" style=\"position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden; text-align: justify;\">\r\n<pre style=\"color: #000000; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; word-wrap: break-word; white-space: pre-wrap;\">Exhumaciones Accomarca - octubre 2008\r\n\r\nLos restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.</pre>\r\n</div>"
     excerpt: "Los restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 2008. Se trata de los comuneros Agust&iacute;n Ch&aacute;vez (64), Seferino Balde&oacute;n (55) y Filomeno Chuchon Teccsi, quienes fueron asesinados por efectivos del Ej&eacute;rcito peruano entre el 14 y 15 de agosto de 1985. Los cad&aacute;veres de Agust&iacute;n Ch&aacute;vez y Seferino Balde&oacute;n fueron hallados en el anexo de Pitecc, mientras el de Filomeno Chuch&oacute;n en la zona de Huambalpa. No fue posible encontrar los restos de Br&iacute;gida P&eacute;rez y su hijo Alejandro Balde&oacute;n, porque la zona donde fueron enterrados actualmente es la carretera de Accomarca.\r\nLos restos de tres v&iacute;ctimas de la masacre de Accomarca fueron exhumados durante las excavaciones complementarias realizadas en esa localidad entre el lunes 20 y el s&aacute;bado 25 de octubre de 20..."
     meta_description: demo
     meta_keywords: frmo
-    datetime: '2012-07-25 18:35:11'
+    datetime: '2012-07-25'
+    show_dates: '1'
     status: PU
     slug: exhumaciones_accomarca_octubre_2008
     created_at: '2012-07-25 18:35:12'
-    updated_at: '2012-07-30 18:02:46'
+    updated_at: '2012-11-15 00:58:12'
   Post_2:
     User: User_1
     title: 'Festival de la Memoria por las víctimas'
-    image: img_10_jpg_89743.jpg
+    image: img_10_jpg_38235_jpg_70057_jpg_77290.jpg
     size: '194012'
     full_mime: image/jpeg
     content: '<p>Ante un gran marco de huantinos, familiares de v&iacute;ctimas, autoridades locales, y organismos de derechos humanos se realiz&oacute; el domingo 02 de agosto de 2009 el &lsquo;Festival de la Memoria de las V&iacute;ctimas de la Violencia Pol&iacute;tica de Huanta (1980 &ndash; 2000)&rdquo;, organizada por la Asociaci&oacute;n Para el Desarrollo Humano Runamasinchiqpaq (ADEHR), la Asociaci&oacute;n FREPROAVIPH y la Municipalidad de Huanta, en el que deudos y poblaci&oacute;n en general pudieron observar fotograf&iacute;as sobre la violencia interna.<br /><br />Tambi&eacute;n, ADEHR junto a otras organizaciones como Paz y Esperanza, EPAF y FREPROAVIPH colocaron stands informativos en el que mostraron la labor que realizan, adem&aacute;s de entregar folletos, libros, entre otros trabajos que buscan evitar que hechos como los registrados hace unas d&eacute;cadas se vuelvan a repetir.<br /><br />Como plato de fondo estuvo la presentaci&oacute;n de la cantante folcl&oacute;rica Margot Palomino, quien ofreci&oacute; un recital en homenaje de los desaparecidos, en el que interpret&oacute; canciones como &ldquo;d&oacute;nde est&aacute;n&rdquo;, en el que se exige saber d&oacute;nde est&aacute;n los restos de las v&iacute;ctimas de la violencia como Jaime Ayala. Tambi&eacute;n cant&oacute; &ldquo;Lucia&rdquo;, &ldquo;No podr&aacute;n&rdquo;, entre otros. Pero el momento m&aacute;s importante fue cuando interpret&oacute; &ldquo;la flor de retama&rdquo;, que rob&oacute; los aplausos de los presentes.<br /><br />Del mismo modo, se rindi&oacute; homenaje al periodista Jaime Ayala Sulca ante la presencia de sus seres queridos. Tambi&eacute;n se mostr&oacute; el mural con su rostro en el Estadio Municipal de Huanta. Finalmente, se coloc&oacute; una placa recordatoria en la entrada principal del recinto deportivo en memoria de todas las v&iacute;ctimas.<br /><br />Objetivos principales del Festival de la Memoria:<br /><br />Rendir un homenaje a todas las v&iacute;ctimas del conflicto armado interno 1980-2000.<br />Dar a conocer la magnitud del conflicto y las secuelas de la violencia en la Provincia de Huanta.<br />Hacer un fuerte llamado de atenci&oacute;n a las autoridades nacionales sobre la impunidad en que se encuentran los casos de violaciones de derechos humanos perpetrados.<br />Poner &eacute;nfasis en la importancia de rescatar y mantener la memoria de lo ocurrido&nbsp; para que estos hechos atroces ocurridos no vuelvan a repetirse.<br />Incidir en la importancia de poner en marcha un plan de exhumaciones, identificaci&oacute;n y restituci&oacute;n de los&nbsp; cuerpos a los familiares de las v&iacute;ctimas como parte del proceso de verdad,&nbsp; justicia y reconciliaci&oacute;n.<br />Llamar la atenci&oacute;n del Estado para que se cumpla con las recomendaciones de la Comisi&oacute;n de la Verdad y Reconciliaci&oacute;n.<br /><br /></p>'
     excerpt: 'Ante un gran marco de huantinos, familiares de v&iacute;ctimas, autoridades locales, y organismos de derechos humanos se realiz&oacute; el domingo 02 de agosto de 2009 el &lsquo;Festival de la Memoria de las V&iacute;ctimas de la Violencia Pol&iacute;tica de Huanta (1980 &ndash; 2000)&rdquo;, organizada por la Asociaci&oacute;n Para el Desarrollo Humano Runamasinchiqpaq (ADEHR), la Asociaci&oacute;n FREPROAVIPH y la Municipalidad de Huanta, en el que deudos y poblaci&oacute;n en general pudieron observar fotograf&iacute;as sobre la violencia interna.Tambi&eacute;n, ADEHR junto a otras organizaciones como Paz y Esperanza, EPAF y FREPROAVIPH colocaron stands informativos en el que mostraron la labor que realizan, adem&aacute;s de entregar folletos, libros, entre otros trabajos que buscan evitar que hechos como los registrados hace unas d&eacute;cadas se vuelvan a repetir.Como plato de fondo estuvo la presentaci&oacute;n de la cantante folcl&oacute;rica Margot Palomino, quien ofreci&oacut...'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 22:37:24'
+    datetime: '2012-07-25'
+    show_dates: '1'
     status: PU
     slug: festival_de_la_memoria_por_las_victimas
     created_at: '2012-07-25 22:37:24'
-    updated_at: '2012-07-30 18:03:11'
+    updated_at: '2012-11-20 00:58:32'
   Post_3:
     User: User_1
     title: 'Navidad en Orccohuasi'
@@ -253,7 +304,8 @@ Post:
     excerpt: 'A una hora de Huamanga, capital del departamento de Ayacucho, se halla Orccohuasi, una peque&ntilde;a comunidad campesina donde se registraron casos de violaciones de derechos humanos en 1990.Orccohuasi est&aacute; compuesta por unas 30 familias pobres con unos 50 ni&ntilde;os y ni&ntilde;as. Ah&iacute; no existe presencia alguna del Estado. La &uacute;nica escuela primaria que existe en la comunidad es un aula improvisada con un solo profesor para todos los grados, en la que asisten no m&aacute;s de 19 alumnos.Para que los ni&ntilde;os de Orccohuasi puedan continuar sus estudios de secundaria tienen que trasladarse hasta el distrito de Ticcllas, que est&aacute; a m&aacute;s de dos horas de caminata. Asimismo, este peque&ntilde;o pueblo carece de los servicios b&aacute;sicos como agua y desag&uuml;e y su poblaci&oacute;n es proclive a las enfermedades.Es por ello que la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) decidi&oacute; emprender una peque&ntilde;a camp...'
     meta_description: 'demo 3'
     meta_keywords: demo
-    datetime: '2012-07-25 22:38:28'
+    datetime: '2012-07-25'
+    show_dates: '1'
     status: PU
     slug: navidad_en_orccohuasi
     created_at: '2012-07-25 22:38:28'
@@ -261,78 +313,83 @@ Post:
   Post_4:
     User: User_1
     title: 'Adehr en Acción: Enero 2007'
-    image: img_10_jpg_89773.jpg
+    image: img_10_jpg_38235_jpg_70057_jpg_77290_jpg_17626.jpg
     size: '194012'
     full_mime: image/jpeg
     content: '<p style="text-align: justify;">Continuando con el ciclo de talleres Psicojur&iacute;dicos, Psicosociales y Vivenciales en distintos distritos del departamento de Ayacucho, la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) ha desarrollado una serie de actividades, siendo las m&aacute;s importantes las siguientes :<br /><br /><strong>Taller con Familiares V&iacute;ctimas de la Violencia Pol&iacute;tica</strong><br /><br />El 22 de enero del 2007, el equipo de ADEHR se traslad&oacute; hasta el distrito de Accomarca, en Ayacucho, donde se llev&oacute; a cabo el tercer taller con familiares v&iacute;ctimas de la violencia pol&iacute;tica tanto de las Fuerzas Armadas como de grupos subversivos, denominado &ldquo;Fortaleciendo las Capacidades Propositivas de los Familiares V&iacute;ctimas de la Violencia en Accomarca&rdquo;.<br /><br />El taller reuni&oacute; a m&aacute;s de 40 personas entre hombres y mujeres, quienes participaron en discusiones sobre propuestas relacionadas al Acceso a la Justicia y Lucha Contra la Impunidad, Memoria Individual, Colectiva y Reparaciones.<br /><br />Estos mismos temas fueron discutidos al d&iacute;a siguiente (23 de enero) entre los pobladores y&nbsp; el alcalde del distrito de Accomarca, profesor Alfredo G&oacute;mez Palomino, y dem&aacute;s autoridades del Gobierno Local.<br /><br />En la reuni&oacute;n tambien estuvo presente Rosa Peralta Balde&oacute;n, gobernadora del distrito de Accomarca, Mar&iacute;a Gamboa, responsable del Programa Juntos, la Jueza de Paz no Letrado (accesitaria) y miembros de ADEHR.<br /><br />Taller con Mujeres de Accomarca<br /><br />El 23 de enero tambien se desarroll&oacute; el "Primer Encuentro de Mujeres de Accomarca", evento en el que participaron m&aacute;s de 60 mujeres, pertenecientes a diferentes organizaciones de base as&iacute; como mujeres v&iacute;ctimas de la violencia pol&iacute;tica.<br /><br />Entre las participantes estuvieron las lideresas del Vaso de Leche, Programa Social Juntos, Regidora del Gobierno Local, la gobernadora del distrito de Accomarca,&nbsp; y la jueza de Paz accesitaria, entre otras autoridades.<br /><br />El encuentro fue facilitado por ADEHR y cont&oacute; con el apoyo de la enfermera del distrito de Accomarca, la se&ntilde;ora Odilia.<br /><br />En este encuentro las Mujeres de Accomarca analizaron la problem&aacute;tica principal del distrito, identificaron las demandas comunes y debatieron alternativas de soluci&oacute;n, propiciando propuestas que est&aacute;n siendo sistematizadas para su presentaci&oacute;n en una Asamblea Comunal con las autoridades del Gobierno Local.<br /><br />El encuentro ha constituido por primera vez en el Distrito de Accomarca la integraci&oacute;n de las mujeres de diversos grupos, asociaciones y programas sociales, ha servido adem&aacute;s como un espacio de reconocimiento e identidad colectiva de las mujeres accomarquinas.<br /><br /></p>'
     excerpt: 'Continuando con el ciclo de talleres Psicojur&iacute;dicos, Psicosociales y Vivenciales en distintos distritos del departamento de Ayacucho, la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR) ha desarrollado una serie de actividades, siendo las m&aacute;s importantes las siguientes :Taller con Familiares V&iacute;ctimas de la Violencia Pol&iacute;ticaEl 22 de enero del 2007, el equipo de ADEHR se traslad&oacute; hasta el distrito de Accomarca, en Ayacucho, donde se llev&oacute; a cabo el tercer taller con familiares v&iacute;ctimas de la violencia pol&iacute;tica tanto de las Fuerzas Armadas como de grupos subversivos, denominado &ldquo;Fortaleciendo las Capacidades Propositivas de los Familiares V&iacute;ctimas de la Violencia en Accomarca&rdquo;.El taller reuni&oacute; a m&aacute;s de 40 personas entre hombres y mujeres, quienes participaron en discusiones sobre propuestas relacionadas al Acceso a la Justicia y Lucha Contra la Impunidad, Memoria Individual, Colec...'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 23:08:39'
+    datetime: '2012-07-25'
+    show_dates: '0'
     status: PU
     slug: adehr_en_accion_enero_2007
     created_at: '2012-07-25 23:08:39'
-    updated_at: '2012-07-30 17:59:27'
+    updated_at: '2012-11-20 00:59:01'
   Post_5:
     User: User_1
     title: 'ADEHR en Museografía de la Memoria'
-    image: callqui_7_jpg_75922.JPG
-    size: '112546'
+    image: img_10_jpg_80284_jpg_76272.jpg
+    size: '194012'
     full_mime: image/jpeg
     content: '<p>La Embajada de Francia en el Per&uacute; co-organiz&oacute; con la Comisi&oacute;n Presidencial de Alto Nivel un taller sobre Museograf&iacute;a de la Memoria, realizado los d&iacute;as 4 y 5 de noviembre de 2010 en la casa de la Defensor&iacute;a del Pueblo.<br /><br />En este primer encuentro, participar&oacute;n expertos de museos de la memoria de Brasil, de Chile, de Colombia, de Francia y tambien de representantes de los lugares de la memoria de Huancavelica, de Ayacucho y de Huanta asi como de representantes de asociaciones de victimas y de ONG de derechos Humanos, entre ellas la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR).<br /><br />Cabe resaltar que este taller se inaugur&oacute; de manera simb&oacute;lica el mismo d&iacute;a que se pus&oacute; la primera piedra del futuro lugar de la memoria de Lima.<br /><br />Al terminar las jornadas de trabajo, se llev&oacute; a cabo un cokt&eacute;l en la Residencia de Francia.<br /><br /></p>'
     excerpt: 'La Embajada de Francia en el Per&uacute; co-organiz&oacute; con la Comisi&oacute;n Presidencial de Alto Nivel un taller sobre Museograf&iacute;a de la Memoria, realizado los d&iacute;as 4 y 5 de noviembre de 2010 en la casa de la Defensor&iacute;a del Pueblo.En este primer encuentro, participar&oacute;n expertos de museos de la memoria de Brasil, de Chile, de Colombia, de Francia y tambien de representantes de los lugares de la memoria de Huancavelica, de Ayacucho y de Huanta asi como de representantes de asociaciones de victimas y de ONG de derechos Humanos, entre ellas la Asociaci&oacute;n para el Desarrollo Humano Runamasinchiqpaq (ADEHR).Cabe resaltar que este taller se inaugur&oacute; de manera simb&oacute;lica el mismo d&iacute;a que se pus&oacute; la primera piedra del futuro lugar de la memoria de Lima.Al terminar las jornadas de trabajo, se llev&oacute; a cabo un cokt&eacute;l en la Residencia de Francia....'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 23:09:16'
+    datetime: '2012-07-25'
+    show_dates: '0'
     status: PU
     slug: adehr_en_museografia_de_la_memoria
     created_at: '2012-07-25 23:09:16'
-    updated_at: '2012-07-30 17:48:04'
+    updated_at: '2012-11-20 01:03:06'
   Post_6:
     User: User_1
     title: 'Carmen Cecilia Gamboa Lévano'
-    image: img_10_jpg_85560.jpg
+    image: img_10_jpg_71128_jpg_57172_jpg_83979.jpg
     size: '194012'
     full_mime: image/jpeg
     content: '<p>Responsable del programa de Cultura de Paz y Derechos Humanos de Adehr.<br /><br />Es Bachiller en Psicolog&iacute;a, de la Universidad Ricardo Palma. Tambien sigui&oacute; estudios de Artes Pl&aacute;sticas y Artes Gr&aacute;ficas. Tiene experiencia en realizaci&oacute;n de actividades de Promoci&oacute;n, Asesor&iacute;a y Asistencia Psicosocial a poblaciones migrantes y zonas urbano marginales, as&iacute; como de poblaciones rurales.<br /><br />Adem&aacute;s, en la Elaboraci&oacute;n de Diagn&oacute;sticos Socio Econ&oacute;mico y participaci&oacute;n en Proyectos Psicosociales, as&iacute; como en investigaci&oacute;n de hechos de violaciones de Derechos Humanos, sistematizaci&oacute;n, an&aacute;lisis e informes en el marco de investigaciones de casos judicializables, por delitos de lesa humanidad.<br /><br />Tambien tiene experiencia en la conducci&oacute;n de talleres participativos tanto con ni&ntilde;os, j&oacute;venes y adultos.<br /><br />Realiz&oacute; trabajos de coordinaci&oacute;n a nivel nacional con instituciones estatales para la implementaci&oacute;n de las recomendaciones de la Comisi&oacute;n Interamericana de Derechos Humanos en materia de reparaciones integrales (Decreto Supremo N&ordm;&nbsp;&nbsp; 005-2002-JUS).<br /><br />Tiene experiencia en la asistencia a familiares de v&iacute;ctimas de violaciones de derechos humanos y desplazados por la violencia pol&iacute;tica. Tambien en la elaboraci&oacute;n de informes relacionado a los casos del Decreto Supremo N&ordm; 005-2002-JUS (Casos de la Comisi&oacute;n Interamericana de Derechos Humanos).<br /><br /><br /><br /></p>'
     excerpt: 'Responsable del programa de Cultura de Paz y Derechos Humanos de Adehr.Es Bachiller en Psicolog&iacute;a, de la Universidad Ricardo Palma. Tambien sigui&oacute; estudios de Artes Pl&aacute;sticas y Artes Gr&aacute;ficas. Tiene experiencia en realizaci&oacute;n de actividades de Promoci&oacute;n, Asesor&iacute;a y Asistencia Psicosocial a poblaciones migrantes y zonas urbano marginales, as&iacute; como de poblaciones rurales.Adem&aacute;s, en la Elaboraci&oacute;n de Diagn&oacute;sticos Socio Econ&oacute;mico y participaci&oacute;n en Proyectos Psicosociales, as&iacute; como en investigaci&oacute;n de hechos de violaciones de Derechos Humanos, sistematizaci&oacute;n, an&aacute;lisis e informes en el marco de investigaciones de casos judicializables, por delitos de lesa humanidad.Tambien tiene experiencia en la conducci&oacute;n de talleres participativos tanto con ni&ntilde;os, j&oacute;venes y adultos.Realiz&oacute; trabajos de coordinaci&oacute;n a nivel nacional con instituciones est...'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 23:28:47'
+    datetime: '2012-07-25'
+    show_dates: '1'
     status: PU
     slug: carmen_cecilia_gamboa_levano
     created_at: '2012-07-25 23:28:47'
-    updated_at: '2012-07-30 18:00:30'
+    updated_at: '2012-11-20 01:03:48'
   Post_7:
     User: User_1
     title: 'Jassal Boris Ayala Pallqui'
-    image: img_10_jpg_54774.jpg
+    image: img_10_jpg_80284_jpg_76272_jpg_78175.jpg
     size: '194012'
     full_mime: image/jpeg
     content: '<p>Licenciado en Periodismo. es hijo del periodista del Diario La Rep&uacute;blica, Jaime Ayala Sulca, quien fuera desaparecido el 02 de agosto de 1984, luego de ingresar al estadio municipal de Huanta, en ese entonces base militar de la Marina de Guerra del Per&uacute;.<br /><br />Jaime ingres&oacute; a dicho recinto tras enterarse de que un grupo de militares hab&iacute;an ingresado a la fuerza al hogar de su se&ntilde;ora madre, agredi&eacute;ndola a ella y al hermano del hombre de prensa. Asimismo, estaba investigando el asesinato de seis evang&eacute;licos de Callqui, registrado el 01 de agosto de 1984.<br /><br />Su hijo, Boris Ayala, sigue el ejemplo de su padre y es Director del &Aacute;rea de Comunicaci&oacute;n de ADEHR. Del mismo modo, colabora con otras instituciones de derechos humanos y medios digitales.</p>'
     excerpt: 'Licenciado en Periodismo. es hijo del periodista del Diario La Rep&uacute;blica, Jaime Ayala Sulca, quien fuera desaparecido el 02 de agosto de 1984, luego de ingresar al estadio municipal de Huanta, en ese entonces base militar de la Marina de Guerra del Per&uacute;.Jaime ingres&oacute; a dicho recinto tras enterarse de que un grupo de militares hab&iacute;an ingresado a la fuerza al hogar de su se&ntilde;ora madre, agredi&eacute;ndola a ella y al hermano del hombre de prensa. Asimismo, estaba investigando el asesinato de seis evang&eacute;licos de Callqui, registrado el 01 de agosto de 1984.Su hijo, Boris Ayala, sigue el ejemplo de su padre y es Director del &Aacute;rea de Comunicaci&oacute;n de ADEHR. Del mismo modo, colabora con otras instituciones de derechos humanos y medios digitales....'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 23:32:19'
+    datetime: '2012-07-25'
+    show_dates: '1'
     status: PU
     slug: jassal_boris_ayala_pallqui
     created_at: '2012-07-25 23:32:19'
-    updated_at: '2012-07-30 18:01:03'
+    updated_at: '2012-11-20 01:04:06'
   Post_8:
     User: User_1
     title: 'Karim Virginia Ninaquispe Gil'
-    image: img_10_jpg_54880.jpg
+    image: img_10_jpg_71128_jpg_57172.jpg
     size: '194012'
     full_mime: image/jpeg
     content: '<p>Directora Ejecutiva y Responsable del programa "Justicia y Desarrollo Humano" de Adehr. <br /><br />Egresada en Derecho y Ciencia Pol&iacute;tica de la Universidad Nacional Mayor de San Marcos (UNMSM). Ha culminado estudios de Pos Grado en la Maestr&iacute;a en Ciencias Penales en la UNMSM; diplomada en Derechos Humanos y Procesos de Democratizaci&oacute;n por el Centro de Derechos Humanos de la Facultad de Derecho de la Universidad de Chile y el International Center for Transitional Justice (ICTJ). Actualmente cursa estudios de Pos Grado en la Maestr&iacute;a de Derecho Constitucional y Derechos Humanos en la UNMSM.<br /><br />Karim es abogada de profesi&oacute;n. Ha laborado en instituciones de derechos humanos, ha tenido a su cargo la investigaci&oacute;n y defensa de importantes casos de violaciones de derechos humanos del Conflicto Armado Interno Peruano; as&iacute; como casos de violaciones de derechos humanos con recomendaci&oacute;n de la Comisi&oacute;n Interamericana de Derechos Humanos. Entre los principales casos tenemos: Graves Violaciones a los Derechos Humanos en el Cuartel Los Cabitos de Ayacucho; Ejecuciones Extrajudiciales en Cayara y Accomarca; la Desaparici&oacute;n Forzada de Jaime Ayala Sulca,&nbsp; Albino Quino Sulca, Guadalupe Ccallocunto, Eladio Quispe Mendoza, entre otros casos.<br /><br /></p>'
     excerpt: 'Directora Ejecutiva y Responsable del programa "Justicia y Desarrollo Humano" de Adehr. Egresada en Derecho y Ciencia Pol&iacute;tica de la Universidad Nacional Mayor de San Marcos (UNMSM). Ha culminado estudios de Pos Grado en la Maestr&iacute;a en Ciencias Penales en la UNMSM; diplomada en Derechos Humanos y Procesos de Democratizaci&oacute;n por el Centro de Derechos Humanos de la Facultad de Derecho de la Universidad de Chile y el International Center for Transitional Justice (ICTJ). Actualmente cursa estudios de Pos Grado en la Maestr&iacute;a de Derecho Constitucional y Derechos Humanos en la UNMSM.Karim es abogada de profesi&oacute;n. Ha laborado en instituciones de derechos humanos, ha tenido a su cargo la investigaci&oacute;n y defensa de importantes casos de violaciones de derechos humanos del Conflicto Armado Interno Peruano; as&iacute; como casos de violaciones de derechos humanos con recomendaci&oacute;n de la Comisi&oacute;n Interamericana de Derechos Humanos. Entre los p...'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 23:34:00'
+    datetime: '2012-07-25'
+    show_dates: '0'
     status: PU
     slug: karim_virginia_ninaquispe_gil
     created_at: '2012-07-25 23:34:00'
-    updated_at: '2012-07-30 17:59:59'
+    updated_at: '2012-11-15 00:57:18'
   Post_9:
     User: User_1
     title: 'Nora Aurora Quispe Ccallocunto'
@@ -343,7 +400,8 @@ Post:
     excerpt: 'Responsable del Programa Fortalecimiento Institucional de AdehrNora es hija de Eladio Quispe Mendoza y Guadalupe Ccallocunto Olano, ambos detenidos y desaparecidos por las Fuerzas Armadas en Ayacucho durante el Conflicto Armado Interno. Eladio Quispe fue detenido y desaparecido en 1983 en el Cuartel los Cabitos, mientras Guadalupe Ccallocunto fue detenida y desaparecida en 1990 por el Ejercito, como represalia a su incesante defensa por los detenidos-desaparecidos de Ayacucho.Desde muy joven, activa en diversos grupos y organizaciones de familiares v&iacute;ctimas de la violencia pol&iacute;tica en Ayacucho; desde su experiencia como dirigente, contribuye en el fortalecimiento de nuevas organizaciones de familiares y de derechos humanos a nivel nacional.No s&oacute;lo se caracteriza, por su activismo en el campo de derechos humanos, sino tambien por su incansable lucha contra la impunidad y la b&uacute;squeda de verdad y justicia de las poblaciones afectadas por la violencia pol&iacute...'
     meta_description: demo
     meta_keywords: demo
-    datetime: '2012-07-25 23:34:33'
+    datetime: '2012-07-25'
+    show_dates: '1'
     status: PU
     slug: nora_aurora_quispe_ccallocunto
     created_at: '2012-07-25 23:34:33'
@@ -373,6 +431,10 @@ PostCategory:
     Post: Post_6
     Category: Category_3
     created_at: '2012-07-25 23:28:47'
+  PostCategory_6_4:
+    Post: Post_6
+    Category: Category_4
+    created_at: '2012-11-20 01:07:23'
   PostCategory_7_1:
     Post: Post_7
     Category: Category_1
@@ -515,16 +577,16 @@ User:
   User_1:
     realname: 'David Tataje'
     username: admin
-    password: '1234'
+    password: 'b3551f0b:cfb08bf5a1cb968eac095426429b4f39'
     email: djtm_rhcp@hotmail.com
     url: www.adehr.org.pe
     twitter_username: david.joan
     phone: null
     active: '1'
-    last_access_at: '2012-07-26 00:31:13'
+    last_access_at: '2012-11-20 00:56:07'
     slug: admin
     created_at: '2010-05-02 01:39:30'
-    updated_at: '2012-07-26 00:31:13'
+    updated_at: '2012-11-20 00:56:07'
 Video:
   Video_1:
     title: 'Identifican a 12 de los 37 restos exhumados en Huanta - Abril 2010'
@@ -2379,3 +2441,276 @@ Visit:
     datetime: '2012-07-30 18:03:14'
     created_at: '2012-07-30 18:03:14'
     updated_at: '2012-07-30 18:03:14'
+  Visit_263:
+    remote_address: 127.0.0.1
+    remote_port: '50624'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-15 00:50:29'
+    created_at: '2012-11-15 00:50:29'
+    updated_at: '2012-11-15 00:50:29'
+  Visit_264:
+    remote_address: 127.0.0.1
+    remote_port: '50702'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-15 00:57:53'
+    created_at: '2012-11-15 00:57:53'
+    updated_at: '2012-11-15 00:57:53'
+  Visit_265:
+    remote_address: 127.0.0.1
+    remote_port: '50719'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-15 00:58:16'
+    created_at: '2012-11-15 00:58:16'
+    updated_at: '2012-11-15 00:58:16'
+  Visit_266:
+    remote_address: 127.0.0.1
+    remote_port: '50757'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-15 01:00:40'
+    created_at: '2012-11-15 01:00:40'
+    updated_at: '2012-11-15 01:00:40'
+  Visit_267:
+    remote_address: 127.0.0.1
+    remote_port: '51409'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-15 02:36:19'
+    created_at: '2012-11-15 02:36:19'
+    updated_at: '2012-11-15 02:36:19'
+  Visit_268:
+    remote_address: 127.0.0.1
+    remote_port: '51533'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17'
+    datetime: '2012-11-15 02:45:36'
+    created_at: '2012-11-15 02:45:36'
+    updated_at: '2012-11-15 02:45:36'
+  Visit_269:
+    remote_address: 127.0.0.1
+    remote_port: '49548'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-15 08:49:17'
+    created_at: '2012-11-15 08:49:17'
+    updated_at: '2012-11-15 08:49:17'
+  Visit_270:
+    remote_address: 127.0.0.1
+    remote_port: '49577'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:09:03'
+    created_at: '2012-11-20 00:09:03'
+    updated_at: '2012-11-20 00:09:03'
+  Visit_271:
+    remote_address: 127.0.0.1
+    remote_port: '50075'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:35:33'
+    created_at: '2012-11-20 00:35:33'
+    updated_at: '2012-11-20 00:35:33'
+  Visit_272:
+    remote_address: 127.0.0.1
+    remote_port: '50098'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:37:04'
+    created_at: '2012-11-20 00:37:04'
+    updated_at: '2012-11-20 00:37:04'
+  Visit_273:
+    remote_address: 127.0.0.1
+    remote_port: '50111'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:37:19'
+    created_at: '2012-11-20 00:37:19'
+    updated_at: '2012-11-20 00:37:19'
+  Visit_274:
+    remote_address: 127.0.0.1
+    remote_port: '50131'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:37:38'
+    created_at: '2012-11-20 00:37:38'
+    updated_at: '2012-11-20 00:37:38'
+  Visit_275:
+    remote_address: 127.0.0.1
+    remote_port: '50138'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:37:48'
+    created_at: '2012-11-20 00:37:48'
+    updated_at: '2012-11-20 00:37:48'
+  Visit_276:
+    remote_address: 127.0.0.1
+    remote_port: '50160'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:38:52'
+    created_at: '2012-11-20 00:38:52'
+    updated_at: '2012-11-20 00:38:52'
+  Visit_277:
+    remote_address: 127.0.0.1
+    remote_port: '50188'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:39:55'
+    created_at: '2012-11-20 00:39:55'
+    updated_at: '2012-11-20 00:39:55'
+  Visit_278:
+    remote_address: 127.0.0.1
+    remote_port: '50508'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:48:38'
+    created_at: '2012-11-20 00:48:38'
+    updated_at: '2012-11-20 00:48:38'
+  Visit_279:
+    remote_address: 127.0.0.1
+    remote_port: '50524'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:49:47'
+    created_at: '2012-11-20 00:49:47'
+    updated_at: '2012-11-20 00:49:47'
+  Visit_280:
+    remote_address: 127.0.0.1
+    remote_port: '50541'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-20 00:50:07'
+    created_at: '2012-11-20 00:50:07'
+    updated_at: '2012-11-20 00:50:07'
+  Visit_281:
+    remote_address: 127.0.0.1
+    remote_port: '50550'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-20 00:52:39'
+    created_at: '2012-11-20 00:52:39'
+    updated_at: '2012-11-20 00:52:39'
+  Visit_282:
+    remote_address: 127.0.0.1
+    remote_port: '50558'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-20 00:53:11'
+    created_at: '2012-11-20 00:53:11'
+    updated_at: '2012-11-20 00:53:11'
+  Visit_283:
+    remote_address: 127.0.0.1
+    remote_port: '50564'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-20 00:54:30'
+    created_at: '2012-11-20 00:54:30'
+    updated_at: '2012-11-20 00:54:30'
+  Visit_284:
+    remote_address: 127.0.0.1
+    remote_port: '50577'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:54:42'
+    created_at: '2012-11-20 00:54:42'
+    updated_at: '2012-11-20 00:54:42'
+  Visit_285:
+    remote_address: 127.0.0.1
+    remote_port: '50582'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:54:48'
+    created_at: '2012-11-20 00:54:48'
+    updated_at: '2012-11-20 00:54:48'
+  Visit_286:
+    remote_address: 127.0.0.1
+    remote_port: '50579'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:54:57'
+    created_at: '2012-11-20 00:54:57'
+    updated_at: '2012-11-20 00:54:57'
+  Visit_287:
+    remote_address: 127.0.0.1
+    remote_port: '50601'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:55:32'
+    created_at: '2012-11-20 00:55:32'
+    updated_at: '2012-11-20 00:55:32'
+  Visit_288:
+    remote_address: 127.0.0.1
+    remote_port: '50607'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0'
+    datetime: '2012-11-20 00:55:45'
+    created_at: '2012-11-20 00:55:45'
+    updated_at: '2012-11-20 00:55:45'
+  Visit_289:
+    remote_address: 127.0.0.1
+    remote_port: '50650'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:57:59'
+    created_at: '2012-11-20 00:57:59'
+    updated_at: '2012-11-20 00:57:59'
+  Visit_290:
+    remote_address: 127.0.0.1
+    remote_port: '50658'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 00:58:36'
+    created_at: '2012-11-20 00:58:36'
+    updated_at: '2012-11-20 00:58:36'
+  Visit_291:
+    remote_address: 127.0.0.1
+    remote_port: '50699'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:02:43'
+    created_at: '2012-11-20 01:02:43'
+    updated_at: '2012-11-20 01:02:43'
+  Visit_292:
+    remote_address: 127.0.0.1
+    remote_port: '50724'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:03:10'
+    created_at: '2012-11-20 01:03:10'
+    updated_at: '2012-11-20 01:03:10'
+  Visit_293:
+    remote_address: 127.0.0.1
+    remote_port: '50738'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:03:51'
+    created_at: '2012-11-20 01:03:51'
+    updated_at: '2012-11-20 01:03:51'
+  Visit_294:
+    remote_address: 127.0.0.1
+    remote_port: '50750'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:04:10'
+    created_at: '2012-11-20 01:04:10'
+    updated_at: '2012-11-20 01:04:10'
+  Visit_295:
+    remote_address: 127.0.0.1
+    remote_port: '50765'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:04:46'
+    created_at: '2012-11-20 01:04:46'
+    updated_at: '2012-11-20 01:04:46'
+  Visit_296:
+    remote_address: 127.0.0.1
+    remote_port: '50802'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:07:27'
+    created_at: '2012-11-20 01:07:27'
+    updated_at: '2012-11-20 01:07:27'
+  Visit_297:
+    remote_address: 127.0.0.1
+    remote_port: '50814'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:07:41'
+    created_at: '2012-11-20 01:07:41'
+    updated_at: '2012-11-20 01:07:41'
+  Visit_298:
+    remote_address: 127.0.0.1
+    remote_port: '50820'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:07:56'
+    created_at: '2012-11-20 01:07:56'
+    updated_at: '2012-11-20 01:07:56'
+  Visit_299:
+    remote_address: 127.0.0.1
+    remote_port: '50830'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:08:23'
+    created_at: '2012-11-20 01:08:23'
+    updated_at: '2012-11-20 01:08:23'
+  Visit_300:
+    remote_address: 127.0.0.1
+    remote_port: '50840'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:08:39'
+    created_at: '2012-11-20 01:08:39'
+    updated_at: '2012-11-20 01:08:39'
+  Visit_301:
+    remote_address: 127.0.0.1
+    remote_port: '50868'
+    http_user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'
+    datetime: '2012-11-20 01:10:27'
+    created_at: '2012-11-20 01:10:27'
+    updated_at: '2012-11-20 01:10:27'
