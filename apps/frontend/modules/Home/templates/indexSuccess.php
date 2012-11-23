@@ -102,7 +102,7 @@
                 <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
                 <br />
             </div>
-            <?php if($post->getImage() <> ''):?><?php echo image_tag($post->getThumbnailFilePath('image',297 ), array('size' => '297x169'));?><?php endif; ?>
+            <?php if($post->getImage() <> ''):?><?php echo image_tag($post->getThumbnailFilePath('image',297 ), array('size' => '315x169'));?><?php endif; ?>
             <br />
             <span><?php echo simple_format_text(truncate_text($post->getExcerpt(),250)); ?></span> </div>
         <!-- Nota item--> 

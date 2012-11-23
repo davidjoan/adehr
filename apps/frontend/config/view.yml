@@ -10,7 +10,7 @@ default:
    
   stylesheets:
     - frontend/menu.css: { position: first }    
-    - frontend/style.min.css: { position: first }        
+    - frontend/style.css: { media: screen }        
     - fancybox/jquery.fancybox.css: { position: first }
     - general/jquery-ui-1.8.custom.css: { media: screen }
 

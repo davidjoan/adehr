@@ -85,8 +85,7 @@ p, pre {
 	margin: 1em 0;
 }
 pre, code, kbd, samp {
-	font-family: monospace, serif;
-	_font-family: 'courier new', monospace;
+	font-family: sans-serif;
 	font-size: 1em;
 }
 pre {
@@ -151,13 +150,11 @@ legend {
 	border: 0; /* 1 */
 	padding: 0;
 	white-space: normal; /* 2 */
-*margin-left: -7px; /* 3 */
 }
 button, input, select, textarea {
 	font-size: 100%; /* 1 */
 	margin: 0; /* 2 */
 	vertical-align: baseline; /* 3 */
-*vertical-align: middle; /* 3 */
 }
 button, input {
 	line-height: normal; /* 1 */
@@ -165,7 +162,7 @@ button, input {
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	cursor: pointer; /* 1 */
 	-webkit-appearance: button; /* 2 */
-*overflow: visible; /* 3 */
+        overflow: visible; /* 3 */
 }
 button[disabled], input[disabled] {
 	cursor: default;
@@ -173,8 +170,6 @@ button[disabled], input[disabled] {
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
-*height: 13px; /* 3 */
-*width: 13px; /* 3 */
 }
 input[type="search"] {
 	-webkit-appearance: textfield; /* 1 */
@@ -279,9 +274,8 @@ table {
 	color:#3d3d3b;
 	font-family:sans-serif;
 	font-size:28px;
-	font-weight:100;
 	margin:0px 15px 10px 15px;
-	line-height:1;
+	/*line-height:1;*/
 	text-decoration:none;
 	display:block;
 }
@@ -709,7 +703,7 @@ table {
 .notaPe  span {
 	margin: 0;		
 }
-margin:0px 15px 10px 15px;
+
 .notasTit {
 	background-image:url(/images/frontend/fdoNar1.jpg);
 	background-repeat:no-repeat;
@@ -756,7 +750,7 @@ margin:0px 15px 10px 15px;
 	color:#FFFFFF;
 }
 .notaPe span {
-	font-size:14px;		
+	font-size:12px;		
 }
 
 /* Estilos Interna 1 */
@@ -916,12 +910,20 @@ margin:0px 15px 10px 15px;
 	background-color:#9E9E9E;	
 }
 #copyR {
-	margin:200px auto 30px auto;
-	width:450px;
+    
+        margin: 0 auto;
+        padding-top: 200px;
+        overflow: hidden;
+	width:960px;
 	font-size:12px;
 	border:0px solid red;
 	font-weight:600;
+        color: #EBEBEB;
+    font: 14px/100% arial;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 #copyR a {
 	font-size:14px;
 	color:#FFFFFF;	
