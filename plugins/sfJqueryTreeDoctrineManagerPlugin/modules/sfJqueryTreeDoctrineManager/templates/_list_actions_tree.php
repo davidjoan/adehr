@@ -1,9 +1,9 @@
 <ul class="sf_admin_actions">
 	<?php if($hasManyRoots):?>
  		<li class="sf_admin_action_list">
-		<?php echo link_to( 'Regresar' ,$sf_request->getParameter('module') . '/' . $sf_request->getParameter('action') );?>
+		<?php echo link_to( "Regresar" ,$sf_request->getParameter('module') . '/' . $sf_request->getParameter('action') );?>
 	<?php endif;?>
-
+	
 </ul>
 
 <?php echo javascript_tag();?>

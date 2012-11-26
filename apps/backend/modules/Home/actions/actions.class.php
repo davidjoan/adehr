@@ -11,6 +11,8 @@ class HomeActions extends sfActions
 {
   public function executeShow(sfWebRequest $request)
   {
+      
+      /*
 $username = 'adehrperu';
 $album    = '21AniversarioDelAsesinatoDelPeriodistaHugoBustiosSaavedra';
 
@@ -26,6 +28,6 @@ catch( Exception $e )
 {
   $this->images = array();
   $this->title = '';
-}      
+}    */  
   }
 }

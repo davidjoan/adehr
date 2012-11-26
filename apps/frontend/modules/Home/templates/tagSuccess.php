@@ -19,7 +19,7 @@
                 <a href="#"><?php echo link_to(image_tag('frontend/post/print'), '@post_print?slug='.$post->getSlug(),array('data-fancybox-type' => "iframe",'class' => "various")); ?></a>&nbsp;
                 </div>
             </div>
-            <p><?php echo simple_format_text($post->getExcerpt()); ?></p>
+            <p><?php echo simple_format_text(truncate_text($post->getExcerpt(), 350, ' ...')); ?></p>
             <div class="breaker"></div>
             <br />
         </div>
@@ -32,7 +32,7 @@
             <div class="iconos">
                 <div class="izquierda">Escrito por <?php echo $post->getUserRealname(); ?>. Publicado: <?php echo $post->getFormattedDatetime(); ?></div><div class="derecha"><a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a>&nbsp;<a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a>&nbsp;<a href="#"><img src="/images/frontend/dot.gif" width="20" height="20" class="mano" /></a></div>
             </div>
-            <p><?php echo simple_format_text($post->getExcerpt()); ?></p>
+            <p><?php echo simple_format_text(truncate_text($post->getExcerpt(), 350, ' ...')); ?></p>
             <div class="breaker"></div>
             <br />
         </div>

@@ -23,8 +23,4 @@
                                 )
       ))
 ?>
-<?php 
-use_helper("sfJqueryTreeDoctrine");
-echo get_nested_set_manager("Menu", "name");
-
-?>
+<iframe src="<?php echo url_for('@home');?>" width="80%" height="300"></iframe>

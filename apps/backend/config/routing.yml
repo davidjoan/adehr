@@ -367,7 +367,7 @@ generic_remove_dynamic_form:
 home:
   url:             /inicio
   param:           { module: Home, action: show }
-  
+
 ##############################
 ######### Zefault ############
 ##############################
