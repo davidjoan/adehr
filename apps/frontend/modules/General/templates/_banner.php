@@ -20,7 +20,7 @@
           <div class="breaker"></div>
           <!-- Ultimos Art-->
           <div class="ultArt">
-            <div class="ultArtTit">Ultimos Articulos</div>
+            <div class="ultArtTit">&Uacute;ltimos Art&iacute;culos</div>
             <div class="ultArtTot">
                 
               <?php foreach($posts as $key => $post): ?>
