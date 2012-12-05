@@ -46,7 +46,7 @@ class Post extends BasePost {
 
         if ($this->isNew() && sfContext::hasInstance()) {
             $this->setUserId(sfContext::getInstance()->getUser()->getUserId());
-            $this->setDatetime(date('Y-m-d H:i:s'));
+           // $this->setDatetime(date('Y-m-d H:i:s'));
         }
 
         if ($this->isColumnModified('content')) {

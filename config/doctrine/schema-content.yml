@@ -12,7 +12,7 @@ Post:
     image:                             { type: string   , length: 200                   , notnull: true                                                        }
     size:                              { type: integer  , length: 10                    , notnull: true , default: 0                                           }
     full_mime:                         { type: string   , length: 100                   , notnull: true                                                        }    
-    content:                           { type: string   , length: 20000                 , notnull: true                                                        }
+    content:                           { type: string   , length: 50000000                 , notnull: true                                                        }
     excerpt:                           { type: string   , length: 500                   , notnull: true                                                        }
     meta_description:                  { type: string   , length: 5000                  , notnull: true                                                        }
     meta_keywords:                     { type: string   , length: 1000                  , notnull: true                                                        }

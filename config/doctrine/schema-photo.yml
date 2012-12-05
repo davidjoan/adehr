@@ -13,7 +13,7 @@ Photo:
     rank:                              { type: integer  , length: 5                     , notnull: true , default: 0                                           }
     active:                            { type: string   , length: 1  , fixed: true      , notnull: true , default: 1                                           }
   indexes:
-    u_title:                           { fields: [ title ]                               , type: unique                                                        }
+    #u_title:                           { fields: [ title ]                               , type: unique                                                        }
   relations:
     Post:                              { class: Post             , local: photo_id   , foreign: post_id  , alias: Posts, refClass: PostPhoto }
   options:

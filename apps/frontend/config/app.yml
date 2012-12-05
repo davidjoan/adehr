@@ -1,6 +1,6 @@
 all:
   contact_form:
-    email:        davidtataje@gmail.com
+    email:        [davidtataje@gmail.com,info@adehr.org.pe,prensa@adehr.org.pe,borisayalap@gmail.com]
     error:        Hay un problema y No puede ser enviado!
     notice:       Tu mensaje ha sido enviado con &eacute;xito.
     captcha:      Su c&oacute;digo secreto es incorrecto.

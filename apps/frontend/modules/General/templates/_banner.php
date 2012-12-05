@@ -59,7 +59,7 @@
                 <?php foreach($videos as $key => $video): ?>
                 <?php $counter = $counter + 1; ?>
                 <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <a class="fancybox-media"  href="<?php echo trim($video->getDescription()); ?>">
+                        <a class="fancybox-media"  title="<?php echo $video->getTitle(); ?>" href="<?php echo trim($video->getDescription()); ?>">
                             <?php echo truncate_text($video->getTitle(), 37); ?>
                         </a>
                     </span><span class="archMulRight">Video</span>
@@ -69,7 +69,7 @@
                 <?php foreach($photos as $key => $photo): ?>
                 <?php $counter = $counter + 1; ?>
                 <div class="<?php echo ($counter%2 == 0)?'archMulOff': 'archMulOn'; ?>"><span class="archMulLeft">
-                        <a class="fancybox-photo" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
+                        <a class="fancybox-photo" title="<?php echo $photo->getTitle(); ?>" href="<?php echo PhotoTable::getInstance()->getPathPath().'/'.$photo->getPath();?>">
                             <?php echo truncate_text($photo->getTitle(),37); ?>
                         </a>
                     </span><span class="archMulRight">Foto</span>
@@ -113,6 +113,9 @@
             <div class="breaker"></div>
           </div>
           <!-- /Redes--> 
+<br/>
+<div class="fb-like-box" data-href="https://www.facebook.com/pages/ADEHR/111874458833632?bookmark_t=page" data-width="292" data-show-faces="true" data-stream="true" data-header="true"></div>
+          
         </div>
         <!-- /Barra Derecha--->        
         <script>

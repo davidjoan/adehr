@@ -176,7 +176,7 @@ class PostForm extends BasePostForm
 
     if ($this->isNew())
     {
-     $this->validatorSchema['image']->setOption('required', true);
+     //$this->validatorSchema['image']->setOption('required', true);
     }
     
      

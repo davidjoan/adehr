@@ -776,7 +776,24 @@ table {
 }
 
 .notaDetalle{
+	margin: 0;
 		
+}
+
+.notaDetalle ol {
+	text-align: justify;
+	}
+.notaDetalle ol li {
+  padding-left: 0.8em; 
+}
+
+
+
+.notaDetalle ul {
+	text-align: justify;
+	}
+.notaDetalle ul li {
+  padding-left: 0.8em; 
 }
 
 .breadcrumb {
@@ -810,8 +827,10 @@ table {
 }
 .notaDetalle span {
 	font-size:16px;
-	margin:15px 0px 0px 30px;
+	/*margin:15px 0px 0px 0px;*/
 	font-weight:bold;
+           margin-left: 1px;
+    padding-top: 10px;
 }
 .notaDetalle h2 {
 	color:#de510a;
@@ -825,11 +844,12 @@ table {
         
     border: 3px solid #EBEBEB;
     border-radius: 5px 5px 5px 5px;
-    margin: 8px;      
+    margin: 0px;      
 }
 .notaDetalle p {
-	margin:15px 0px 0px 30px;
-	float:left;	
+    margin: 0 0 0 30px;
+    padding-top: 10px;
+	
 }
 .notaDetalle a{
 	color:#de510a;
@@ -849,14 +869,14 @@ table {
 	clear:both;	
 }
 .notaDetalle img {
-	margin:20px auto 10px 55px;
+	margin:20px auto 10px 15px;
 	background-color:#CCC;
 }
 .iconos {
 	font-style:italic;
 	font-size:9px;
 	color:#999999;
-	padding:5px 0px 10px 30px;	
+	padding:5px 0px 15px 30px;
 }
 .derecha {
 	float:right;
@@ -979,4 +999,15 @@ table {
 }
 #contacts-form div:last-child {
     padding-left: 110px;
+}
+
+.media-type {
+    margin-right: 17px;
+}
+
+.media-type a img {
+    margin: 4px auto 10px 30px;
+}
+.left {
+    float: left !important;
 }

@@ -98,7 +98,7 @@
             </div>
             <div class="notaT">
                 
-                <div class="notaFe"><?php echo date("d",strtotime($post->getCreatedAt())); ?><br /><span><?php echo date("M",strtotime($post->getCreatedAt())); ?></span></div>
+                <div class="notaFe"><?php echo date("d",strtotime($post->getDatetime())); ?><br /><span><?php echo date("M",strtotime($post->getDatetime())); ?></span></div>
                 <?php echo link_to($post->getTitle(), '@post_show?slug='.$post->getSlug()) ?>
                 <br />
             </div>

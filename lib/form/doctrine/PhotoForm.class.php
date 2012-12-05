@@ -67,7 +67,14 @@ class PhotoForm extends BasePhotoForm
       'created_at'              => '-',
       'updated_at'              => '-'
     );
+
+     if ($this->isNew())
+    {
+      $this->validatorSchema['path']->setOption('required', true);
+    }
     
-    $this->validatorSchema['path']->setOption('required', true);
+    
+
+    $this->widgetSchema->setHelp('path' , 'Tamaño recomendado 700px (ancho) y 500px (alto) como maximo');
   }
 }

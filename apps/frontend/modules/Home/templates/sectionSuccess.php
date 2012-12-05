@@ -19,7 +19,12 @@
                 <a href="#"><?php echo link_to(image_tag('frontend/post/print'), '@post_print?slug='.$post->getSlug(),array('data-fancybox-type' => "iframe",'class' => "various")); ?></a>&nbsp;
                 </div>
             </div>
-            <p><?php echo simple_format_text(truncate_text($post->getExcerpt(), 350, ' ...')); ?></p>
+            <?php if($post->getImage() <> ''):?>
+            <div class="media-type left">
+                <?php echo link_to(image_tag($post->getThumbnailFilePath('image',142 ), array('size' => '142x90')), '@post_show?slug=' . $post->getSlug()) ?></div>
+            <?php endif; ?>
+            <p style="padding-top: 5px;">
+                <?php echo simple_format_text(truncate_text($post->getExcerpt(), 400, ' ...')); ?></p>
             <div class="breaker"></div>
             <br />
         </div>

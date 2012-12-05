@@ -42,7 +42,7 @@ class PostActions extends ActionsProject
 		  ->setSubject($this->form->getValue('subject'))
 		  ->setBody($this->getPartial('email', array('post' => $post, 'name' => $this->form->getValue('name'))), 'text/html');
  
-           //  $this->getMailer()->send($mensage); //enable in production
+             $this->getMailer()->send($mensage); //enable in production
 
              $this->getUser()->setFlash('notice', 'Tu Correo ha sido enviado con &eacute;xito.');
              else:

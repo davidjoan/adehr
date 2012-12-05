@@ -19,19 +19,19 @@
         <p>
             <?php if ($post->getImage() <> ''): ?><?php echo image_tag($post->getThumbnailFilePath('image', 684), array('size' => '640x300')); ?><?php endif; ?>
         </p>
-        <?php echo simple_format_text($post->getPostIndex()->getContent()) ?>
-
+        <?php //echo simple_format_text($post->getPostIndex()->getContent()) ?>
+        <?php echo $post->getPostIndex()->getContent(); ?>
         <?php if($post->getShowDates() == '1'): ?>
         <div class="fecha">Escrito por <?php echo $post->getUserRealname(); ?>, <?php echo $post->getFormattedDatetime(); ?></div>
         <?php endif; ?>
         <div class="breaker"></div>
         <br />
 
-        <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>            
+        <div class="fb-like" data-send="true" data-width="450" data-show-faces="true" style="margin: 15px 0 0 30px;"></div>            
 
 
         <br />
-        <?php if($post->getShowDates() == '1'): ?>
+        <?php //if($post->getShowDates() == '1'): ?>
         <div class="breaker"></div>
         <?php if(count($post->getVideos()->toArray()) > 0): ?>
         <h2>Videos</h2>  
@@ -78,7 +78,7 @@
             </div>
         </div>
         
-        <?php endif; ?>
+        <?php //endif; ?>
         <?php endif; ?>
     </div>
 </div>
@@ -116,8 +116,8 @@
         // Initialize Advanced Galleriffic Gallery
         var gallery = $('#thumbs').galleriffic({
             delay:                     2500,
-            numThumbs:                 10,
-            preloadAhead:              10,
+            numThumbs:                 14,
+            preloadAhead:              14,
             enableTopPager:            false,
             enableBottomPager:         false,
             imageContainerSel:         '#slideshow',
@@ -145,6 +145,15 @@
                 // Update the photo index display
                 this.$captionContainer.find('div.photo-index')
                 .html('Photo '+ (nextIndex+1) +' of '+ this.data.length);
+
+                //alert('index: '+nextIndex+' , length: '+this.data.length);
+
+                if((nextIndex+1) == this.data.length)
+                {
+                    //alert('index: '+nextIndex+' , length: '+this.data.length);
+
+                    this.pause();
+                }
             },
             onPageTransitionOut:       function(callback) {
                 this.fadeTo('fast', 0.0, callback);
@@ -157,9 +166,7 @@
                 if (this.displayedPage > 0)
                     prevPageLink.css('visibility', 'visible');
 
-                var lastPage = this.getNumPages() - 1;
-                if (this.displayedPage < lastPage)
-                    nextPageLink.css('visibility', 'visible');
+
 
                 this.fadeTo('fast', 1.0);
             }

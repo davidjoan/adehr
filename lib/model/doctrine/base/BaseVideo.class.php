@@ -76,14 +76,6 @@ abstract class BaseVideo extends DoctrineRecord
              'default' => 1,
              ));
 
-
-        $this->index('u_title', array(
-             'fields' => 
-             array(
-              0 => 'title',
-             ),
-             'type' => 'unique',
-             ));
         $this->option('symfony', array(
              'filter' => false,
              'form' => true,

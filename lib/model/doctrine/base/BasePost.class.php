@@ -138,9 +138,9 @@ abstract class BasePost extends DoctrineRecord
              'length' => 100,
              'notnull' => true,
              ));
-        $this->hasColumn('content', 'string', 20000, array(
+        $this->hasColumn('content', 'string', 50000000, array(
              'type' => 'string',
-             'length' => 20000,
+             'length' => 50000000,
              'notnull' => true,
              ));
         $this->hasColumn('excerpt', 'string', 500, array(

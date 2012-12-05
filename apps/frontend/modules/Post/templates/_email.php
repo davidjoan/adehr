@@ -2,7 +2,6 @@
 
 
 
-<?php decorate_with(false) ?>
 <?php use_helper('Date', 'Text') ?>
 <style>
     html, button, input, select, textarea,p,h5,h2 {
@@ -13,11 +12,11 @@ p {
 }
 </style>
 
-<img src="/images/frontend/logo.jpg" /><br/>
-<h2><?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug()) ?></h2>
+<img src="http://www.adehr.org.pe/images/frontend/logo.jpg" /><br/>
+<h2><?php echo link_to($post->getTitle(), '@post_show?slug=' . $post->getSlug(),array('absolute' => true)) ?></h2>
 
 <p>
-    <?php if ($post->getImage() <> ''): ?><?php echo image_tag($post->getThumbnailFilePath('image', 684), array('size' => '640x300')); ?><?php endif; ?>
+    <?php if ($post->getImage() <> ''): ?><?php echo image_tag("http://www.adehr.org.pe".$post->getThumbnailFilePath('image', 684), array('size' => '640x300')); ?><?php endif; ?>
 </p>
 
 <?php echo simple_format_text($post->getPostIndex()->getContent()) ?>

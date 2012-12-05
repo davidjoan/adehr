@@ -43,10 +43,7 @@ abstract class BasePhotoForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'Photo', 'column' => array('title'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Photo', 'column' => array('slug'))),
-      ))
+      new sfValidatorDoctrineUnique(array('model' => 'Photo', 'column' => array('slug')))
     );
 
     $this->widgetSchema->setNameFormat('photo[%s]');

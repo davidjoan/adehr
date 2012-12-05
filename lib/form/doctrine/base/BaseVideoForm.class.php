@@ -41,10 +41,7 @@ abstract class BaseVideoForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'Video', 'column' => array('title'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Video', 'column' => array('slug'))),
-      ))
+      new sfValidatorDoctrineUnique(array('model' => 'Video', 'column' => array('slug')))
     );
 
     $this->widgetSchema->setNameFormat('video[%s]');

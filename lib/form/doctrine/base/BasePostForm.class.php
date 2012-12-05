@@ -46,7 +46,7 @@ abstract class BasePostForm extends BaseFormDoctrine
       'image'            => new sfValidatorString(array('max_length' => 200)),
       'size'             => new sfValidatorInteger(array('required' => false)),
       'full_mime'        => new sfValidatorString(array('max_length' => 100)),
-      'content'          => new sfValidatorString(array('max_length' => 20000)),
+      'content'          => new sfValidatorString(array('max_length' => 50000000)),
       'excerpt'          => new sfValidatorString(array('max_length' => 500)),
       'meta_description' => new sfValidatorString(array('max_length' => 5000)),
       'meta_keywords'    => new sfValidatorString(array('max_length' => 1000)),
